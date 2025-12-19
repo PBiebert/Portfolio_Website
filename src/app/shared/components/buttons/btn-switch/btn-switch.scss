@@ -1,4 +1,4 @@
-@import '../../../../../styles.scss';
+@use '../../../styles/_core.scss' as *;
 
 .btn-switch {
   @include flexbox($flex-direction: row);

@@ -1,4 +1,4 @@
-@import '../header.scss';
+@use '../../../../shared/styles/_core.scss' as *;
 
 nav {
   height: 100%;
@@ -20,6 +20,7 @@ nav {
         height: 2.5rem;
         aspect-ratio: 1/1;
         fill: #35f;
+        stroke-width: 4px;
       }
 
       a {

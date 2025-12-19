@@ -1,9 +1,13 @@
-@import '../../../../styles.scss';
+@use './../../../shared/styles/_core.scss' as *;
 
 header {
   @include flexbox($flex-direction: row, $justify-content: space-between);
   height: 80px;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 4.5rem;
 }
 
 .logo-mobile {
@@ -11,6 +15,7 @@ header {
   aspect-ratio: 1/1;
   fill: #35f;
   display: none;
+  stroke-width: 4px;
 }
 
 app-nav {

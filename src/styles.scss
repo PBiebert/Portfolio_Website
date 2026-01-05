@@ -29,3 +29,23 @@ html {
   margin: 0 auto;
   padding: 0 4.5rem;
 }
+
+@media (max-width: 700px) {
+  .wrapper {
+    position: relative;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrapper {
+    position: relative;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}

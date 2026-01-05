@@ -3,6 +3,7 @@
 nav {
   height: 100%;
   width: 100%;
+  z-index: 10;
 
   ul {
     @include flexbox($flex-direction: row, $justify-content: space-between);
@@ -19,8 +20,14 @@ nav {
       .logo {
         height: 2.5rem;
         aspect-ratio: 1/1;
-        fill: #35f;
+        fill: $color-accent-blue;
         stroke-width: 4px;
+        cursor: pointer;
+        transition: $hover-transition;
+
+        &:hover {
+          fill: $color-accent-yellow;
+        }
       }
 
       a {

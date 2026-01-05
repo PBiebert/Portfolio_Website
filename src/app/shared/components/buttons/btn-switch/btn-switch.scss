@@ -33,7 +33,7 @@ span {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $color-active;
+    background-color: $color-accent-orange;
     transition: 0.4s;
     border: 1px solid white;
   }
@@ -43,7 +43,7 @@ span {
     content: '';
     height: 1rem;
     aspect-ratio: 1/1;
-    left: 0;
+    left: -1px;
     bottom: calc(-5px);
     background-color: $color-accent-blue;
     -webkit-transition: 0.4s;
@@ -66,5 +66,5 @@ span {
 }
 
 .switch-active {
-  color: $color-active;
+  color: $color-accent-orange;
 }

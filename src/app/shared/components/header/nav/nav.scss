@@ -18,6 +18,7 @@ nav {
       @include flexbox($flex-direction: row);
 
       .logo {
+        cursor: pointer;
         height: 2.5rem;
         aspect-ratio: 1/1;
         fill: $color-accent-blue;
@@ -28,12 +29,6 @@ nav {
         &:hover {
           fill: $color-accent-yellow;
         }
-      }
-
-      a {
-        text-decoration: none;
-        color: $color-font-light;
-        font-weight: bold;
       }
     }
   }

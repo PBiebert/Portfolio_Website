@@ -4,6 +4,12 @@ $color-accent-orange: #f87a55;
 $color-accent-blue: #3355ff;
 $color-accent-yellow: #f7c518;
 $hover-transition: all 250ms ease-in-out;
+$hover-transition-fast: all 125ms ease-in-out;
+
+:root {
+  --color-accent-yellow: #{$color-accent-yellow};
+  --color-font-light: #{$color-font-light};
+}
 
 @mixin flexbox($flex-direction: column, $align-items: center, $justify-content: center) {
   display: flex;

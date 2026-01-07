@@ -4,8 +4,16 @@
       <div class="content">
         <button class="say-hello">Hello World</button>
         <h1>
-          <span class="first-line">Fullstack</span>
-          <span class="second-line">DEVELOPER</span>
+          <span class="first-line">
+            @for( char of contentFirstLine ; track $index){
+            <span appInvertCase>{{ char }}</span>
+            }
+          </span>
+          <span class="second-line">
+            @for( char of contentSecondLine ; track $index){
+            <span appInvertCase>{{ char }}</span>
+            }
+          </span>
         </h1>
         <button><a href="#">Get in Touch</a></button>
         <div class="polaroid">

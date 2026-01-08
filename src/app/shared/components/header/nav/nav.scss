@@ -13,11 +13,19 @@ nav {
     padding: 0;
 
     li {
-      height: 100%;
+      position: relative;
       text-align: center;
       @include flexbox($flex-direction: row);
+    }
 
-      .logo {
+    a {
+      padding: 15px;
+    }
+
+    .logo {
+      padding: 0;
+
+      svg {
         cursor: pointer;
         height: 2.5rem;
         aspect-ratio: 1/1;
@@ -32,4 +40,25 @@ nav {
       }
     }
   }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  top: calc(50%-height);
+  left: 0;
+  transition: $hover-transition;
+  pointer-events: none;
+}
+
+.startLeftToRight {
+  clip-path: inset(0 100% 0 0);
+}
+
+.startTopToBottom {
+  clip-path: inset(100% 0 0 0);
+}
+
+.animationOverlay {
+  clip-path: inset(0 0 0 0);
 }

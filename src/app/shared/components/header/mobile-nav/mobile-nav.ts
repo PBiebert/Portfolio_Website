@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { BtnLangSwitch } from '../../buttons/btn-lang-switch/btn-switch';
 import { CommonModule, NgClass } from '@angular/common';
+import { Component } from '@angular/core';
+import { SocialLinks } from '../../social-links/social-links';
+import { BtnLangSwitch } from '../../buttons/btn-lang-switch/btn-switch';
 
 interface NavItem {
   title: string;
@@ -11,12 +12,12 @@ interface NavItem {
 }
 
 @Component({
-  selector: 'app-nav',
-  imports: [BtnLangSwitch, CommonModule, NgClass],
-  templateUrl: './nav.html',
-  styleUrl: './nav.scss',
+  selector: 'app-mobile-nav',
+  imports: [CommonModule, NgClass, SocialLinks, BtnLangSwitch],
+  templateUrl: './mobile-nav.html',
+  styleUrl: './mobile-nav.scss',
 })
-export class Nav {
+export class MobileNav {
   navItems: NavItem[] = [
     {
       title: 'Über mich',

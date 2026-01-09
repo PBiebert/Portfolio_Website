@@ -1,0 +1,21 @@
+<nav>
+  <ul>
+    @for (li of navItems; track $index) {
+    <li>
+      <a
+        href="{{ li.href }}"
+        (mouseenter)="li.isHovered = true"
+        (mouseleave)="li.isHovered = false"
+        >{{ li.title }}</a
+      >
+      <img
+        class="overlay {{ li.startAnimation }}"
+        src="{{ li.hoverImg }}"
+        [ngClass]="{ animationOverlay: li.isHovered }"
+      />
+    </li>
+    }
+    <li><app-btn-lang-switch></app-btn-lang-switch></li>
+  </ul>
+  <app-social-links></app-social-links>
+</nav>

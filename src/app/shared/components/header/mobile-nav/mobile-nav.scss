@@ -1,0 +1,67 @@
+@use '../../../../shared/styles/_core.scss' as *;
+
+nav {
+  height: 100vh;
+  width: 100%;
+  background-image: url(./../.././../../../../public/assets/img/hero.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include flexbox();
+
+  ul {
+    @include flexbox($justify-content: space-between);
+    height: 50%;
+
+    li {
+      position: relative;
+      text-align: center;
+      @include flexbox($flex-direction: row);
+
+      a {
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 15px;
+      }
+    }
+  }
+
+  app-social-links {
+    position: absolute;
+    bottom: 10%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  top: calc(50%-height);
+  left: 0;
+  transition: $hover-transition;
+  pointer-events: none;
+}
+
+.startLeftToRight {
+  clip-path: inset(0 100% 0 0);
+}
+
+.startTopToBottom {
+  clip-path: inset(100% 0 0 0);
+}
+
+.animationOverlay {
+  clip-path: inset(0 0 0 0);
+}
+
+@media (max-width: 450px) {
+  nav {
+    ul {
+      height: 45%;
+      li {
+        a {
+          font-size: 1.15rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use './../../../../../../shared/styles/core' as *;
+
+.say-hello {
+  align-self: flex-start;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $color-accent-blue;
+    transform: none;
+  }
+}

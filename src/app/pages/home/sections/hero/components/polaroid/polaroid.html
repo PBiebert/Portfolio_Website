@@ -1,0 +1,12 @@
+<div class="polaroid" (mouseenter)="isOnPicture()" (mouseleave)="isNotOnPicture()">
+  <img
+    class="frame"
+    [ngClass]="{ frameEffect: hoverAnimationRunning, onPolaroid: isOnPolaroid }"
+    src="./assets/img/polaroid_frame.png"
+    alt=""
+  />
+  <img class="me" src="./assets/img/me.PNG" alt="" />
+  <p [ngClass]="{ shake: hoverAnimationRunning }">
+    {{ !isOnPolaroid ? 'Philipp :&#41;' : 'Philipp :D' }}
+  </p>
+</div>

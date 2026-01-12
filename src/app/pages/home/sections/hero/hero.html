@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="hero-section">
       <div class="content">
-        <button class="say-hello">Hello World</button>
+        <app-btn-hello-world></app-btn-hello-world>
         <h1>
           <span class="first-line">
             @for( char of contentFirstLine ; track $index){
@@ -15,12 +15,9 @@
             }
           </span>
         </h1>
+
         <button><a href="#">Get in Touch</a></button>
-        <div class="polaroid">
-          <img class="frame" src="./assets/img/polaroid_frame.png" alt="" />
-          <img class="me" src="./assets/img/me.PNG" alt="" />
-          <p>Philipp :-&#41;</p>
-        </div>
+        <app-polaroid></app-polaroid>
       </div>
       <app-social-links></app-social-links>
     </div>

@@ -32,14 +32,8 @@ h1 {
     width: 90%;
     height: 500px;
 
-    .say-hello {
+    app-btn-hello-world {
       align-self: flex-start;
-      box-shadow: none;
-
-      &:hover {
-        background-color: $color-accent-blue;
-        transform: none;
-      }
     }
 
     .first-line {
@@ -59,48 +53,6 @@ h1 {
   }
 }
 
-.polaroid {
-  position: absolute;
-  bottom: 265px;
-  right: 10px;
-  height: 250px;
-  rotate: 8deg;
-  overflow: hidden;
-
-  .frame {
-    position: relative;
-    height: 100%;
-    width: auto;
-    z-index: 2;
-    backdrop-filter: grayscale(1);
-  }
-
-  .me {
-    position: absolute;
-    top: -5px;
-    left: 7px;
-    width: auto;
-    height: 100%;
-    z-index: 1;
-  }
-
-  & > p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    color: $color-font-dark;
-    font-family: 'Kalam';
-    font-weight: bold;
-    height: 1.5rem;
-    width: 100%;
-    text-align: center;
-    line-height: 55px;
-    height: 55px;
-    z-index: 2;
-    pointer-events: none;
-  }
-}
-
 app-social-links {
   position: absolute;
   bottom: 12%;
@@ -111,20 +63,11 @@ app-social-links {
   h1 {
     font-size: 7rem;
   }
-
-  .polaroid {
-    height: 200px;
-    bottom: 245px;
-  }
 }
 
 @media (max-width: 900px) {
   h1 {
     font-size: 6rem;
-  }
-
-  .polaroid {
-    bottom: 220px;
   }
 }
 
@@ -137,6 +80,7 @@ app-social-links {
 
       h1 {
         width: auto;
+        font-size: 5rem;
       }
     }
 
@@ -144,46 +88,26 @@ app-social-links {
       display: none;
     }
   }
-
-  .polaroid {
-    position: relative;
-    bottom: auto;
-    right: auto;
+  app-polaroid {
     height: 30%;
-    margin-top: 50px;
-
-    .me {
-      left: 10px;
-    }
+    margin-bottom: 50px;
   }
 }
 
 @media (max-width: 550px) {
-  h1 {
+  .hero-section .content h1 {
     font-size: 5rem;
-  }
-
-  .polaroid {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    height: 250px;
-    margin-top: 50px;
-
-    .me {
-      left: 7px;
-    }
   }
 }
 
-@media (max-width: 500px) {
-  h1 {
+@media (max-width: 520px) {
+  .hero-section .content h1 {
     font-size: 4rem;
   }
 }
 
 @media (max-width: 420px) {
-  h1 {
+  .hero-section .content h1 {
     font-size: 3rem;
   }
 }

@@ -38,21 +38,37 @@ a {
 
 button {
   background-color: transparent;
-  color: $color-font-light;
   font-weight: bold;
   font-size: 18px;
   padding: 12px 24px;
-  border: 1px solid $color-font-light;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 1.5rem;
   margin-bottom: 1rem;
-  box-shadow: 2px 5px $color-font-light;
   transition: all 125ms ease-in-out;
+}
+
+.button-bright {
+  color: $color-font-light;
+  border: 1px solid $color-font-light;
+  box-shadow: 2px 5px $color-font-light;
 
   &:hover {
     background-color: $color-accent-orange;
+    transform: translateX(2px) translateY(5px);
+    box-shadow: none;
+  }
+}
+
+.button-dark {
+  color: $color-font-dark;
+  border: 1px solid $color-font-dark;
+  box-shadow: 2px 5px $color-font-dark;
+
+  &:hover {
+    background-color: $color-accent-orange;
+    color: $color-font-light;
     transform: translateX(2px) translateY(5px);
     box-shadow: none;
   }

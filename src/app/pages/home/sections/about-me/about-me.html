@@ -1,0 +1,31 @@
+<section>
+  <div class="wrapper">
+    <aside>
+      <div class="info-strips">
+        @for (strip of strips; track $index) {
+        <div class="stripe" [ngClass]="strip.cssClass">
+          <div class="content">
+            <img src="{{ strip.icon }}" />
+            <p>{{ strip.content }}</p>
+          </div>
+        </div>
+        }
+      </div>
+    </aside>
+
+    <div class="about-me-container">
+      <p class="head-line">Wer ist Philipp?</p>
+      <h2>Über mich</h2>
+      <p class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, et dicta. Et hic, fugit
+        minima necessitatibus unde placeat dignissimos aliquam recusandae laboriosam mollitia? Nemo
+        praesentium at incidunt nulla quis quisquam repudiandae necessitatibus, illum aliquam nihil
+        eum vitae placeat voluptas laboriosam reprehenderit mollitia debitis perferendis! Voluptas
+        <br /><br />
+        nobis repudiandae corporis minima. Dolores eaque accusantium vitae veniam recusandae?
+      </p>
+
+      <button class="button-dark">Kontakt aufnehmen</button>
+    </div>
+  </div>
+</section>

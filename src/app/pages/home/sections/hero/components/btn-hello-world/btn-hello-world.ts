@@ -1,9 +1,9 @@
-import { CommonModule, NgClass } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-btn-hello-world',
-  imports: [CommonModule, NgClass],
+  imports: [CommonModule],
   templateUrl: './btn-hello-world.html',
   styleUrl: './btn-hello-world.scss',
 })

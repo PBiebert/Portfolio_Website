@@ -89,16 +89,9 @@ aside {
   .info-strips {
     .yellow-strip {
       transform: rotate(-5deg) translateY(85px);
-      z-index: 3;
-
-      .content {
-        padding-bottom: 1.5rem;
-      }
     }
     .orange-strip {
       transform: rotate(5deg) translateY(-85px);
-
-      z-index: 1;
     }
   }
 }
@@ -118,7 +111,6 @@ aside {
 
     .yellow-strip {
       transform: rotate(-5deg) translateY(100px);
-      z-index: 3;
 
       .content {
         padding-bottom: 1.25rem;
@@ -126,8 +118,6 @@ aside {
     }
     .orange-strip {
       transform: rotate(5deg) translateY(-100px);
-
-      z-index: 1;
     }
   }
 
@@ -139,11 +129,6 @@ aside {
     h2 {
       margin: 1rem 0 2rem 0;
       font-size: 4rem;
-    }
-
-    button {
-      margin-top: 1.5rem;
-      align-self: flex-end;
     }
   }
 }
@@ -159,10 +144,6 @@ aside {
   }
 
   .about-me-container {
-    p {
-      font-size: 1.15rem;
-    }
-
     h2 {
       margin: 1rem 0 1.5rem 0;
       font-size: 3rem;
@@ -189,8 +170,6 @@ aside {
       height: 400px;
 
       .stripe {
-        width: 100%;
-
         .content {
           p {
             font-size: 1.5rem;
@@ -229,8 +208,6 @@ aside {
     height: 300px;
 
     .stripe {
-      width: 100%;
-
       .content {
         p {
           font-size: 1.25rem;

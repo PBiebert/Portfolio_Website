@@ -32,8 +32,14 @@ h1 {
     width: 90%;
     height: 500px;
 
-    app-btn-hello-world {
+    .say-hello {
+      box-shadow: none;
       align-self: flex-start;
+
+      &:hover {
+        background-color: $color-accent-blue;
+        transform: none;
+      }
     }
 
     .first-line {
@@ -51,6 +57,96 @@ h1 {
       margin-top: 1rem;
     }
   }
+
+  .polaroid {
+    position: absolute;
+    bottom: 265px;
+    right: 10px;
+    height: 250px;
+    rotate: 8deg;
+    overflow: hidden;
+
+    .frame {
+      position: relative;
+      height: 100%;
+      width: auto;
+      z-index: 2;
+      backdrop-filter: grayscale(1);
+    }
+
+    .onPolaroid {
+      backdrop-filter: grayscale(0);
+    }
+
+    .frameEffect {
+      animation: flashLight 500ms ease-in-out;
+    }
+
+    @keyframes flashLight {
+      0% {
+        backdrop-filter: brightness(100%);
+      }
+      25% {
+        backdrop-filter: brightness(110%);
+      }
+      50% {
+        backdrop-filter: brightness(90%);
+      }
+      75% {
+        backdrop-filter: brightness(110%);
+      }
+      100% {
+        backdrop-filter: brightness(100%);
+      }
+    }
+
+    .me {
+      position: absolute;
+      top: -5px;
+      left: 7px;
+      width: auto;
+      height: 100%;
+      z-index: 1;
+    }
+
+    & > p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: $color-font-dark;
+      font-family: 'Kalam';
+      font-weight: bold;
+      font-size: 1.5rem;
+      width: 100%;
+      text-align: center;
+      line-height: 55px;
+      height: 55px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .shake {
+      animation: shake 500ms ease-in-out;
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(1px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    75% {
+      transform: translateX(1px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
 }
 
 app-social-links {
@@ -63,11 +159,26 @@ app-social-links {
   h1 {
     font-size: 7rem;
   }
+
+  .hero-section .polaroid {
+    height: 180px;
+    bottom: 245px;
+
+    & > p {
+      font-size: 1.25rem;
+      line-height: 45px;
+      height: 45px;
+    }
+  }
 }
 
 @media (max-width: 900px) {
   h1 {
     font-size: 6rem;
+  }
+
+  .hero-section .polaroid {
+    bottom: 220px;
   }
 }
 
@@ -84,19 +195,45 @@ app-social-links {
       }
     }
 
+    .polaroid {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      height: 30%;
+      margin-top: 50px;
+
+      & > p {
+        font-size: 1.5rem;
+        line-height: 55px;
+        height: 55px;
+      }
+
+      .me {
+        left: 10px;
+      }
+    }
+
     app-social-links {
       display: none;
     }
-  }
-  app-polaroid {
-    height: 30%;
-    margin-bottom: 50px;
   }
 }
 
 @media (max-width: 550px) {
   .hero-section .content h1 {
     font-size: 5rem;
+  }
+
+  .hero-section .polaroid {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    height: 250px;
+    margin-top: 50px;
+
+    .me {
+      left: 7px;
+    }
   }
 }
 

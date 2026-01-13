@@ -2,7 +2,13 @@
   <div class="wrapper">
     <div class="hero-section">
       <div class="content">
-        <app-btn-hello-world></app-btn-hello-world>
+        <button
+          class="button-bright say-hello"
+          (mouseenter)="isOnHelloWorldBtn()"
+          (mouseleave)="isNotOnHelloWorldBtn()"
+        >
+          {{ helloWorldBtnContent }}
+        </button>
         <h1>
           <span class="first-line">
             @for( char of contentFirstLine ; track $index){
@@ -17,7 +23,18 @@
         </h1>
 
         <button class="button-bright"><a href="#">Get in Touch</a></button>
-        <app-polaroid></app-polaroid>
+        <div class="polaroid" (mouseenter)="isOnPicture()" (mouseleave)="isNotOnPicture()">
+          <img
+            class="frame"
+            [ngClass]="{ frameEffect: hoverAnimationRunning, onPolaroid: isOnPolaroid }"
+            src="./assets/img/polaroid_frame.png"
+            alt=""
+          />
+          <img class="me" src="./assets/img/me.PNG" alt="" />
+          <p [ngClass]="{ shake: hoverAnimationRunning }">
+            {{ !isOnPolaroid ? 'Philipp :&#41;' : 'Philipp :D' }}
+          </p>
+        </div>
       </div>
       <app-social-links></app-social-links>
     </div>

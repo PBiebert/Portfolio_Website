@@ -1,0 +1,26 @@
+@use './../../../../shared/styles/core' as *;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.project-container {
+  width: 100%;
+  height: 500px;
+}
+
+.introduction {
+  @include flexbox($align-items: flex-start);
+  height: 100%;
+  width: 100%;
+
+  h2 {
+    margin: 1rem 0 3rem 0;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}

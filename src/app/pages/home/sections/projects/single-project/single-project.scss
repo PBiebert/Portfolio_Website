@@ -1,0 +1,46 @@
+@use './../projects.scss' as *;
+@use './../../../../../shared/styles/core' as *;
+
+.preview-img-container {
+  @include flexbox();
+  position: relative;
+  width: 100%;
+  height: 65%;
+  border-radius: 25px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    transition: $hover-transition-fast;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .overlay {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(247, 247, 247, 0) 50%);
+
+    button {
+      pointer-events: fill;
+
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      font-size: 1rem;
+      font-weight: lighter;
+    }
+  }
+}
+
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}

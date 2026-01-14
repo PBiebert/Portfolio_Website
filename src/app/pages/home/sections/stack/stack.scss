@@ -146,3 +146,21 @@ section {
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .head-line {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    .head-line-content {
+      width: 65%;
+      // max-width: 650px;
+      // text-align: center;
+    }
+  }
+
+  .stack .stack-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

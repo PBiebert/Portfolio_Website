@@ -1,4 +1,7 @@
 @use './../../../../shared/styles/core' as *;
+section {
+  margin-bottom: 5rem;
+}
 
 .wrapper {
   display: grid;

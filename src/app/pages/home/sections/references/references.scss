@@ -1,0 +1,135 @@
+@use './../../../../shared/styles/core' as *;
+
+.head-line {
+  width: 100%;
+  text-align: right;
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.references-container {
+  @include flexbox($flex-direction: row);
+  width: 100%;
+  position: relative;
+  margin-top: 10rem;
+
+  .reference {
+    position: relative;
+    height: 350px;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &:first-child {
+      position: absolute;
+      top: -50px;
+      left: 0;
+      transform: rotate(-4deg);
+      z-index: 2;
+    }
+
+    &:last-child {
+      position: absolute;
+      top: -30px;
+      right: 0;
+      transform: rotate(4deg);
+      z-index: 0;
+    }
+  }
+
+  .reference.stack-top {
+    z-index: 3;
+  }
+
+  .reference.stack-middle {
+    z-index: 2;
+  }
+
+  .reference.stack-bottom {
+    z-index: 1;
+  }
+}
+
+.reference-text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2rem;
+  @include flexbox($justify-content: space-between);
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../../../../../../public/assets/img/ref-bg-hover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:hover .reference-footer .person-name,
+  &:hover .reference-footer .person-position {
+    color: $color-font-light;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .reference-footer {
+    @include flexbox($flex-direction: row, $justify-content: space-between);
+    width: 100%;
+
+    .person-name {
+      font-weight: bold;
+    }
+
+    .person-position {
+      font-size: 1rem;
+    }
+
+    .linkedIn {
+      display: block;
+      @include flexbox($flex-direction: row);
+      color: $color-font-dark;
+
+      &:hover {
+        color: $color-font-light;
+
+        & svg path {
+          fill: $color-font-light;
+        }
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+
+        path {
+          fill: $color-font-dark;
+        }
+      }
+
+      p {
+        font-weight: normal;
+      }
+    }
+  }
+}

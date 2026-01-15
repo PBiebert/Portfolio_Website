@@ -1,0 +1,67 @@
+@use './../../../../shared/styles/core' as *;
+
+section {
+  min-height: 110vh;
+  background-image: url(../../../../../../public/assets/img/contact.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+.wrapper {
+  flex-direction: row;
+  height: 100%;
+  color: $color-font-light;
+
+  margin-bottom: 25vh;
+}
+
+.content {
+  flex-grow: 1;
+  text-wrap: wrap;
+  min-width: 60%;
+  padding-right: 10%;
+}
+
+.contact-form-container {
+  position: relative;
+  margin-top: 340px;
+  flex-grow: 1;
+  min-width: 40%;
+}
+
+.input-container {
+  @include flexbox($align-items: flex-start);
+  height: 100px;
+  border-bottom: 1px solid $color-accent-yellow;
+
+  &:hover {
+    border-top: 2px solid $color-accent-blue;
+    border-bottom: 2px solid $color-accent-blue;
+  }
+
+  label,
+  input {
+    margin-left: 2rem;
+  }
+}
+
+.input-container:first-child {
+  border-top: 1px solid $color-accent-yellow;
+
+  &:hover {
+    border-top: 2px solid $color-accent-blue;
+  }
+}
+
+.interactions-container {
+  @include flexbox($align-items: flex-start);
+
+  margin-top: 2.5rem;
+
+  button {
+    margin-top: 2.5rem;
+    align-self: flex-end;
+  }
+}

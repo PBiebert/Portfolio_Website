@@ -12,45 +12,12 @@ nav {
   ul {
     @include flexbox($justify-content: space-between);
     height: 50%;
-
-    li {
-      position: relative;
-      text-align: center;
-      @include flexbox($flex-direction: row);
-
-      a {
-        font-size: 1.5rem;
-        width: 100%;
-        padding: 15px;
-      }
-    }
   }
 
   app-social-links {
     position: absolute;
     bottom: 10%;
   }
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  top: calc(50%-height);
-  left: 0;
-  transition: $hover-transition;
-  pointer-events: none;
-}
-
-.startLeftToRight {
-  clip-path: inset(0 100% 0 0);
-}
-
-.startTopToBottom {
-  clip-path: inset(100% 0 0 0);
-}
-
-.animationOverlay {
-  clip-path: inset(0 0 0 0);
 }
 
 @media (max-width: 450px) {

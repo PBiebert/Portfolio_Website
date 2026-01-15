@@ -1,0 +1,13 @@
+<li>
+  <a
+    href="{{ item.href }}"
+    (mouseenter)="item.isHovered = true"
+    (mouseleave)="item.isHovered = false"
+    >{{ item.title }}</a
+  >
+  <img
+    class="overlay {{ item.startAnimation }}"
+    src="{{ item.hoverImg }}"
+    [ngClass]="{ animationOverlay: item.isHovered }"
+  />
+</li>

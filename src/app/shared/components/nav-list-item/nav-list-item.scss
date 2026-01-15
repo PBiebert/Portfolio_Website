@@ -1,0 +1,32 @@
+@use './../../styles/core' as *;
+
+li {
+  position: relative;
+  text-align: center;
+  @include flexbox($flex-direction: row);
+}
+
+a {
+  padding: 15px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  top: calc(50%-height);
+  left: 0;
+  transition: $hover-transition;
+  pointer-events: none;
+}
+
+.startLeftToRight {
+  clip-path: inset(0 100% 0 0);
+}
+
+.startTopToBottom {
+  clip-path: inset(100% 0 0 0);
+}
+
+.animationOverlay {
+  clip-path: inset(0 0 0 0);
+}

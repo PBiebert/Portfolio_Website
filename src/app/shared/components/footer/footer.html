@@ -13,10 +13,8 @@
     <p>&#169; Philipp Biebert</p>
     <ul>
       @for (item of footerItems; track $index) {
-      <li>
-        <a href="#">{{ item.title }}</a>
-      </li>
-      }
+      <app-nav-list-item [item]="item"></app-nav-list-item
+      >}
     </ul>
   </div>
 </footer>

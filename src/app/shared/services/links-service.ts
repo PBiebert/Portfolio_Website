@@ -1,12 +1,6 @@
 import { Injectable } from '@angular/core';
-
-interface NavItem {
-  title: string;
-  href: string;
-  hoverImg: string;
-  startAnimation: string;
-  isHovered: boolean;
-}
+import { NavItem } from '../../Interfaces/nav-items.interface';
+import { ExternLink } from '../../Interfaces/extern-links.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -39,6 +33,37 @@ export class LinksService {
       href: '#',
       hoverImg: './assets/img/hover4.png',
       startAnimation: 'startLeftToRight',
+      isHovered: false,
+    },
+  ];
+
+  externLinks: ExternLink[] = [
+    {
+      title: 'Rechtshinweis',
+      href: '#',
+      hoverImg: './assets/img/hover4.png',
+      startAnimation: 'startLeftToRight',
+      isHovered: false,
+    },
+    {
+      title: 'GitHub',
+      href: '#',
+      hoverImg: '',
+      startAnimation: '',
+      isHovered: false,
+    },
+    {
+      title: 'LinkedIn',
+      href: '#',
+      hoverImg: '',
+      startAnimation: '',
+      isHovered: false,
+    },
+    {
+      title: 'E-Mail',
+      href: '#',
+      hoverImg: '',
+      startAnimation: '',
       isHovered: false,
     },
   ];

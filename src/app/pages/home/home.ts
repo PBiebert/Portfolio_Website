@@ -5,10 +5,11 @@ import { Stack } from './sections/stack/stack';
 import { Projects } from './sections/projects/projects';
 import { References } from './sections/references/references';
 import { ContactMe } from './sections/contact-me/contact-me';
+import { Footer } from '../../shared/components/footer/footer';
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, AboutMe, Stack, Projects, References, ContactMe],
+  imports: [Hero, AboutMe, Stack, Projects, References, ContactMe, Footer],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

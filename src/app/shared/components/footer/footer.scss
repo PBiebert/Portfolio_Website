@@ -1,0 +1,20 @@
+@use '../../styles/_core.scss' as *;
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: $color-font-light;
+  width: 100%;
+}
+
+.wrapper {
+  @include flexbox($align-items: flex-start);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+ul {
+  width: 100%;
+  @include flexbox($flex-direction: row, $justify-content: space-between);
+}

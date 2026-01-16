@@ -17,27 +17,27 @@ section {
   margin-bottom: 4rem;
   .title {
     width: 30%;
+    height: 100%;
     text-align: end;
     color: $color-font-light;
   }
 
   .head-line-content {
-    width: 50%;
     max-width: 650px;
     text-align: center;
-  }
-
-  .head-line-bg-web {
     background-image: url(../../../../../../public/assets/img/skills-description-web.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 100%;
+    aspect-ratio: 4.5/1;
     @include flexbox();
 
     p {
+      align-self: center;
+      width: 100%;
+      padding: 1.5rem;
       text-align: start;
-      width: 90%;
     }
   }
 }
@@ -65,7 +65,7 @@ section {
       img {
         width: 4.5rem;
         aspect-ratio: 1/1;
-        transform: $hover-transition;
+        transition: $hover-transition-fast;
         filter: grayscale(1);
       }
 
@@ -90,12 +90,6 @@ section {
   padding: 1rem;
   @include flexbox();
 
-  p {
-    font-weight: bold;
-    font-size: 1.25rem;
-    text-align: center;
-  }
-
   .note-item-container {
     @include flexbox($flex-direction: row);
     gap: 1rem;
@@ -107,7 +101,6 @@ section {
       }
 
       p {
-        font-size: 1rem;
         font-weight: lighter;
       }
     }
@@ -149,18 +142,93 @@ section {
 
 @media (max-width: 1024px) {
   .head-line {
-    width: 100%;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    gap: 0;
 
-    .head-line-content {
-      width: 65%;
-      // max-width: 650px;
-      // text-align: center;
+    .title {
+      width: 100%;
     }
+  }
+
+  .head-line-content {
+    width: 100%;
+    aspect-ratio: 3/1;
   }
 
   .stack .stack-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .stack {
+    flex-direction: column;
+    gap: 0;
+    width: auto;
+  }
+
+  .note-container {
+    align-self: flex-end;
+    margin-bottom: 2rem;
+    transform-origin: left top;
+    transform: rotate(8deg) translateY(-40%);
+  }
+}
+
+@media (max-width: 768px) {
+  .stack .stack-container .stack-item img {
+    filter: grayscale(0);
+  }
+}
+
+@media (max-width: 750px) {
+  .head-line .head-line-content {
+    background-image: url(../../../../../../public/assets/img/skills-description-mobile.png);
+    width: 100%;
+    aspect-ratio: 1.6/1;
+
+    p {
+      font-size: 1.25rem;
+      padding: 3rem;
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .head-line .head-line-content p {
+    font-size: 1rem;
+    padding: 2rem;
+  }
+
+  .stack {
+    gap: 20px;
+    .stack-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .note-container {
+    align-self: center;
+    margin-bottom: 3rem;
+    transform: rotate(8deg) translateY(0);
+  }
+}
+
+@media (max-width: 400px) {
+  .head-line .head-line-content p {
+    padding: 1rem;
+  }
+
+  .stack .stack-container {
+    gap: initial;
+
+    .stack-item {
+      margin-bottom: 1rem;
+      img {
+        width: 3.5rem;
+      }
+    }
   }
 }

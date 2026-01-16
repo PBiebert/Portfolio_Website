@@ -13,8 +13,8 @@ section {
   flex-direction: row;
   height: 100%;
   color: $color-font-light;
-
-  margin-bottom: 25vh;
+  margin-top: 10rem;
+  margin-bottom: 225px;
 }
 
 .content {
@@ -43,13 +43,15 @@ section {
 
   label,
   input {
-    margin-left: 2rem;
+    margin: 0.5rem 2rem;
+    color: $color-font-light;
+    &:focus {
+      outline: none;
+    }
   }
 }
 
 .input-container:first-child {
-  border-top: 1px solid $color-accent-yellow;
-
   &:hover {
     border-top: 2px solid $color-accent-blue;
   }
@@ -63,5 +65,27 @@ section {
   button {
     margin-top: 2.5rem;
     align-self: flex-end;
+  }
+}
+
+@media (max-width: 1150px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .content {
+    padding-right: 0;
+  }
+
+  .contact-form-container {
+    margin-top: 3rem;
+    width: 100%;
+  }
+
+  .input-container {
+    label,
+    input {
+      margin: 0.5rem 0rem;
+    }
   }
 }

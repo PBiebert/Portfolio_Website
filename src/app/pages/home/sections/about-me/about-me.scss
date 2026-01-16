@@ -1,7 +1,8 @@
 @use './../../../../shared/styles/core' as *;
 
 section {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 650px;
 }
 
 .wrapper {
@@ -34,8 +35,9 @@ aside {
       width: 100%;
       @include flexbox($flex-direction: row);
 
-      p {
-        font-size: 1.5rem;
+      h3 {
+        margin: 0;
+        font-weight: normal;
       }
 
       img {
@@ -70,14 +72,6 @@ aside {
   width: 50%;
   height: 100%;
 
-  p {
-    font-size: 1.25rem;
-  }
-
-  h2 {
-    margin: 1rem 0 3rem 0;
-  }
-
   button {
     margin-top: 1.5rem;
     align-self: flex-end;
@@ -98,8 +92,8 @@ aside {
 @media (max-width: 1024px) {
   .info-strips {
     .stripe .content {
-      p {
-        font-size: 1rem;
+      h3 {
+        margin: 0;
       }
 
       img {
@@ -119,16 +113,6 @@ aside {
       transform: rotate(5deg) translateY(-100px);
     }
   }
-
-  .about-me-container {
-    p {
-      font-size: 1.15rem;
-    }
-
-    h2 {
-      margin: 1rem 0 2rem 0;
-    }
-  }
 }
 
 @media (max-width: 920px) {
@@ -140,19 +124,9 @@ aside {
       transform: rotate(5deg) translateY(-110px);
     }
   }
-
-  .about-me-container {
-    h2 {
-      margin: 1rem 0 1.5rem 0;
-    }
-  }
 }
 
 @media (max-width: 820px) {
-  section {
-    height: 100%;
-  }
-
   .wrapper {
     @include flexbox($flex-direction: column-reverse);
     gap: 0px;
@@ -168,10 +142,6 @@ aside {
 
       .stripe {
         .content {
-          p {
-            font-size: 1.5rem;
-          }
-
           img {
             margin-right: 1rem;
           }
@@ -206,10 +176,6 @@ aside {
 
     .stripe {
       .content {
-        p {
-          font-size: 1.25rem;
-        }
-
         img {
           margin-right: 1rem;
         }

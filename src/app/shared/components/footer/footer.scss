@@ -12,9 +12,64 @@ footer {
   @include flexbox($align-items: flex-start);
   gap: 1rem;
   margin-bottom: 2rem;
+  padding: 0 calc(4.5rem - 30px);
+
+  @media (max-width: 700px) {
+    padding: 0 calc(2rem - 30px);
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 calc(1.5rem - 30px);
+  }
+
+  @media (max-width: 420px) {
+    padding: 0 calc(1rem - 30px);
+  }
 }
 
 ul {
   width: 100%;
   @include flexbox($flex-direction: row, $justify-content: space-between);
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  position: relative;
+  margin: 0 15px;
+
+  .logo {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.copyright {
+  padding: 15px 15px;
+  a {
+    width: 100%;
+    text-align: end;
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  app-nav-list-item:first-child {
+    display: none;
+  }
+  .headline {
+    width: 100%;
+    @include flexbox($flex-direction: row, $justify-content: space-between);
+
+    margin-bottom: 2rem;
+    .copyright {
+      @include flexbox();
+      padding: 0px 15px;
+      gap: 1rem;
+
+      a {
+        display: initial;
+      }
+    }
+  }
 }

@@ -1,46 +1,62 @@
 @use './../projects.scss' as *;
 @use './../../../../../shared/styles/core' as *;
+.project-container {
+  @include flexbox($align-items: flex-start);
 
-.preview-img-container {
-  @include flexbox();
-  position: relative;
-  width: 100%;
-  height: 65%;
-  border-radius: 25px;
-  overflow: hidden;
-
-  img {
+  .preview-img-container {
+    @include flexbox();
+    position: relative;
     width: 100%;
-    object-fit: cover;
-    transition: $hover-transition-fast;
+    aspect-ratio: 1.6/1;
+    border-radius: 25px;
+    overflow: hidden;
 
-    &:hover {
-      transform: scale(1.1);
+    img {
+      width: 100%;
+      object-fit: cover;
+      transition: $hover-transition-fast;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
-  }
 
-  .overlay {
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    height: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(247, 247, 247, 0) 50%);
-
-    button {
-      pointer-events: fill;
-
+    .overlay {
+      pointer-events: none;
       position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      font-size: 1rem;
-      font-weight: lighter;
+      top: 0;
+      height: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(247, 247, 247, 0) 50%);
+
+      button {
+        pointer-events: fill;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1rem;
+        font-weight: lighter;
+      }
     }
   }
 }
 
-h3 {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+.button-dark {
+  display: none;
+  margin-top: 1rem;
+  align-self: flex-end;
+  a {
+    color: $color-font-dark;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-dark {
+    display: initial;
+  }
+
+  .button-bright {
+    display: none;
+  }
 }

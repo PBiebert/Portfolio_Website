@@ -12,6 +12,7 @@ nav {
   ul {
     @include flexbox($justify-content: space-between);
     height: 50%;
+    margin-bottom: 100px;
   }
 
   app-social-links {
@@ -20,15 +21,19 @@ nav {
   }
 }
 
+app-nav-list-item {
+  font-size: 1.5rem;
+}
+
 @media (max-width: 450px) {
-  nav {
-    ul {
-      height: 45%;
-      li {
-        a {
-          font-size: 1.15rem;
-        }
-      }
-    }
-  }
+  // nav {
+  //   ul {
+  //     height: 45%;
+  //     li {
+  //       a {
+  //         font-size: 1.15rem;
+  //       }
+  //     }
+  //   }
+  // }
 }

@@ -11,13 +11,13 @@
         </button>
         <h1>
           <span class="first-line">
-            @for( char of contentFirstLine ; track $index){
-            <span appInvertCase>{{ char }}</span>
+            @for (char of contentFirstLine; track $index) {
+              <span appInvertCase>{{ char }}</span>
             }
           </span>
           <span class="second-line">
-            @for( char of contentSecondLine ; track $index){
-            <span appInvertCase>{{ char }}</span>
+            @for (char of contentSecondLine; track $index) {
+              <span appInvertCase>{{ char }}</span>
             }
           </span>
         </h1>

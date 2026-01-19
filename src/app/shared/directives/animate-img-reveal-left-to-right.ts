@@ -10,23 +10,23 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[appAnimateImgRevealRightToLeft]',
+  selector: '[appAnimateImgRevealLeftToRight]',
 })
 export class AnimateImgRevealRightToLeft implements AfterViewInit {
-  @Input() imgPosition!: 'bottom';
+  @Input() imgPosition!: 'left';
   @Input() animationTrigger!: 'hover' | 'interval';
   @ContentChild('imgRef', { read: ElementRef }) animateImg!: ElementRef;
 
   private renderer = inject(Renderer2);
   private elementContainer = inject(ElementRef);
 
-  revalType: string = 'revalRightToLeft';
+  revalType: string = 'revalLeftToRight';
 
   ngAfterViewInit(): void {
-    if (this.imgPosition == 'bottom') {
+    if (this.imgPosition == 'left') {
       console.log(this.imgPosition);
       this.renderer.addClass(this.elementContainer.nativeElement, 'animate-container');
-      this.renderer.addClass(this.animateImg.nativeElement, 'overlay-bottom');
+      this.renderer.addClass(this.animateImg.nativeElement, 'overlay-left');
       this.renderer.addClass(this.animateImg.nativeElement, this.revalType);
     }
 

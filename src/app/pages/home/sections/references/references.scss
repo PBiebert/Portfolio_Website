@@ -3,6 +3,13 @@
 .head-line {
   width: 100%;
   text-align: right;
+
+  span {
+    display: inline-block;
+    width: 100px;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
 }
 
 .references-container {

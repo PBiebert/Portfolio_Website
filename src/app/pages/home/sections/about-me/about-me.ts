@@ -16,7 +16,7 @@ interface Infostrip {
   styleUrl: './about-me.scss',
 })
 export class AboutMe {
-  animatePosition: 'top' | 'middle' | 'bottom' = 'bottom';
+  animatePosition: 'bottom' = 'bottom';
   animationTrigger: 'hover' | 'interval' = 'interval';
 
   strips: Infostrip[] = [

@@ -310,6 +310,20 @@ ul {
   clip-path: inset(0 0 0 0);
 }
 
+.overlay-left {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: $hover-transition;
+  pointer-events: none;
+  clip-path: inset(0 0 0 0);
+}
+
 .revalRightToLeft {
   clip-path: inset(0 100% 0 0);
+}
+
+.revalLeftToRight {
+  clip-path: inset(0 0 0 100%);
 }

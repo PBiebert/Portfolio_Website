@@ -13,6 +13,6 @@ import { AnimateImgRevealRightToLeft } from '../../../../shared/directives/anima
 export class Projects {
   projectServic = inject(ProjectService);
 
-  imgPosition: 'top' | 'middle' | 'bottom' = 'bottom';
+  imgPosition: 'bottom' = 'bottom';
   animationTrigger: 'hover' | 'interval' = 'interval';
 }

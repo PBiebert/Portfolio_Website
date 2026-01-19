@@ -9,9 +9,6 @@ import { AnimateImgRevealRightToLeft } from '../../../../shared/directives/anima
   styleUrl: './references.scss',
 })
 export class References {
-  imgPosition: 'left' = 'left';
-  animationTrigger: 'hover' | 'interval' = 'interval';
-
   references: Reference[] = [
     {
       name: 'Werauch Immer',

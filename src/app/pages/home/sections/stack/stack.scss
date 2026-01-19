@@ -17,10 +17,16 @@ section {
   margin-top: 5rem;
   margin-bottom: 4rem;
   .title {
+    position: relative;
     width: 30%;
     height: 100%;
     text-align: end;
     color: $color-font-light;
+
+    .animate-container {
+      position: relative;
+      z-index: 1;
+    }
   }
 
   .head-line-content {

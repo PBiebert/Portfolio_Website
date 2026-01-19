@@ -327,3 +327,34 @@ ul {
 .revalLeftToRight {
   clip-path: inset(0 0 0 100%);
 }
+
+.overlay-rotate-90deg {
+  position: absolute;
+  width: 250px;
+  bottom: 0;
+  right: -5%;
+  transition: $hover-transition-fast;
+  pointer-events: none;
+  transform-origin: center right;
+  transform: rotate(-90deg) scale(0);
+  clip-path: inset(0 100% 100% 0);
+  z-index: -1;
+
+  @media (max-width: 1080px) {
+    width: 200px;
+  }
+
+  @media (max-width: 1024px) {
+    right: -10px;
+  }
+
+  @media (max-width: 700px) {
+    width: 140px;
+  }
+}
+
+.reval-0deg {
+  z-index: -1;
+  transform: rotate(0deg) scale(1);
+  clip-path: inset(0 0 0 0);
+}

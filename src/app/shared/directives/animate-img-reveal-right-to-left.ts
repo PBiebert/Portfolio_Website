@@ -13,7 +13,6 @@ import {
   selector: '[appAnimateImgRevealRightToLeft]',
 })
 export class AnimateImgRevealRightToLeft implements AfterViewInit {
-  @Input() imgPosition!: 'bottom';
   @Input() animationTrigger!: 'hover' | 'interval';
   @ContentChild('imgRef', { read: ElementRef }) animateImg!: ElementRef;
 
@@ -23,12 +22,9 @@ export class AnimateImgRevealRightToLeft implements AfterViewInit {
   revalType: string = 'revalRightToLeft';
 
   ngAfterViewInit(): void {
-    if (this.imgPosition == 'bottom') {
-      console.log(this.imgPosition);
-      this.renderer.addClass(this.elementContainer.nativeElement, 'animate-container');
-      this.renderer.addClass(this.animateImg.nativeElement, 'overlay-bottom');
-      this.renderer.addClass(this.animateImg.nativeElement, this.revalType);
-    }
+    this.renderer.addClass(this.elementContainer.nativeElement, 'animate-container');
+    this.renderer.addClass(this.animateImg.nativeElement, 'overlay-bottom');
+    this.renderer.addClass(this.animateImg.nativeElement, this.revalType);
 
     if (this.animationTrigger == 'interval') {
       setTimeout(() => {

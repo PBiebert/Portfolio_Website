@@ -9,7 +9,11 @@
         iusto eos numquam exercitationem quam magnam cum eius earum. Sit velit omnis, suscipit et
         impedit ab id sequi maxime animi architecto ipsam alias iusto odio?
       </p>
+      <div appAnimateImgRevealRightToLeft [animationTrigger]="animationTrigger">
+        <img #imgRef src="assets/img/wave_arrow_yellow.png" />
+      </div>
     </div>
+
     <div class="contact-form-container">
       <form>
         <div class="input-container">
@@ -50,8 +54,12 @@
               Verarbeitung meiner Daten als externe Dienstleister zu.
             </p>
           </div>
-
-          <button class="button-bright">Senden</button>
+          <div class="button-container">
+            <div appAnimateImgRevealRightToLeft [animationTrigger]="animationTrigger">
+              <img #imgRef src="assets/img/wave_arrow_yellow.png" />
+            </div>
+            <button class="button-bright">Senden</button>
+          </div>
         </div>
       </form>
     </div>

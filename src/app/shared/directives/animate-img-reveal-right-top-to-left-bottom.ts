@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[appAnimateImgRevealLeftToRight]',
+  selector: '[appAnimateImgRevealRightTopToLeftBottom]',
 })
 export class AnimateImgRevealRightToLeft implements AfterViewInit {
   @ContentChild('imgRef', { read: ElementRef }) animateImg!: ElementRef;
@@ -18,11 +18,11 @@ export class AnimateImgRevealRightToLeft implements AfterViewInit {
   private renderer = inject(Renderer2);
   private elementContainer = inject(ElementRef);
 
-  revalType: string = 'revalLeftToRight';
+  revalType: string = 'reval-0deg';
 
   ngAfterViewInit(): void {
     this.renderer.addClass(this.elementContainer.nativeElement, 'animate-container');
-    this.renderer.addClass(this.animateImg.nativeElement, 'overlay-left');
+    this.renderer.addClass(this.animateImg.nativeElement, 'overlay-rotate-90deg');
     this.renderer.addClass(this.animateImg.nativeElement, this.revalType);
 
     setTimeout(() => {

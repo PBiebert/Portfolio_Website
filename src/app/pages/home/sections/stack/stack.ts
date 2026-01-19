@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AnimateImgRevealRightToLeft } from '../../../../shared/directives/animate-img-reveal-right-top-to-left-bottom';
 
 interface StackItem {
   icon: string;
@@ -7,7 +8,7 @@ interface StackItem {
 
 @Component({
   selector: 'app-stack',
-  imports: [],
+  imports: [AnimateImgRevealRightToLeft],
   templateUrl: './stack.html',
   styleUrl: './stack.scss',
 })

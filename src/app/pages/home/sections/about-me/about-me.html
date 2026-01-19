@@ -3,19 +3,26 @@
     <aside>
       <div class="info-strips">
         @for (strip of strips; track $index) {
-        <div class="stripe" [ngClass]="strip.cssClass">
-          <div class="content">
-            <img src="{{ strip.icon }}" />
-            <h3>{{ strip.content }}</h3>
+          <div class="stripe" [ngClass]="strip.cssClass">
+            <div class="content">
+              <img src="{{ strip.icon }}" />
+              <h3>{{ strip.content }}</h3>
+            </div>
           </div>
-        </div>
         }
       </div>
     </aside>
 
     <div class="about-me-container">
       <p class="head-line">Wer ist Philipp?</p>
-      <h2>Über mich</h2>
+      <div
+        appAnimateImgRevealRightToLeft
+        [imgPosition]="animatePosition"
+        [animationTrigger]="animationTrigger"
+      >
+        <h2>Über mich</h2>
+        <img #imgRef src="assets/img/underline_blue.png" />
+      </div>
       <p class="content">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, et dicta. Et hic, fugit
         minima necessitatibus unde placeat dignissimos aliquam recusandae laboriosam mollitia? Nemo

@@ -3,7 +3,14 @@
     <div class="project-container">
       <div class="introduction">
         <p>MEINE ERSTELTEN</p>
-        <h2>Projekte</h2>
+        <div
+          appAnimateImgRevealRightToLeft
+          [imgPosition]="imgPosition"
+          [animationTrigger]="animationTrigger"
+        >
+          <h2>Projekte</h2>
+          <img #imgRef src="assets/img/underlined_waved_yellow.png" />
+        </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quidem quas alias quos
           vero! Fugiat praesentium quam tempore, et accusamus porro dolore laborum libero ex!
@@ -11,7 +18,7 @@
       </div>
     </div>
     @for (projectItem of projectServic.projects; track $index) {
-    <app-single-project [project]="projectItem"></app-single-project>
+      <app-single-project [project]="projectItem"></app-single-project>
     }
   </div>
 </section>

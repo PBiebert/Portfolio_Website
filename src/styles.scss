@@ -295,3 +295,21 @@ ul {
     }
   }
 }
+
+.animate-container {
+  position: relative;
+}
+
+.overlay-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+  left: 0;
+  transition: $hover-transition;
+  pointer-events: none;
+  clip-path: inset(0 0 0 0);
+}
+
+.revalRightToLeft {
+  clip-path: inset(0 100% 0 0);
+}

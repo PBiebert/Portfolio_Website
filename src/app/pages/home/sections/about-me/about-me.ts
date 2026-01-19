@@ -1,5 +1,6 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { AnimateImgRevealRightToLeft } from '../../../../shared/directives/animate-img-reveal-right-to-left';
 
 interface Infostrip {
   imgPath: string;
@@ -10,11 +11,14 @@ interface Infostrip {
 
 @Component({
   selector: 'app-about-me',
-  imports: [CommonModule, NgClass],
+  imports: [CommonModule, NgClass, AnimateImgRevealRightToLeft],
   templateUrl: './about-me.html',
   styleUrl: './about-me.scss',
 })
 export class AboutMe {
+  animatePosition: 'top' | 'middle' | 'bottom' = 'bottom';
+  animationTrigger: 'hover' | 'interval' = 'interval';
+
   strips: Infostrip[] = [
     {
       imgPath: 'assets/img/ripped_paper_01.png',

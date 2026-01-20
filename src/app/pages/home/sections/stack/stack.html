@@ -35,7 +35,7 @@
         }
       </div>
 
-      <div class="note-container">
+      <div class="note-container" (click)="peelTheNote()">
         <p>Auf meinem Lernplan:</p>
         <div class="note-item-container">
           @for (stackItem of learningStack; track $index) {
@@ -46,8 +46,8 @@
           }
         </div>
 
-        <div class="overlay-container">
-          <img class="note-overlay" src="assets\img\peel-off-default.png" alt="" />
+        <div class="overlay-container" [ngClass]="{ 'd-none': noteIsCheckt }">
+          <img class="note-overlay" [src]="overlaySrc" />
           <div class="overlay-text">
             <img class="note-arrow" src="assets/img/note-arrow.png" alt="" />
             <p>Zum <br />Abziehen</p>

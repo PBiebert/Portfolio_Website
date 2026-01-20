@@ -248,6 +248,10 @@ input[type='checkbox'] {
   flex-direction: row;
 }
 
+.d-none {
+  display: none;
+}
+
 .button-bright {
   color: $color-font-light;
   border: 1px solid $color-font-light;

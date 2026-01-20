@@ -328,7 +328,7 @@ ul {
   left: 0;
   width: 100%;
   pointer-events: none;
-  transition: $hover-transition;
+  transition: all 0.5s ease-in-out;
   transform: translateX(0);
   filter: opacity(1);
 
@@ -336,7 +336,7 @@ ul {
     width: 32px;
     aspect-ratio: 1/1;
     transform: rotate(0deg);
-    transition: $hover-transition;
+    transition: all 0.5s ease-in-out;
   }
 
   &:not(.role-left) img {

@@ -40,22 +40,23 @@ h1 {
       text-align: center;
       @include flexbox($flex-direction: row);
       font-weight: bold;
-      font-size: 18px;
+      font-size: 1.25rem;
       padding: 12px 24px;
       border: 1px solid $color-font-light;
       border-radius: 1.5rem;
       align-self: flex-start;
 
       &::before {
-        content: '';
+        // content: '';
+        font-size: 1.25rem;
         transform: scaleX(0);
-        transform-origin: right;
+        transform-origin: left;
         transition: $hover-transition;
         opacity: 0;
       }
 
       &:hover::before {
-        content: 'Mein name ist Philipp';
+        content: 'MEIN NAME IST PHILIPP BIEBERT';
         transform: scaleX(1);
         opacity: 1;
       }

@@ -2,15 +2,14 @@ import { Component, inject } from '@angular/core';
 import { SingleProject } from './single-project/single-project';
 import { Project } from '../../../../Interfaces/project.interface';
 import { ProjectService } from '../../../../shared/services/project-service';
-import { AnimateImgRevealRightToLeft } from '../../../../shared/directives/animate-img-reveal-right-to-left';
+import { ImgReveal } from '../../../../shared/directives/img-reveal';
 
 @Component({
   selector: 'app-projects',
-  imports: [SingleProject, AnimateImgRevealRightToLeft],
+  imports: [SingleProject, ImgReveal],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
 export class Projects {
   projectServic = inject(ProjectService);
-  animationTrigger: 'hover' | 'interval' = 'interval';
 }

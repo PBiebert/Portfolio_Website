@@ -36,12 +36,28 @@ h1 {
     width: 90%;
 
     .say-hello {
-      box-shadow: none;
+      position: relative;
+      text-align: center;
+      @include flexbox($flex-direction: row);
+      font-weight: bold;
+      font-size: 18px;
+      padding: 12px 24px;
+      border: 1px solid $color-font-light;
+      border-radius: 1.5rem;
       align-self: flex-start;
 
-      &:hover {
-        background-color: $color-accent-blue;
-        transform: none;
+      &::before {
+        content: '';
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: $hover-transition;
+        opacity: 0;
+      }
+
+      &:hover::before {
+        content: 'Mein name ist Philipp';
+        transform: scaleX(1);
+        opacity: 1;
       }
     }
 

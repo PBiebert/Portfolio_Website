@@ -3,9 +3,15 @@
     <div class="project-container">
       <div class="introduction">
         <p>MEINE ERSTELTEN</p>
-        <div appAnimateImgRevealRightToLeft [animationTrigger]="animationTrigger">
+        <div
+          appImgReveal
+          revealClass="reveal-right-to-left"
+          overlayClass="overlay-bottom"
+          trigger="interval"
+          appAnimateImgRevealRightToLeft
+        >
           <h2>Projekte</h2>
-          <img #imgRef src="assets/img/underlined_waved_yellow.png" />
+          <img #animateElementRef src="assets/img/underlined_waved_yellow.png" />
         </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quidem quas alias quos

@@ -2,13 +2,21 @@
   <div class="wrapper">
     <div class="hero-section">
       <div class="content">
-        <button
-          class="button-bright say-hello"
+        <div
+          appImgReveal
+          class="fill-container say-hello"
+          revealClass="role-left"
+          overlayClass="role-overlay"
+          trigger="hover"
           (mouseenter)="isOnHelloWorldBtn()"
           (mouseleave)="isNotOnHelloWorldBtn()"
         >
-          {{ helloWorldBtnContent }}
-        </button>
+          <p>{{ helloWorldBtnContent }}</p>
+          <div #animateElementRef>
+            <img src="assets/icons/waving_hand.png" />
+          </div>
+        </div>
+
         <h1>
           <span class="first-line">
             @for (char of contentFirstLine; track $index) {

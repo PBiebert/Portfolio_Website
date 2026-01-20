@@ -13,7 +13,6 @@ section {
   flex-direction: row;
   height: 100%;
   color: $color-font-light;
-  margin-top: 10rem;
   margin-bottom: 225px;
 }
 
@@ -97,6 +96,7 @@ section {
 @media (max-width: 1150px) {
   .wrapper {
     flex-direction: column;
+    margin-top: 10rem;
   }
 
   .content {

@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { SocialLinks } from '../../../../shared/components/social-links/social-links';
 import { InvertCase } from '../../../../shared/directives/invert-case';
 import { CommonModule } from '@angular/common';
+import { ImgReveal } from '../../../../shared/directives/img-reveal';
 
 @Component({
   selector: 'app-hero',
-  imports: [SocialLinks, InvertCase, CommonModule],
+  imports: [SocialLinks, InvertCase, CommonModule, ImgReveal],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
@@ -20,7 +21,7 @@ export class Hero {
   isOnPolaroid: boolean = false;
 
   isOnHelloWorldBtn() {
-    this.helloWorldBtnContent = 'Mein Name ist Philipp';
+    this.helloWorldBtnContent = '';
   }
 
   isNotOnHelloWorldBtn() {

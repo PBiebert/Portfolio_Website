@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { AnimateImgRevealRightToLeft } from '../../../../shared/directives/animate-img-reveal-right-to-left';
+import { ImgReveal } from '../../../../shared/directives/img-reveal';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [AnimateImgRevealRightToLeft],
+  imports: [ImgReveal],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })
-export class ContactMe {
-  animationTrigger: 'hover' | 'interval' = 'interval';
-}
+export class ContactMe {}

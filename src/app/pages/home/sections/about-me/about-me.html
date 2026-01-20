@@ -15,9 +15,14 @@
 
     <div class="about-me-container">
       <p class="head-line">Wer ist Philipp?</p>
-      <div appAnimateImgRevealRightToLeft [animationTrigger]="animationTrigger">
+      <div
+        appImgReveal
+        revealClass="reveal-right-to-left"
+        overlayClass="overlay-bottom"
+        trigger="interval"
+      >
         <h2>Über mich</h2>
-        <img #imgRef src="assets/img/underline_blue.png" />
+        <img #animateElementRef src="assets/img/underline_blue.png" />
       </div>
       <p class="content">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, et dicta. Et hic, fugit

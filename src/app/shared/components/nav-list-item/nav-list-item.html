@@ -1,13 +1,28 @@
-<li>
-  <a
-    href="{{ item.href }}"
-    (mouseenter)="item.isHovered = true"
-    (mouseleave)="item.isHovered = false"
-    >{{ item.title }}</a
+@if (item.animationType == 'topToBottom') {
+  <li appImgReveal revealClass="reveal-top-to-bottom" overlayClass="overlay-bottom" trigger="hover">
+    <a href="{{ item.href }}">{{ item.title }}</a>
+    <img #animateElementRef src="{{ item.hoverImg }}" />
+  </li>
+}
+
+@if (item.animationType == 'rightToLeft') {
+  <li appImgReveal revealClass="reveal-right-to-left" overlayClass="overlay-bottom" trigger="hover">
+    <a href="{{ item.href }}">{{ item.title }}</a>
+    <img #animateElementRef src="{{ item.hoverImg }}" />
+  </li>
+}
+
+@if (item.animationType == 'role') {
+  <li
+    appImgReveal
+    class="fill-container"
+    revealClass="role-left"
+    overlayClass="role-overlay"
+    trigger="hover"
   >
-  <img
-    class="overlay {{ item.startAnimation }}"
-    src="{{ item.hoverImg }}"
-    [ngClass]="{ animationOverlay: item.isHovered }"
-  />
-</li>
+    <a href="{{ item.href }}">{{ item.title }}</a>
+    <div #animateElementRef>
+      <img src="{{ item.hoverImg }}" />
+    </div>
+  </li>
+}

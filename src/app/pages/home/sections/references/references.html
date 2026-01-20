@@ -2,8 +2,13 @@
   <div class="wrapper">
     <div class="head-line">
       <p>
-        <span appAnimateImgRevealLeftToRight>
-          <img #imgRef src="assets/img/arrow_blue.png" />
+        <span
+          appImgReveal
+          revealClass="reveal-left-to-right"
+          overlayClass="overlay-left"
+          trigger="interval"
+        >
+          <img #animateElementRef src="assets/img/arrow_blue.png" />
         </span>
         In eigenen Worten
       </p>

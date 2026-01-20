@@ -320,11 +320,68 @@ ul {
   clip-path: inset(0 0 0 0);
 }
 
-.revalRightToLeft {
+.role-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  top: -32px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  transition: $hover-transition;
+  transform: translateX(0);
+  filter: opacity(1);
+
+  img {
+    width: 32px;
+    aspect-ratio: 1/1;
+    transform: rotate(0deg);
+    transition: $hover-transition;
+  }
+
+  &:not(.role-left) img {
+    transform: rotate(360deg);
+  }
+}
+
+.role-left {
+  transform: translateX(calc(-100% + 32px));
+  filter: opacity(0);
+}
+
+.fill-container {
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $color-accent-blue;
+    border-radius: 25px;
+    z-index: -1;
+    transition: $hover-transition;
+    transform: scale(0);
+    transform-origin: center bottom;
+    opacity: 0;
+  }
+
+  &:hover::after {
+    content: '';
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.reveal-top-to-bottom {
+  clip-path: inset(0 0 100% 0);
+}
+
+.reveal-right-to-left {
   clip-path: inset(0 100% 0 0);
 }
 
-.revalLeftToRight {
+.reveal-left-to-right {
   clip-path: inset(0 0 0 100%);
 }
 

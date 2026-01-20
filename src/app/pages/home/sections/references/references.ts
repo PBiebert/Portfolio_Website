@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Reference } from '../../../../Interfaces/reference.interface';
-import { AnimateImgRevealRightToLeft } from '../../../../shared/directives/animate-img-reveal-left-to-right';
+import { ImgReveal } from '../../../../shared/directives/img-reveal';
 
 @Component({
   selector: 'app-references',
-  imports: [AnimateImgRevealRightToLeft],
+  imports: [ImgReveal],
   templateUrl: './references.html',
   styleUrl: './references.scss',
 })

@@ -3,9 +3,14 @@
     <div class="head-line">
       <div class="title">
         <p>MY STACK</p>
-        <div appAnimateImgRevealRightTopToLeftBottom>
+        <div
+          appImgReveal
+          revealClass="reval-0deg"
+          overlayClass="overlay-rotate-90deg"
+          trigger="interval"
+        >
           <h2>Skill set</h2>
-          <img #imgRef src="assets/img/circle_orange.png" />
+          <img #animateElementRef src="assets/img/circle_orange.png" />
         </div>
       </div>
       <div class="head-line-content">

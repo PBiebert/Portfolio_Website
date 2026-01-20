@@ -1,7 +1,6 @@
 export interface NavItem {
   title: string;
   href: string;
+  animationType: string;
   hoverImg: string;
-  startAnimation: string;
-  isHovered: boolean;
 }

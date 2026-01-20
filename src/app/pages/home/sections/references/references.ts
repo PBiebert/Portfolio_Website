@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { Reference } from '../../../../Interfaces/reference.interface';
 import { ImgReveal } from '../../../../shared/directives/img-reveal';
 

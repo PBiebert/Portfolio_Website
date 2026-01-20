@@ -16,7 +16,7 @@
     </div>
     <div class="references-container">
       @for (reference of references; track $index) {
-        <div class="reference">
+        <div class="reference" id="reference{{ $index }}">
           <img
             [src]="
               reference.bgClass === 'reference-bg-1'

@@ -16,8 +16,12 @@
       object-fit: cover;
       transition: $hover-transition-fast;
 
+      &.bounce {
+        animation: slowBounce 2s ease-in-out infinite alternate;
+      }
+
       &:hover {
-        transform: scale(1.1);
+        animation: slowScale 250ms ease-in-out 1 forwards;
       }
     }
 
@@ -64,5 +68,25 @@
 
   .button-bright {
     display: none;
+  }
+}
+
+@keyframes slowBounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10%);
+  }
+}
+
+@keyframes slowScale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
   }
 }

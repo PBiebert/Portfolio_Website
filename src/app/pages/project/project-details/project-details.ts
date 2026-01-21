@@ -1,6 +1,7 @@
 import { Component, inject, Input, input } from '@angular/core';
 import { ProjectService } from '../../../shared/services/project-service';
 import { ImgReveal } from '../../../shared/directives/img-reveal';
+import { Footer } from '../../../shared/components/footer/footer';
 
 @Component({
   selector: 'app-project-details',

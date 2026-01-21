@@ -307,6 +307,7 @@ ul {
 .overlay-bottom {
   position: absolute;
   width: 100%;
+  min-height: 1rem;
   bottom: 30px;
   left: 0;
   transition: $hover-transition;

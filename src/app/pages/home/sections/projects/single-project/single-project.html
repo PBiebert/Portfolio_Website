@@ -2,10 +2,10 @@
   <div class="preview-img-container">
     <img src="{{ project.pevImg }}" [ngClass]="{ bounce: project.title == 'Join' }" alt="" />
     <div class="overlay">
-      <button class="button-bright"><a href="#">Projekt Details</a></button>
+      <button class="button-bright"><a routerLink="single-project">Projekt Details</a></button>
     </div>
   </div>
   <h3>{{ project.title }}</h3>
   <p>{{ project.description }}</p>
-  <button class="button-dark"><a href="#">Projekt Details</a></button>
+  <button class="button-dark"><a routerLink="single-project">Projekt Details</a></button>
 </div>

@@ -24,7 +24,7 @@
 
     <div class="stack">
       <div class="stack-container">
-        @for (stackItem of stack; track $index) {
+        @for (stackItem of stackServce.stack; track $index) {
           <div class="stack-item">
             <div class="img-container">
               <img src="{{ stackItem.icon }}" />
@@ -38,7 +38,7 @@
       <div class="note-container" (click)="peelTheNote()">
         <p>Auf meinem Lernplan:</p>
         <div class="note-item-container">
-          @for (stackItem of learningStack; track $index) {
+          @for (stackItem of stackServce.learningStack; track $index) {
             <div class="note-skills-item">
               <img src="{{ stackItem.icon }}" />
               <p>{{ stackItem.title }}</p>

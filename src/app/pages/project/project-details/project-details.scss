@@ -1,0 +1,119 @@
+@use './../../../shared/styles/core' as *;
+
+section {
+  height: 100vh;
+  height: 100svh;
+  background-image: url('./../../../../../public/assets/img/notbook_paper.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $color-font-dark;
+  margin-bottom: 0;
+}
+
+p,
+h2 {
+  color: $color-font-light;
+  mix-blend-mode: difference;
+}
+
+.wrapper {
+  //   justify-content: flex-end;
+  margin-top: 5rem;
+}
+
+.arrow {
+  @include flexbox($flex-direction: column);
+  width: 100%;
+
+  a {
+    @include flexbox($flex-direction: row);
+  }
+
+  .go-back {
+    align-self: flex-start;
+
+    p {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .next {
+    align-self: flex-end;
+
+    p {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.project-wrapper {
+  @include flexbox($flex-direction: row, $justify-content: space-between);
+}
+
+.content-container {
+  width: 45%;
+  @include flexbox($align-items: flex-start);
+  margin-right: 2rem;
+
+  .content {
+    @include flexbox($align-items: flex-start);
+
+    margin-left: 2rem;
+
+    .description h3 {
+      margin-top: 0;
+    }
+
+    .duration-title {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .programming-languages-container {
+    @include flexbox($flex-direction: row);
+
+    .language {
+      @include flexbox($flex-direction: row);
+      margin-top: 1rem;
+      margin-right: 1.5rem;
+      img {
+        height: 2rem;
+        margin-right: 0.5rem;
+      }
+
+      p {
+        font-weight: lighter;
+      }
+    }
+  }
+}
+
+.preview-container {
+  width: 50%;
+  @include flexbox($align-items: flex-end, $justify-content: space-between);
+  gap: 5rem;
+
+  .preview {
+    width: 90%;
+    aspect-ratio: 1.6/1;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .links {
+    @include flexbox($flex-direction: row);
+    gap: 3rem;
+
+    a {
+    }
+  }
+}

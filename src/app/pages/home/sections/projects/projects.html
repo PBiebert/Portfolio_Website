@@ -20,7 +20,7 @@
       </div>
     </div>
     @for (projectItem of projectServic.projects; track $index) {
-      <app-single-project [project]="projectItem"></app-single-project>
+      <app-single-project [project]="projectItem" [projectIndex]="$index"></app-single-project>
     }
   </div>
 </section>

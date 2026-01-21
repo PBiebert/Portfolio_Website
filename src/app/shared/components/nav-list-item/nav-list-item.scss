@@ -4,8 +4,17 @@ li {
   position: relative;
   text-align: center;
   @include flexbox($flex-direction: row);
+  z-index: 2;
 }
 
 a {
   padding: 15px 24px;
+  mix-blend-mode: difference;
+  color: $color-font-light;
+}
+
+.overlay-bottom {
+  height: 100%;
+  width: 100%;
+  bottom: 0;
 }

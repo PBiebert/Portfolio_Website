@@ -6,6 +6,11 @@ header {
   width: 100%;
 }
 
+.header-over-nav {
+  z-index: 100;
+  position: relative;
+}
+
 .logo-mobile {
   cursor: pointer;
   height: 2.5rem;
@@ -55,6 +60,7 @@ app-mobile-nav {
     display: block;
     width: 75%;
     height: 3px;
+    mix-blend-mode: difference;
     background-color: $color-font-light;
     border-radius: 1.5px;
     transition: transform 250ms ease-in-out;

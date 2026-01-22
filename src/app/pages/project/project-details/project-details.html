@@ -46,7 +46,12 @@
           </div>
           <div class="preview-container">
             <div class="preview">
-              <img src="{{ project.pevImg }}" alt="" />
+              <img
+                [src]="
+                  project.title == 'Join' ? 'assets/img/prev-join_full_size.png' : project.pevImg
+                "
+                alt=""
+              />
             </div>
             <div class="links">
               <button class="button-bright"><a href="{{ project.githubLink }}">Github</a></button>

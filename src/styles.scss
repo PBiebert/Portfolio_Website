@@ -75,6 +75,14 @@ button {
   border-radius: 1.5rem;
   margin-bottom: 1rem;
   transition: all 125ms ease-in-out;
+
+  @media (max-width: 1024px) {
+    font-size: 1.15rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
 }
 
 h1 {
@@ -319,6 +327,14 @@ ul {
   transition: $hover-transition;
   pointer-events: none;
   clip-path: inset(0 0 0 0);
+
+  @media (max-width: 920px) {
+    bottom: 15px;
+  }
+
+  @media (max-width: 700px) {
+    bottom: 5px;
+  }
 }
 
 .overlay-left {

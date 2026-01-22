@@ -9,6 +9,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   @include flexbox();
+  z-index: 1;
 
   ul {
     @include flexbox($justify-content: space-between);

@@ -23,6 +23,10 @@ h1 {
   }
 }
 
+app-header {
+  width: 100%;
+}
+
 .hero-section {
   position: relative;
   @include flexbox();

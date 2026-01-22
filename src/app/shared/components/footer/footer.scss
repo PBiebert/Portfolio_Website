@@ -1,9 +1,6 @@
 @use '../../styles/_core.scss' as *;
 
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   color: $color-font-light;
   width: 100%;
 }
@@ -11,7 +8,7 @@ footer {
 .wrapper {
   @include flexbox($align-items: flex-start);
   gap: 1rem;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
   padding: 0 calc(4.5rem - 30px);
 
   @media (max-width: 700px) {

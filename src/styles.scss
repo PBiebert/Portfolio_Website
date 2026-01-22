@@ -30,6 +30,11 @@ section {
   @include flexbox($align-items: stretch);
 }
 
+.blend-mode a {
+  mix-blend-mode: difference;
+  color: $color-font-light;
+}
+
 .wrapper {
   position: relative;
   max-width: 1440px;
@@ -53,6 +58,7 @@ section {
 }
 
 a {
+  padding: 12px 24px;
   text-decoration: none;
   color: $color-font-light;
   font-weight: bold;
@@ -62,7 +68,7 @@ button {
   background-color: transparent;
   font-weight: bold;
   font-size: 18px;
-  padding: 12px 24px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;

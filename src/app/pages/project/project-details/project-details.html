@@ -1,61 +1,75 @@
-<section>
-  <div class="wrapper">
-    <div class="arrow">
-      <a class="go-back" href="">
-        <img src="assets/icons/arrow-back.png" alt="" />
-        <p>Zurück</p>
-      </a>
-    </div>
-    <div class="project-wrapper">
-      <div class="content-container">
-        <div class="content">
-          <div
-            appImgReveal
-            revealClass="reveal-right-to-left"
-            overlayClass="overlay-bottom"
-            trigger="interval"
-          >
-            <h2>{{ project.title }}</h2>
-            <img #animateElementRef src="assets/img/underline_blue.png" />
-          </div>
-          <div class="description">
-            <h3>Beschreibung</h3>
-            <p>
-              {{ project.description }}
-            </p>
-          </div>
-          <div class="details">
-            <h3>Meine Rolle & Arbeitsweise</h3>
-            <p>
-              {{ project.implementationDetails }}
-            </p>
-            <p class="duration-title"><span>Dauer</span>: {{ project.duration }}</p>
-          </div>
-          <div class="programming-languages-container">
-            @for (language of project.programmingLanguages; track $index) {
-              <div class="language">
-                <img src="{{ language.icon }}" alt="" />
-                <p>{{ language.title }}</p>
+@for (project of projectService.projects; track $index) {
+  @if (project.id == urlID) {
+    <section>
+      <app-header></app-header>
+      <div class="wrapper">
+        <div class="arrow">
+          <a class="go-back" routerLink="">
+            <img src="assets/icons/arrow-back.png" alt="" />
+            <p>Zurück zur Startseite</p>
+          </a>
+        </div>
+        <div class="project-wrapper">
+          <div class="content-container">
+            <div class="content">
+              <div
+                appImgReveal
+                revealClass="reveal-right-to-left"
+                overlayClass="overlay-bottom"
+                trigger="interval"
+              >
+                <h2>{{ project.title }}</h2>
+                <img #animateElementRef src="assets/img/underline_blue.png" />
               </div>
-            }
+              <div class="description">
+                <h3>Beschreibung</h3>
+                <p>
+                  {{ project.description }}
+                </p>
+              </div>
+              <div class="details">
+                <h3>Meine Rolle & Arbeitsweise</h3>
+                <p>
+                  {{ project.implementationDetails }}
+                </p>
+                <p class="duration-title"><span>Dauer</span>: {{ project.duration }}</p>
+              </div>
+              <div class="programming-languages-container">
+                @for (language of project.programmingLanguages; track $index) {
+                  <div class="language">
+                    <img src="{{ language.icon }}" alt="" />
+                    <p>{{ language.title }}</p>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+          <div class="preview-container">
+            <div class="preview">
+              <img src="{{ project.pevImg }}" alt="" />
+            </div>
+            <div class="links">
+              <button class="button-bright"><a href="{{ project.githubLink }}">Github</a></button>
+              <button class="button-bright">
+                <a
+                  [href]="
+                    project.testLink == ''
+                      ? 'assets/projects/in-progress/index.html'
+                      : project.testLink
+                  "
+                  >Testen</a
+                >
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="preview-container">
-        <div class="preview">
-          <img src="{{ project.pevImg }}" alt="" />
-        </div>
-        <div class="links">
-          <button class="button-bright"><a href="{{ project.githubLink }}">Github</a></button>
-          <button class="button-bright"><a href="{{ project.testLink }}">Testen</a></button>
+        <div class="arrow" (click)="nextProject()">
+          <a class="next">
+            <p>Nächstes Projekt</p>
+            <img src="assets/icons/arrow-next.png" alt="" />
+          </a>
         </div>
       </div>
-    </div>
-    <div class="arrow">
-      <a class="next" href="">
-        <p>Weiter</p>
-        <img src="assets/icons/arrow-next.png" alt="" />
-      </a>
-    </div>
-  </div>
-</section>
+    </section>
+  }
+}

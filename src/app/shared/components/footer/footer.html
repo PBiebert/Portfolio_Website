@@ -1,5 +1,5 @@
-<footer>
-  <div class="wrapper">
+<div class="wrapper">
+  <footer>
     <div class="headline">
       <div class="logo-container">
         <a class="logo" href="#">
@@ -21,8 +21,8 @@
 
     <ul>
       @for (item of footerItems; track $index) {
-      <app-nav-list-item [item]="item"></app-nav-list-item
-      >}
+        <app-nav-list-item [item]="item"></app-nav-list-item>
+      }
     </ul>
-  </div>
-</footer>
+  </footer>
+</div>

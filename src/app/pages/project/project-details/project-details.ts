@@ -1,15 +1,33 @@
 import { Component, inject, Input, input } from '@angular/core';
 import { ProjectService } from '../../../shared/services/project-service';
 import { ImgReveal } from '../../../shared/directives/img-reveal';
-import { Footer } from '../../../shared/components/footer/footer';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Header } from '../../../shared/components/header/header';
 
 @Component({
   selector: 'app-project-details',
-  imports: [ImgReveal],
+  imports: [ImgReveal, Header, RouterLink],
   templateUrl: './project-details.html',
   styleUrl: './project-details.scss',
 })
 export class ProjectDetails {
-  @Input({ required: true }) projectIndex!: number;
-  project = inject(ProjectService).projects[this.projectIndex];
+  projectService = inject(ProjectService);
+  urlID: string | null = null;
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.paramMap.subscribe((params) => {
+      this.urlID = params.get('id');
+    });
+  }
+
+  nextProject() {
+    let currentID = Number(this.urlID);
+    if (currentID < this.projectService.projects.length - 1) {
+      this.urlID = String(currentID + 1);
+    } else {
+      this.urlID = '0';
+    }
+  }
 }

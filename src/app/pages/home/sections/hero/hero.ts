@@ -3,10 +3,11 @@ import { SocialLinks } from '../../../../shared/components/social-links/social-l
 import { InvertCase } from '../../../../shared/directives/invert-case';
 import { CommonModule } from '@angular/common';
 import { ImgReveal } from '../../../../shared/directives/img-reveal';
+import { Header } from '../../../../shared/components/header/header';
 
 @Component({
   selector: 'app-hero',
-  imports: [SocialLinks, InvertCase, CommonModule, ImgReveal],
+  imports: [SocialLinks, InvertCase, CommonModule, ImgReveal, Header],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })

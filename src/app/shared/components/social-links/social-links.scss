@@ -32,11 +32,16 @@
   }
 }
 
+a {
+  display: flex;
+  z-index: 2;
+  padding: 0;
+}
+
 svg {
   width: 32px;
   height: 32px;
   fill: $color-font-light;
-  z-index: 2;
 }
 
 .github {

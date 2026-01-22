@@ -17,11 +17,6 @@ h2 {
   mix-blend-mode: difference;
 }
 
-.wrapper {
-  //   justify-content: flex-end;
-  margin-top: 5rem;
-}
-
 .arrow {
   @include flexbox($flex-direction: column);
   width: 100%;

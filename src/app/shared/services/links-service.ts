@@ -9,25 +9,25 @@ export class LinksService {
   navItems: NavItem[] = [
     {
       title: 'Über mich',
-      href: '#',
+      href: '#about-me',
       animationType: 'topToBottom',
       hoverImg: './assets/img/hover1.png',
     },
     {
       title: 'Fähigkeiten',
-      href: '#',
+      href: '#my-stack',
       hoverImg: './assets/img/hover2.png',
       animationType: 'rightToLeft',
     },
     {
       title: 'Projekte',
-      href: '#',
+      href: '#projects',
       hoverImg: './assets/img/hover3.png',
       animationType: 'rightToLeft',
     },
     {
       title: 'Kontakt',
-      href: '#',
+      href: '#contact-me',
       hoverImg: './assets/img/hover4.png',
       animationType: 'rightToLeft',
     },
@@ -36,25 +36,25 @@ export class LinksService {
   externLinks: ExternLink[] = [
     {
       title: 'Rechtshinweis',
-      href: '#',
+      href: '/imprint',
       hoverImg: './assets/img/hover4.png',
       animationType: 'rightToLeft',
     },
     {
       title: 'GitHub',
-      href: '#',
+      href: 'https://github.com/PBiebert',
       hoverImg: './assets/icons/github.png',
       animationType: 'role',
     },
     {
       title: 'LinkedIn',
-      href: '#',
+      href: 'https://www.linkedin.com/in/philipp-alexander-biebert-55258737a',
       hoverImg: './assets/icons/linkedin.png',
       animationType: 'role',
     },
     {
       title: 'E-Mail',
-      href: '#',
+      href: 'mailto:philipp.biebert@gmail.com',
       hoverImg: './assets/icons/mail.png',
       animationType: 'role',
     },

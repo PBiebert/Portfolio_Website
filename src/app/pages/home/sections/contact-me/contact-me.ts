@@ -1,17 +1,19 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { ImgReveal } from '../../../../shared/directives/img-reveal';
 import { Footer } from '../../../../shared/components/footer/footer';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [ImgReveal, Footer, FormsModule],
+  imports: [ImgReveal, Footer, FormsModule, RouterLink],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })
 export class ContactMe {
   http = inject(HttpClient);
+  @ViewChild('thankYouDialog') thankYouDialog!: ElementRef<HTMLDialogElement>;
 
   contactData = {
     name: '',
@@ -45,6 +47,7 @@ export class ContactMe {
         complete: () => console.info('send post complete'),
       });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      this.thankYouDialog.nativeElement.showModal();
       ngForm.resetForm();
     }
   }

@@ -7,4 +7,5 @@ export const routes: Routes = [
   { path: '', component: Home },
   { path: 'single-project/:id', component: ProjectDetails },
   { path: 'imprint', component: Imprint },
+  { path: 'privacy', component: Imprint },
 ];

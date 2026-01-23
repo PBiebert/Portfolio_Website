@@ -19,6 +19,7 @@ header {
   display: none;
   stroke-width: 4px;
   transition: $hover-transition;
+  padding: 0;
 
   &:hover {
     fill: $color-accent-yellow;

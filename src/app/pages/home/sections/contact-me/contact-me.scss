@@ -1,6 +1,7 @@
 @use './../../../../shared/styles/core' as *;
 
 section {
+  position: relative;
   min-height: 110vh;
   background-image: url(../../../../../../public/assets/img/contact.png);
   background-position: top;
@@ -231,4 +232,10 @@ input[type='checkbox'] {
 .privacy-check-container {
   display: flex;
   flex-direction: row;
+}
+
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
 }

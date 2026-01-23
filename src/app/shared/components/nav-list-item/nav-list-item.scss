@@ -6,10 +6,6 @@ li {
   @include flexbox($flex-direction: row);
 }
 
-a {
-  padding: 15px 24px;
-}
-
 .overlay-bottom {
   height: 100%;
   width: 100%;

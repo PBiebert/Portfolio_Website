@@ -35,7 +35,7 @@ export class LinksService {
 
   externLinks: ExternLink[] = [
     {
-      title: 'Rechtshinweis',
+      title: 'Impressum',
       href: '/imprint',
       hoverImg: './assets/img/hover4.png',
       animationType: 'rightToLeft',

@@ -24,6 +24,16 @@ h3 {
   color: $color-accent-blue;
 }
 
+ul {
+  margin: 1rem 6px;
+  padding-left: 0;
+
+  li {
+    margin-left: 1rem;
+    margin-bottom: 6px;
+    list-style: disc;
+  }
+}
 a {
   padding: 0;
 }

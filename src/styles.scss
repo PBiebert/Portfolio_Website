@@ -85,6 +85,10 @@ button {
   }
 }
 
+.type-button {
+  padding: 12px 24px;
+}
+
 h1 {
   font-size: 8rem;
   @media (max-width: 1024px) {
@@ -174,92 +178,6 @@ p {
 
 section {
   margin-bottom: 5rem;
-}
-
-label {
-  position: relative;
-  font-size: 1.5rem;
-
-  @media (max-width: 500px) {
-    font-size: 1.25rem;
-  }
-}
-
-input {
-  background-color: transparent;
-  line-height: 1.25rem;
-  font-size: 1.25rem;
-  border: none;
-  margin: 0.5rem 0;
-  width: 100%;
-
-  &::placeholder {
-    font-size: 1rem;
-    color: $color-font-light;
-  }
-
-  @media (max-width: 500px) {
-    font-size: 1rem;
-  }
-}
-
-input[type='checkbox'] {
-  position: relative;
-  appearance: none;
-  border: 2px solid $color-accent-blue;
-  border-radius: 2px;
-  height: 1.25rem;
-  aspect-ratio: 1/1;
-  margin: 0;
-
-  &:checked::after {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    content: '';
-    height: 1.1rem;
-    aspect-ratio: 1/1;
-    background-image: url(./../public/assets/img/Check.png);
-    background-size: contain;
-    z-index: 2;
-  }
-}
-.checkbox-bg {
-  position: absolute;
-  // content: '';
-  top: 0;
-  left: -2px;
-  display: block;
-  height: 1.5rem;
-  aspect-ratio: 1/1;
-  border-radius: 2px;
-  background-color: $color-accent-blue;
-  filter: opacity(0);
-  pointer-events: none;
-  z-index: 0;
-  transition: $hover-transition-fast;
-}
-
-.privacy-check-container label:hover .checkbox-bg {
-  filter: opacity(0.5);
-}
-
-.privacy-text {
-  font-size: 1rem;
-  display: block;
-
-  a {
-    color: $color-accent-blue;
-    font-weight: normal;
-    &:hover {
-      color: $color-accent-yellow;
-    }
-  }
-}
-
-.privacy-check-container {
-  display: flex;
-  flex-direction: row;
 }
 
 .d-none {

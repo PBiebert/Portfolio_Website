@@ -20,38 +20,90 @@
     </div>
 
     <div class="contact-form-container">
-      <form>
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="input-container">
-          <label for="input-name">Wie ist dein Name?</label>
+          <label
+            class=""
+            for="input-name"
+            [class.highlight-label-If-Invalid]="name.touched && name.invalid"
+          >
+            {{
+              name.touched && name.invalid && name.dirty
+                ? 'Gib bitte min. 5 Zeichen ein'
+                : 'Wie ist dein Name?'
+            }}
+          </label>
           <input
+            [(ngModel)]="contactData.name"
+            [class.invalid]="name.touched"
             name="input-name"
             id="input-name"
             type="text"
-            placeholder="Gib deinen Namen hier ein"
+            minlength="5"
+            [placeholder]="
+              !name.touched ? 'Gib bitte deinen Namen ein ' : 'Hoppla! dein Name fehlt.'
+            "
+            required
+            #name="ngModel"
           />
         </div>
         <div class="input-container">
-          <label for="input-email">Wie ist deine E-Mail Adresse?</label>
+          <label
+            for="input-email"
+            [class.highlight-label-If-Invalid]="email.touched && email.invalid"
+            >Wie ist deine E-Mail Adresse?</label
+          >
           <input
+            [(ngModel)]="contactData.email"
             name="input-email"
+            [class.invalid]="email.touched"
             id="input-email"
             type="email"
-            placeholder="deine-email@adresse.com"
+            [placeholder]="
+              !email.touched ? 'deine-email@adresse.de' : 'Deine E-Mail Adresse wird benötigt'
+            "
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            #email="ngModel"
           />
         </div>
         <div class="input-container">
-          <label for="input-massage">Wie kann ich dir helfen?</label>
+          <label
+            for="input-massage"
+            [class.highlight-label-If-Invalid]="massage.touched && massage.invalid"
+            >{{
+              massage.touched && massage.invalid && massage.dirty
+                ? 'Bitte gib min. 20 Zeichen ein.'
+                : 'Wie kann ich dir helfen?'
+            }}</label
+          >
           <input
+            [(ngModel)]="contactData.message"
             name="input-massage"
+            [class.invalid]="massage.touched"
             id="input-massage"
             type="text"
-            placeholder="Hallo Philipp, ich bin interesiert an..."
+            [placeholder]="
+              !massage.touched
+                ? 'Hallo Philipp, ich bin interessiert an...'
+                : 'Bitte gib eine Nachricht ein'
+            "
+            minlength="20"
+            required
+            #massage="ngModel"
           />
         </div>
         <div class="interactions-container">
           <div class="privacy-check-container">
             <label for="privacy">
-              <input type="checkbox" id="privacy" name="privacy" />
+              <input
+                [(ngModel)]="contactData.privacyCheck"
+                type="checkbox"
+                id="privacy"
+                name="privacy"
+                required
+                #privacyCheck="ngModel"
+              />
               <span class="checkbox-bg"></span>
             </label>
             <p class="privacy-text" style="margin-left: 8px">
@@ -68,7 +120,13 @@
             >
               <img #animateElementRef src="assets/img/wave_arrow_yellow.png" />
             </div>
-            <button class="button-bright">Senden</button>
+            <button
+              type="submit"
+              class="button-bright type-button"
+              [disabled]="name.invalid || email.invalid || massage.invalid || privacyCheck.invalid"
+            >
+              Senden
+            </button>
           </div>
         </div>
       </form>

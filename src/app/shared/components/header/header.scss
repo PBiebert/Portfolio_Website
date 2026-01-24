@@ -2,7 +2,9 @@
 
 header {
   @include flexbox($flex-direction: row, $justify-content: space-between);
-  height: 80px;
+  min-height: 70px;
+  height: 10vh;
+  height: 10svh;
   width: 100%;
 }
 

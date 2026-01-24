@@ -1,11 +1,30 @@
 <div class="btn-switch">
-  <span class="switch-active">DE</span>
+  <div class="lang-container">
+    <button
+      type="button"
+      class="lang-btn"
+      [class.switch-active]="lang === 'de'"
+      (click)="setLang('de')"
+    >
+      DE
+    </button>
+    <img src="{{ overlayImg }}" [ngClass]="{ clicked: activeOverlay === 'de' && !timerExpired }" />
+  </div>
   <div class="container-switch">
     <label class="switch">
-      <input type="checkbox" />
+      <input type="checkbox" [checked]="lang === 'en'" (change)="toggleLang()" />
       <span class="slider round"></span>
     </label>
   </div>
-
-  <span>EN</span>
+  <div class="lang-container">
+    <button
+      type="button"
+      class="lang-btn"
+      [class.switch-active]="lang === 'en'"
+      (click)="setLang('en')"
+    >
+      EN
+    </button>
+    <img src="{{ overlayImg }}" [ngClass]="{ clicked: activeOverlay === 'en' && !timerExpired }" />
+  </div>
 </div>

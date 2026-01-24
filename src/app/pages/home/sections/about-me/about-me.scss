@@ -75,6 +75,10 @@ aside {
   button {
     margin-top: 1.5rem;
     align-self: flex-end;
+
+    a {
+      color: $color-font-dark;
+    }
   }
 }
 

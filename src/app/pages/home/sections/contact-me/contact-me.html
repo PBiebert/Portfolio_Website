@@ -22,11 +22,7 @@
     <div class="contact-form-container">
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="input-container">
-          <label
-            class=""
-            for="input-name"
-            [class.highlight-label-If-Invalid]="name.touched && name.invalid"
-          >
+          <label for="input-name" [class.highlight-label-If-Invalid]="name.touched && name.invalid">
             {{
               name.touched && name.invalid && name.dirty
                 ? 'Gib bitte min. 5 Zeichen ein'
@@ -51,8 +47,13 @@
           <label
             for="input-email"
             [class.highlight-label-If-Invalid]="email.touched && email.invalid"
-            >Wie ist deine E-Mail Adresse?</label
           >
+            {{
+              email.touched && email.invalid && email.dirty
+                ? 'Prüfe bitte deine E-Mail Adresse'
+                : 'Wie ist deine E-Mail Adresse?'
+            }}
+          </label>
           <input
             [(ngModel)]="contactData.email"
             name="input-email"
@@ -107,7 +108,7 @@
               <span class="checkbox-bg"></span>
             </label>
             <p class="privacy-text" style="margin-left: 8px">
-              Ich habe die <a routerLink="privacy">Datenschutzbestimmungen</a> gelesen und stimme
+              Ich habe die <a routerLink="/privacy">Datenschutzbestimmungen</a> gelesen und stimme
               der Verarbeitung meiner Daten als externe Dienstleister zu.
             </p>
           </div>
@@ -132,7 +133,7 @@
       </form>
     </div>
   </div>
-  <app-footer id="footer"></app-footer>
+  <app-footer></app-footer>
   <dialog #thankYouDialog (click)="closeThankYouDialog()">
     <div class="dialog-wrapper" (click)="$event.stopPropagation()">
       <div class="dialog-content">

@@ -133,12 +133,15 @@
     </div>
   </div>
   <app-footer id="footer"></app-footer>
-  <!-- <dialog open #thankYouDialog>
-    <div class="dialog-wrapper">
-      <div class="content">
+  <dialog #thankYouDialog (click)="closeThankYouDialog()">
+    <div class="dialog-wrapper" (click)="$event.stopPropagation()">
+      <div class="dialog-content">
         <p>Vielen dank für Ihre E-Mail</p>
         <p>Ich werde mich schnellstmöglich bei Ihnen melden</p>
       </div>
+      <button class="dialog-close-btn button-dark" (click)="closeThankYouDialog()">
+        <p>X</p>
+      </button>
     </div>
-  </dialog> -->
+  </dialog>
 </section>

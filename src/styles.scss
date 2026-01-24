@@ -26,6 +26,10 @@ body {
   position: relative;
 }
 
+body.no-scroll-y {
+  overflow-y: hidden;
+}
+
 section {
   @include flexbox($align-items: stretch);
 }
@@ -193,7 +197,6 @@ section {
   color: $color-font-light;
   border: 1px solid $color-font-light;
   box-shadow: 2px 5px $color-font-light;
-  padding: 12px 24px;
 
   &:hover {
     background-color: $color-accent-orange;
@@ -206,7 +209,6 @@ section {
   color: $color-font-dark;
   border: 1px solid $color-font-dark;
   box-shadow: 2px 5px $color-font-dark;
-  padding: 12px 24px;
 
   &:hover {
     background-color: $color-accent-orange;

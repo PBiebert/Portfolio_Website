@@ -1,0 +1,40 @@
+@use './../../styles/core' as *;
+
+.sticker-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticker-bg {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.sticker-svg {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  text {
+    font-family: inherit;
+    fill: $color-font-light;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  .center-icon {
+    /* Zentriert das Icon in der Mitte */
+    transform: translate(0, 0);
+  }
+}

@@ -3,10 +3,11 @@ import { ProjectService } from '../../../shared/services/project-service';
 import { ImgReveal } from '../../../shared/directives/img-reveal';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Header } from '../../../shared/components/header/header';
+import { Sticker } from '../../../shared/components/sticker/sticker';
 
 @Component({
   selector: 'app-project-details',
-  imports: [ImgReveal, Header, RouterLink],
+  imports: [ImgReveal, Header, RouterLink, Sticker],
   templateUrl: './project-details.html',
   styleUrl: './project-details.scss',
 })

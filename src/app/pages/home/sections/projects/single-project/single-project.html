@@ -1,6 +1,9 @@
 <div class="project-container">
   <div class="preview-img-container">
     <img src="{{ project.pevImg }}" [ngClass]="{ bounce: project.title == 'Join' }" alt="" />
+    @if (project.title == 'Join') {
+      <img src="assets/img/sticker-blue.png" class="sticker" />
+    }
     <div class="overlay">
       <button class="button-bright">
         <a [routerLink]="['/single-project', project.id]">Projekt Details</a>

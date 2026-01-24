@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule, NgClass } from '@angular/common';
+import { CommonModule, NgClass, DOCUMENT } from '@angular/common';
 import { LinksService } from '../../services/links-service';
 import { NavListItem } from '../nav-list-item/nav-list-item';
 import { BtnLangSwitch } from '../buttons/btn-lang-switch/btn-switch';
@@ -18,12 +18,23 @@ export class Header {
   burgerOverlayImg: string = './assets/img/nav_pressing_1.png';
   timerExpired: boolean = true;
 
+  private document = inject(DOCUMENT);
+
   openNav() {
     this.navIsActive = !this.navIsActive ? true : false;
     this.burgerOverlayImg = !this.navIsActive
       ? './assets/img/nav_pressing_1.png'
       : './assets/img/nav_pressing_2.png';
+    this.toggleBodyScroll();
     this.timer();
+  }
+
+  toggleBodyScroll() {
+    if (this.navIsActive) {
+      this.document.body.classList.add('no-scroll-y');
+    } else {
+      this.document.body.classList.remove('no-scroll-y');
+    }
   }
 
   timer() {

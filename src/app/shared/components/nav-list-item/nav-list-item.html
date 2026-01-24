@@ -1,12 +1,24 @@
 @if (item.animationType == 'topToBottom') {
-  <li appImgReveal revealClass="reveal-top-to-bottom" overlayClass="overlay-bottom" trigger="hover">
+  <li
+    appImgReveal
+    revealClass="reveal-top-to-bottom"
+    overlayClass="overlay-bottom"
+    trigger="hover"
+    (click)="onItemClicked($event)"
+  >
     <a href="{{ item.href }}">{{ item.title }}</a>
     <img #animateElementRef src="{{ item.hoverImg }}" />
   </li>
 }
 
 @if (item.animationType == 'rightToLeft') {
-  <li appImgReveal revealClass="reveal-right-to-left" overlayClass="overlay-bottom" trigger="hover">
+  <li
+    appImgReveal
+    revealClass="reveal-right-to-left"
+    overlayClass="overlay-bottom"
+    trigger="hover"
+    (click)="onItemClicked($event)"
+  >
     <a href="{{ item.href }}">{{ item.title }}</a>
     <img #animateElementRef src="{{ item.hoverImg }}" />
   </li>
@@ -19,6 +31,7 @@
     revealClass="role-left"
     overlayClass="role-overlay"
     trigger="hover"
+    (click)="onItemClicked($event)"
   >
     <a href="{{ item.href }}">{{ item.title }}</a>
     <div #animateElementRef>

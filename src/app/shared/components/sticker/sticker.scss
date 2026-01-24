@@ -28,13 +28,43 @@
 
   text {
     font-family: inherit;
-    fill: $color-font-light;
+    fill: $color-font-dark;
     letter-spacing: 1px;
     font-weight: 600;
+    /* Abstand zur Außenkante */
+    dominant-baseline: middle;
   }
 
-  .center-icon {
-    /* Zentriert das Icon in der Mitte */
-    transform: translate(0, 0);
-  }
+  /* Abstand des Textes zur Außenkante */
+  // textPath {
+  //   /* StartOffset auf 8px umrechnen: 8px / (2 * PI * 65) ≈ 2% */
+  //   startoffset: 5%;
+  // }
+
+  /* Nur für den Textkreis */
+}
+
+.sticker-logo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+  /* Logo ist immer exakt mittig im Sticker */
+}
+
+.sticker-logo-svg {
+  width: 48px; /* Hier Logo-Größe anpassen */
+  height: 48px;
+  display: block;
+}
+
+.sticker-logo-svg path {
+  fill: $color-font-dark !important;
+  stroke: $color-font-dark !important;
 }

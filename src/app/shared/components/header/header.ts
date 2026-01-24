@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
-import { WebNav } from './web-nav/web-nav';
-import { MobileNav } from './mobile-nav/mobile-nav';
+import { Component, inject } from '@angular/core';
 import { CommonModule, NgClass } from '@angular/common';
+import { LinksService } from '../../services/links-service';
+import { NavListItem } from '../nav-list-item/nav-list-item';
+import { BtnLangSwitch } from '../buttons/btn-lang-switch/btn-switch';
+import { SocialLinks } from '../social-links/social-links';
 
 @Component({
   selector: 'app-header',
-  imports: [WebNav, MobileNav, CommonModule, NgClass],
+  imports: [CommonModule, NgClass, NavListItem, BtnLangSwitch, SocialLinks],
   templateUrl: './header.html',
   styleUrls: ['./header.scss'],
 })
 export class Header {
+  navItems = inject(LinksService).navItems;
+
   navIsActive: boolean = false;
   burgerOverlayImg: string = './assets/img/nav_pressing_1.png';
   timerExpired: boolean = true;

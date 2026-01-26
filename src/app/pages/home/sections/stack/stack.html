@@ -2,23 +2,19 @@
   <div class="wrapper">
     <div class="head-line">
       <div class="title">
-        <p>MY STACK</p>
+        <p>{{ 'stack.myStack' | translate }}</p>
         <div
           appImgReveal
           revealClass="reval-0deg"
           overlayClass="overlay-rotate-90deg"
           trigger="interval"
         >
-          <h2>Skill set</h2>
+          <h2>{{ 'stack.title' | translate }}</h2>
           <img #animateElementRef src="assets/img/circle_orange.png" />
         </div>
       </div>
       <div class="head-line-content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et consectetur, est nihil quis,
-          enim adipisci perferendis libero odit fuga tempora, doloribus voluptatibus quos corporis.
-          Molestias.
-        </p>
+        <p [innerHTML]="'stack.headlineContent' | translate"></p>
       </div>
     </div>
 
@@ -36,7 +32,7 @@
       </div>
 
       <div class="note-container" (click)="peelTheNote()">
-        <p>Auf meinem Lernplan:</p>
+        <p>{{ 'stack.learningPlan' | translate }}</p>
         <div class="note-item-container">
           @for (stackItem of stackServce.learningStack; track $index) {
             <div class="note-skills-item">
@@ -50,7 +46,7 @@
           <img class="note-overlay" [src]="overlaySrc" />
           <div class="overlay-text">
             <img class="note-arrow" src="assets/img/note-arrow.png" alt="" />
-            <p>Zum <br />Abziehen</p>
+            <p [innerHTML]="'stack.peelNote' | translate"></p>
           </div>
         </div>
       </div>

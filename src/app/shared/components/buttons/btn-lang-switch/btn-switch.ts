@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-btn-lang-switch',
@@ -12,10 +13,12 @@ export class BtnLangSwitch {
   timerExpired: boolean = true;
   lang: 'de' | 'en' = 'de';
   activeOverlay: 'de' | 'en' | null = null;
+  private translate = inject(TranslateService);
 
   setLang(lang: 'de' | 'en') {
     this.lang = lang;
     this.showOverlay(lang);
+    this.useLanguage(lang);
   }
 
   toggleLang() {
@@ -30,5 +33,9 @@ export class BtnLangSwitch {
       this.timerExpired = true;
       this.activeOverlay = null;
     }, 1000);
+  }
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
   }
 }

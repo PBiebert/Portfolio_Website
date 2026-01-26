@@ -12,8 +12,8 @@
           (mouseenter)="isOnHelloWorldBtn()"
           (mouseleave)="isNotOnHelloWorldBtn()"
         >
-          <p>{{ helloWorldBtnContent }}</p>
-          <div #animateElementRef>
+          <p>{{ helloWorldBtnContent | translate }}</p>
+          <div #animateElementRef class="d-none">
             <img src="assets/icons/waving_hand.png" />
           </div>
         </div>
@@ -31,7 +31,9 @@
           </span>
         </h1>
 
-        <button class="button-bright"><a href="#contact-me">Get in Touch</a></button>
+        <button class="button-bright">
+          <a href="#contact-me">{{ 'heroSection.buttons.getInTouchBtn' | translate }}</a>
+        </button>
         <div class="polaroid" (mouseenter)="isOnPicture()" (mouseleave)="isNotOnPicture()">
           <img
             class="frame"

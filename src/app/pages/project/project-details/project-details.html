@@ -6,7 +6,7 @@
         <div class="arrow">
           <a class="go-back" routerLink="">
             <img src="assets/icons/arrow-back.png" alt="" />
-            <p>Zurück zur Startseite</p>
+            <p>{{ 'projectsDetails.goBack' | translate }}</p>
           </a>
         </div>
         <div class="project-wrapper">
@@ -18,21 +18,24 @@
                 overlayClass="overlay-bottom"
                 trigger="interval"
               >
-                <h2>{{ project.title }}</h2>
+                <h2>{{ project.title | translate }}</h2>
                 <img #animateElementRef src="assets/img/underline_blue.png" />
               </div>
               <div class="description">
-                <h3>Beschreibung</h3>
+                <h3>{{ 'projectsDetails.descriptionTitle' | translate }}</h3>
                 <p>
-                  {{ project.description }}
+                  {{ project.description | translate }}
                 </p>
               </div>
               <div class="details">
-                <h3>Meine Rolle & Arbeitsweise</h3>
+                <h3>{{ 'projectsDetails.implementationTitle' | translate }}</h3>
                 <p>
-                  {{ project.implementationDetails }}
+                  {{ project.implementationDetails | translate }}
                 </p>
-                <p class="duration-title"><span>Dauer</span>: {{ project.duration }}</p>
+                <p class="duration-title">
+                  <span>{{ 'projectsDetails.duration' | translate }}</span
+                  >: {{ project.duration | translate }}
+                </p>
               </div>
               <div class="programming-languages-container">
                 @for (language of project.programmingLanguages; track $index) {
@@ -48,14 +51,18 @@
             <div class="preview">
               <img
                 [src]="
-                  project.title == 'Join' ? 'assets/img/prev-join_full_size.png' : project.pevImg
+                  project.title == 'projectsService.items.0.title'
+                    ? 'assets/img/prev-join_full_size.png'
+                    : project.pevImg
                 "
                 alt=""
               />
             </div>
             <div class="links">
               <button class="button-bright">
-                <a href="{{ project.githubLink }}" target="_blank">Github</a>
+                <a href="{{ project.githubLink }}" target="_blank">{{
+                  'projectsDetails.github' | translate
+                }}</a>
               </button>
               <button class="button-bright">
                 <a
@@ -64,7 +71,7 @@
                       ? 'assets/projects/in-progress/index.html'
                       : project.testLink
                   "
-                  >Testen</a
+                  >{{ 'projectsDetails.test' | translate }}</a
                 >
               </button>
             </div>
@@ -72,7 +79,7 @@
         </div>
         <div class="arrow" (click)="nextProject()">
           <a class="next">
-            <p>Nächstes Projekt</p>
+            <p>{{ 'projectsDetails.nextProject' | translate }}</p>
             <img src="assets/icons/arrow-next.png" alt="" />
           </a>
         </div>

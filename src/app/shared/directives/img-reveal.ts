@@ -34,9 +34,10 @@ export class ImgReveal implements AfterViewInit {
   private renderer = inject(Renderer2);
 
   ngAfterViewInit(): void {
+    this.renderer.removeClass(this.animateElement.nativeElement, 'd-none');
     this.renderer.addClass(this.host.nativeElement, 'animate-container');
-    this.renderer.addClass(this.animateElement.nativeElement, this.overlayClass);
     this.renderer.addClass(this.animateElement.nativeElement, this.revealClass);
+    this.renderer.addClass(this.animateElement.nativeElement, this.overlayClass);
 
     if (this.trigger === 'interval') {
       this.startInterval();

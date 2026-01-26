@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="project-container">
       <div class="introduction">
-        <p>MEINE ERSTELTEN</p>
+        <p>{{ 'projectsHome.introLabel' | translate }}</p>
         <div
           appImgReveal
           revealClass="reveal-right-to-left"
@@ -10,13 +10,10 @@
           trigger="interval"
           appAnimateImgRevealRightToLeft
         >
-          <h2>Projekte</h2>
+          <h2>{{ 'projectsHome.title' | translate }}</h2>
           <img #animateElementRef src="assets/img/underlined_waved_yellow.png" />
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quidem quas alias quos
-          vero! Fugiat praesentium quam tempore, et accusamus porro dolore laborum libero ex!
-        </p>
+        <p>{{ 'projectsHome.introText' | translate }}</p>
       </div>
     </div>
     @for (projectItem of projectServic.projects; track $index) {

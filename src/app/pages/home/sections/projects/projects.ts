@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { SingleProject } from './single-project/single-project';
-import { Project } from '../../../../Interfaces/project.interface';
 import { ProjectService } from '../../../../shared/services/project-service';
 import { ImgReveal } from '../../../../shared/directives/img-reveal';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
-  imports: [SingleProject, ImgReveal],
+  imports: [SingleProject, ImgReveal, TranslatePipe],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })

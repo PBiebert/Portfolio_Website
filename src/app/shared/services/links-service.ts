@@ -8,25 +8,25 @@ import { ExternLink } from '../../Interfaces/extern-links.interface';
 export class LinksService {
   navItems: NavItem[] = [
     {
-      title: 'Über mich',
+      title: 'header.navElements.aboutMe',
       href: '#about-me',
       animationType: 'topToBottom',
       hoverImg: './assets/img/hover1.png',
     },
     {
-      title: 'Fähigkeiten',
+      title: 'header.navElements.skills',
       href: '#my-stack',
       hoverImg: './assets/img/hover2.png',
       animationType: 'rightToLeft',
     },
     {
-      title: 'Projekte',
+      title: 'header.navElements.projects',
       href: '#projects',
       hoverImg: './assets/img/hover3.png',
       animationType: 'rightToLeft',
     },
     {
-      title: 'Kontakt',
+      title: 'header.navElements.contact',
       href: '#contact-me',
       hoverImg: './assets/img/hover4.png',
       animationType: 'rightToLeft',
@@ -35,25 +35,25 @@ export class LinksService {
 
   externLinks: ExternLink[] = [
     {
-      title: 'Impressum',
+      title: 'externLinks.imprint',
       href: '/imprint',
       hoverImg: './assets/img/hover4.png',
       animationType: 'rightToLeft',
     },
     {
-      title: 'GitHub',
+      title: 'externLinks.github',
       href: 'https://github.com/PBiebert',
       hoverImg: './assets/icons/github.png',
       animationType: 'role',
     },
     {
-      title: 'LinkedIn',
+      title: 'externLinks.linkedin',
       href: 'https://www.linkedin.com/in/philipp-alexander-biebert-55258737a',
       hoverImg: './assets/icons/linkedin.png',
       animationType: 'role',
     },
     {
-      title: 'E-Mail',
+      title: 'externLinks.email',
       href: 'mailto:philipp.biebert@gmail.com',
       hoverImg: './assets/icons/mail.png',
       animationType: 'role',

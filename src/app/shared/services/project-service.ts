@@ -8,46 +8,46 @@ export class ProjectService {
   projects: Project[] = [
     {
       id: '0',
-      title: 'Join',
+      title: 'projectsService.items.0.title',
       pevImg: 'assets/img/prev-join-start.png',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nostrum quaerat veritatis quia quos nemo debitis voluptates veniam nobis perspiciatis, est harum, magni, quae facilis?',
-      implementationDetails:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum velit officiis ad soluta atque, dolores ipsum veniam amet totam fugit ullam! Pariatur soluta fuga iusto repudiandae suscipit doloribus omnis quia?',
+      description: 'projectsService.items.0.description',
+      implementationDetails: 'projectsService.items.0.implementationDetails',
       programmingLanguages: [
-        { icon: 'assets/icons/stack/Angular.png', title: 'Angular' },
         { icon: 'assets/icons/stack/HTML.png', title: 'HTML' },
+        { icon: 'assets/icons/stack/CSS.png', title: 'CSS' },
         { icon: 'assets/icons/stack/Js.png', title: 'JavaScript' },
+        { icon: 'assets/icons/stack/Angular.png', title: 'Angular' },
+        { icon: 'assets/icons/stack/Firebase.png', title: 'Firebase' },
       ],
-      duration: '4 wochen',
-      githubLink: 'https://github.com/PBiebert',
-      testLink: '',
+      duration: 'projectsService.items.0.duration',
+      githubLink: 'https://github.com/PBiebert/join',
+      testLink: 'https://pbiebert.developerakademie.net/join/',
     },
     {
       id: '1',
-      title: 'Sharkie',
+      title: 'projectsService.items.1.title',
       pevImg: 'assets/img/prev-sharkie.png',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nostrum quaerat veritatis quia quos nemo debitis voluptates veniam nobis perspiciatis, est harum, magni, quae facilis?',
-      implementationDetails:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum velit officiis ad soluta atque, dolores ipsum veniam amet totam fugit ullam! Pariatur soluta fuga iusto repudiandae suscipit doloribus omnis quia?',
-      programmingLanguages: [{ icon: 'assets/icons/stack/Angular.png', title: 'Angular' }],
-      duration: '4 wochen',
+      description: 'projectsService.items.1.description',
+      implementationDetails: 'projectsService.items.1.implementationDetails',
+      programmingLanguages: [
+        { icon: 'assets/icons/stack/HTML.png', title: 'HTML' },
+        { icon: 'assets/icons/stack/CSS.png', title: 'CSS' },
+        { icon: 'assets/icons/stack/Js.png', title: 'JavaScript' },
+      ],
+      duration: 'projectsService.items.1.duration',
       githubLink: 'https://github.com/PBiebert/MODUL-12_Sharkie',
-      testLink: 'assets/projects/001/index.html',
+      testLink: 'https://pbiebert.developerakademie.net/sharkie/',
     },
     {
       id: '2',
-      title: 'DA-Bubble',
+      title: 'projectsService.items.2.title',
       pevImg: 'assets/img/prev-da-bubble.jpg',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nostrum quaerat veritatis quia quos nemo debitis voluptates veniam nobis perspiciatis, est harum, magni, quae facilis?',
-      implementationDetails:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum velit officiis ad soluta atque, dolores ipsum veniam amet totam fugit ullam! Pariatur soluta fuga iusto repudiandae suscipit doloribus omnis quia?',
+      description: 'projectsService.items.2.description',
+      implementationDetails: 'projectsService.items.2.implementationDetails',
       programmingLanguages: [{ icon: 'assets/icons/stack/Angular.png', title: 'Angular' }],
-      duration: '4 wochen',
-      githubLink: 'https://github.com/PBiebert',
-      testLink: '',
+      duration: 'projectsService.items.2.duration',
+      githubLink: 'https://github.com/PBiebert/da-bubble',
+      testLink: 'https://pbiebert.developerakademie.net/da-bubble/',
     },
   ];
 }

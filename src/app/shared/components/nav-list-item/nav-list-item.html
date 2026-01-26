@@ -6,7 +6,7 @@
     trigger="hover"
     (click)="onItemClicked($event)"
   >
-    <a href="{{ item.href }}">{{ item.title }}</a>
+    <a href="{{ item.href }}">{{ item.title | translate }}</a>
     <img #animateElementRef src="{{ item.hoverImg }}" />
   </li>
 }
@@ -19,7 +19,7 @@
     trigger="hover"
     (click)="onItemClicked($event)"
   >
-    <a href="{{ item.href }}">{{ item.title }}</a>
+    <a href="{{ item.href }}">{{ item.title | translate }}</a>
     <img #animateElementRef src="{{ item.hoverImg }}" />
   </li>
 }
@@ -33,7 +33,7 @@
     trigger="hover"
     (click)="onItemClicked($event)"
   >
-    <a href="{{ item.href }}">{{ item.title }}</a>
+    <a href="{{ item.href }}">{{ item.title | translate }}</a>
     <div #animateElementRef>
       <img src="{{ item.hoverImg }}" />
     </div>

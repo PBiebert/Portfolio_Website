@@ -1,0 +1,186 @@
+{
+  "header": {
+    "navElements": {
+      "aboutMe": "About Me",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+
+  "heroSection": {
+    "buttons": {
+      "sayHelloBtn": "Hello World",
+      "introduceBtn": "My name is Philipp",
+      "getInTouchBtn": "Get in touch"
+    },
+    "currentLangClass": "lang-en"
+  },
+  "about-me": {
+    "strips": {
+      "location": "Based in Lübeck",
+      "relocate": "Mobile up to 40 km",
+      "remote": "Remote possible"
+    },
+    "headline": "Who is Philipp?",
+    "title": "About Me",
+    "content": "I am Philipp Biebert, a full-stack web developer with a technical background in construction. After several years as a site manager, I transferred my structured, solution-oriented approach to software development. My professional background brings a high level of organization, responsibility, planning reliability, and project understanding to web development. <br /><br />Today, I develop modern web applications with a focus on clean code, clear structures, and functional user interfaces. As a full-stack developer, I accompany projects holistically – from conception to implementation to the finished application – and place great value on maintainability, performance, and comprehensible solutions.",
+    "button": "Get in touch"
+  },
+  "stack": {
+    "myStack": "MY STACK",
+    "title": "Skill Set",
+    "peelNote": "To peel <br> Click!",
+    "learningPlan": "On my learning plan:",
+    "headlineContent": "I work as a full-stack developer with modern frontend technologies such as HTML, CSS, JavaScript, TypeScript, and Angular as well as backend solutions with Python, Django, and REST APIs. I integrate new technologies quickly and flexibly."
+  },
+  "projectsHome": {
+    "introLabel": "MY CREATED",
+    "title": "Projects",
+    "introText": "Discover my projects and get an insight into my way of working as a full-stack web developer. Each project is responsive, user-friendly, and implemented with a focus on efficient, cleanly structured code. Take a look around, test the applications, and experience the solutions in action."
+  },
+  "projectsService": {
+    "items": [
+      {
+        "title": "Join",
+        "shortDescription": "Kanban-style task manager. Organize tasks via drag-and-drop and assign users and categories.",
+        "description": "Join is a task management tool inspired by Kanban. It enables teams to efficiently plan, organize, and track tasks.",
+        "implementationDetails": "The project was implemented with Angular, HTML, and JavaScript. It includes drag-and-drop functionality, responsive design, and an intuitive user interface.",
+        "duration": "5 weeks"
+      },
+      {
+        "title": "Sharkie",
+        "shortDescription": "Browser-based jump-and-run game. Guide Sharkie through an exciting level, collect coins and poison bottles, and defeat the killer whale.",
+        "description": "Sharkie is a browser-based jump-and-run game where you master a level as a little shark, overcome obstacles, collect coins and poison bottles, and fight the killer whale.",
+        "implementationDetails": "The game was developed with Angular and uses modern web technologies for animations and interactions.",
+        "duration": "3 weeks"
+      },
+      {
+        "title": "DA-Bubble",
+        "shortDescription": "This app is a Slack clone. It revolutionizes team communication and collaboration with an intuitive interface, real-time messaging, and strong channel organization.",
+        "description": "DA-Bubble is a communication platform for groups that facilitates exchange and collaboration.",
+        "implementationDetails": "The application is based on Angular and offers features such as group chats, notifications, and a modern UI.",
+        "duration": "4 weeks"
+      }
+    ]
+  },
+  "projectsDetails": {
+    "goBack": "Back to homepage",
+    "descriptionTitle": "Description",
+    "implementationTitle": "My Role & Approach",
+    "duration": "Duration",
+    "nextProject": "Next Project",
+    "github": "Github",
+    "test": "Test"
+  },
+  "references": {
+    "inOwnWords": "In their own words",
+    "colleaguesOpinion": "Colleagues' Opinion",
+    "profile": "Profile",
+    "items": [
+      {
+        "name": "Max Mustermann",
+        "position": "Project Manager",
+        "reference": "Philipp always kept an overview in the team and implemented our tasks efficiently. His structured approach and technical competence helped us a lot."
+      },
+      {
+        "name": "Anna Beispiel",
+        "position": "Frontend Developer",
+        "reference": "Philipp strengthened the frontend team with his clear solutions and support on complex tasks. Working with him was very pleasant."
+      },
+      {
+        "name": "Paul Muster",
+        "position": "Backend Developer",
+        "reference": "Philipp always completed his tasks reliably and contributed helpful ideas. Thanks to him, we were able to complete our projects efficiently."
+      }
+    ]
+  },
+  "contactMe": {
+    "contactMe": "Contact Me",
+    "ready": "Ready to collaborate?",
+    "intro": "I'm looking forward to hearing from you! As a full-stack web developer, I'm always looking for new projects where I can contribute my knowledge in frontend and backend technologies and further develop my skills.",
+    "experience": "With my experience in JavaScript, TypeScript, Angular, Python, Django, and REST APIs, I actively contribute to efficient, structured, and user-friendly solutions. I enjoy working in teams, taking responsibility for tasks, and bringing creative ideas to successfully implement projects.",
+    "outro": "If you are planning a new project or need support in web development, I look forward to your message and to working together on exciting solutions.",
+    "nameLabel": "What's your name?",
+    "nameError": "Please enter at least 5 characters",
+    "namePlaceholder": "Please enter your name",
+    "namePlaceholderError": "Oops! Your name is missing.",
+    "emailLabel": "What's your email address?",
+    "emailError": "Please check your email address",
+    "emailPlaceholder": "your-email@address.com",
+    "emailPlaceholderError": "Your email address is required",
+    "messageLabel": "How can I help you?",
+    "messageError": "Please enter at least 20 characters.",
+    "messagePlaceholder": "Hello Philipp, I am interested in...",
+    "messagePlaceholderError": "Please enter a message",
+    "privacyText1": "I have read the ",
+    "privacyLink": "privacy policy",
+    "privacyText2": " and agree to the processing of my data by external service providers.",
+    "send": "Send",
+    "thankYou": "Thank you for your email",
+    "thankYouSub": "I will get back to you as soon as possible"
+  },
+  "externLinks": {
+    "imprint": "Imprint",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+  "imprint": {
+    "title": "Imprint",
+    "section1Title": "Information according to § 5 TMG",
+    "name": "Philipp Alexander Biebert",
+    "street": "An der Logleine 7",
+    "zipCity": "23570 Lübeck",
+    "country": "Germany",
+    "section2Title": "Contact",
+    "phone": "Phone: 0173 / 7984214",
+    "email": "Email: philipp.biebert@gmail.com",
+    "section3Title": "Website",
+    "website": "www.philipp-biebert-dev.de",
+    "section4Title": "Note according to § 55 Abs. 2 RStV",
+    "section4Text1": "This website is for private and informational purposes only.",
+    "section4Text2": "There is no journalistic or editorial content.",
+    "section5Title": "Liability for Content",
+    "section5Text1": "As a service provider, I am responsible for my own content on these pages according to § 7 Abs.1 TMG and general laws.",
+    "section5Text2": "According to §§ 8 to 10 TMG, I am not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.",
+    "section6Title": "Liability for Links",
+    "section6Text1": "This website may contain links to external third-party websites over whose content I have no influence.",
+    "section6Text2": "No guarantee is given for this external content."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "responsibleTitle": "Controller",
+    "responsibleText": "The controller within the meaning of data protection laws, in particular the EU General Data Protection Regulation (GDPR), is:",
+    "name": "Philipp Alexander Biebert",
+    "street": "An der Logleine 7",
+    "zipCity": "23570 Lübeck",
+    "country": "Germany",
+    "phone": "0173 / 7984214",
+    "email": "Email: philipp.biebert@gmail.com",
+    "rightsTitle": "Your Rights",
+    "rightsText": "You may exercise the following rights at any time using the contact details provided, in accordance with the GDPR:",
+    "rightsList": [
+      "Access to your data stored by us (Art. 15 GDPR)",
+      "Rectification of incorrect data (Art. 16 GDPR)",
+      "Erasure of your data (Art. 17 GDPR)",
+      "Restriction of processing (Art. 18 GDPR)",
+      "Objection to processing (Art. 21 GDPR)",
+      "Data portability (Art. 20 GDPR)"
+    ],
+    "revocation": "You may revoke your consent at any time with effect for the future.",
+    "supervisoryAuthorities": "A list of the competent supervisory authorities can be found at:",
+    "contactTitle": "Contact",
+    "contactText": "If you contact us via contact form, email or telephone, the data you provide will be stored for the purpose of processing your request.",
+    "legalBasisTitle": "Legal Basis",
+    "legalBasisText": "Processing is carried out in accordance with Art. 6 para. 1 lit. f GDPR on the basis of a legitimate interest in simple communication.",
+    "storageDurationTitle": "Storage Duration",
+    "storageDurationText": "Personal data will be deleted no later than 90 days after completion of the request, unless there are statutory retention obligations.",
+    "objectionTitle": "Right to Object",
+    "objectionText": "You have the right to object to the processing of your personal data at any time.",
+    "changesTitle": "Changes to this Privacy Policy",
+    "changesText": "We reserve the right to amend this privacy policy to comply with current legal requirements.",
+    "questionsTitle": "Questions about Data Protection",
+    "questionsText": "If you have any questions about data protection, please contact the controller by email."
+  }
+}

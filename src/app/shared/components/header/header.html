@@ -41,7 +41,6 @@
       <img src="{{ burgerOverlayImg }}" [ngClass]="{ clicked: !timerExpired }" />
     </div>
   </header>
-  <!-- <app-mobile-nav [ngClass]="{ nav_active: navIsActive }"></app-mobile-nav> -->
   <nav class="mobile-nav" [ngClass]="{ nav_active: navIsActive }">
     <ul>
       @for (li of navItems; track $index) {

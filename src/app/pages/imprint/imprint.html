@@ -1,47 +1,41 @@
 <section class="head-line">
   <app-header></app-header>
   <div class="wrapper">
-    <h2>Impressum</h2>
+    <h2>{{ 'imprint.title' | translate }}</h2>
   </div>
 </section>
 
 <section class="imprint">
   <div class="wrapper">
     <div>
-      <h3>Angaben gemäß § 5 TMG</h3>
-      <p>Philipp Alexander Biebert</p>
-      <p>An der Logleine 7</p>
-      <p>23570 Lübeck</p>
-      <p>Deutschland</p>
+      <h3>{{ 'imprint.section1Title' | translate }}</h3>
+      <p>{{ 'imprint.name' | translate }}</p>
+      <p>{{ 'imprint.street' | translate }}</p>
+      <p>{{ 'imprint.zipCity' | translate }}</p>
+      <p>{{ 'imprint.country' | translate }}</p>
 
-      <h3>Kontakt</h3>
-      <p>Telefon: 0173 / 7984214</p>
-      <p><a href="mailto:philipp.biebert@gmail.com">E-Mail: philipp.biebert@gmail.com</a></p>
-
-      <h3>Website</h3>
-      <p><a href="">www.philipp-biebert-dev.de</a></p>
-
-      <h3>Hinweis gemäß § 55 Abs. 2 RStV</h3>
-      <p>Diese Website dient ausschließlich privaten und informativen Zwecken.</p>
-      <p>Es erfolgt keine journalistisch-redaktionelle Gestaltung der Inhalte.</p>
-
-      <h3>Haftung für Inhalte</h3>
+      <h3>{{ 'imprint.section2Title' | translate }}</h3>
+      <p>{{ 'imprint.phone' | translate }}</p>
       <p>
-        Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach
-        den allgemeinen Gesetzen verantwortlich.
-      </p>
-      <p>
-        Nach §§ 8 bis 10 TMG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte
-        fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine
-        rechtswidrige Tätigkeit hinweisen.
+        <a href="mailto:philipp.biebert@gmail.com">{{ 'imprint.email' | translate }}</a>
       </p>
 
-      <h3>Haftung für Links</h3>
+      <h3>{{ 'imprint.section3Title' | translate }}</h3>
       <p>
-        Diese Website enthält ggf. Links zu externen Websites Dritter, auf deren Inhalte ich keinen
-        Einfluss habe.
+        <a href="">{{ 'imprint.website' | translate }}</a>
       </p>
-      <p>Für diese fremden Inhalte wird keine Gewähr übernommen.</p>
+
+      <h3>{{ 'imprint.section4Title' | translate }}</h3>
+      <p>{{ 'imprint.section4Text1' | translate }}</p>
+      <p>{{ 'imprint.section4Text2' | translate }}</p>
+
+      <h3>{{ 'imprint.section5Title' | translate }}</h3>
+      <p>{{ 'imprint.section5Text1' | translate }}</p>
+      <p>{{ 'imprint.section5Text2' | translate }}</p>
+
+      <h3>{{ 'imprint.section6Title' | translate }}</h3>
+      <p>{{ 'imprint.section6Text1' | translate }}</p>
+      <p>{{ 'imprint.section6Text2' | translate }}</p>
     </div>
   </div>
 </section>

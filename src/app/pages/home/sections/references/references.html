@@ -10,9 +10,9 @@
         >
           <img #animateElementRef src="assets/img/arrow_blue.png" />
         </span>
-        In eigenen Worten
+        {{ 'references.inOwnWords' | translate }}
       </p>
-      <h2>Meinung der Kollegen</h2>
+      <h2>{{ 'references.colleaguesOpinion' | translate }}</h2>
     </div>
     <div class="references-container">
       @for (reference of references; track $index) {
@@ -27,12 +27,12 @@
           />
           <div class="reference-text-container">
             <div class="content">
-              <p>{{ reference.reference }}</p>
+              <p>{{ reference.reference | translate }}</p>
             </div>
             <div class="reference-footer">
               <div class="person-data">
-                <p class="person-name">{{ reference.name }}</p>
-                <p class="person-position">{{ reference.position }}</p>
+                <p class="person-name">{{ reference.name | translate }}</p>
+                <p class="person-position">{{ reference.position | translate }}</p>
               </div>
               <a class="linkedIn" href="{{ reference.linkedIn }}">
                 <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +41,7 @@
                     fill="#F8F9FA"
                   />
                 </svg>
-                <p>Profil</p>
+                <p>{{ 'references.profile' | translate }}</p>
               </a>
             </div>
           </div>

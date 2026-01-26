@@ -1,13 +1,14 @@
-import { AfterViewInit, Component, ElementRef, inject, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, Renderer2, ViewChild } from '@angular/core';
 import { ImgReveal } from '../../../../shared/directives/img-reveal';
 import { Footer } from '../../../../shared/components/footer/footer';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-contact-me',
-  imports: [ImgReveal, Footer, FormsModule, RouterLink],
+  imports: [ImgReveal, Footer, FormsModule, RouterLink, TranslatePipe],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })

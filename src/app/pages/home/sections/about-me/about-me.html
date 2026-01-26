@@ -6,7 +6,7 @@
           <div class="stripe" [ngClass]="strip.cssClass">
             <div class="content">
               <img src="{{ strip.icon }}" />
-              <h3>{{ strip.content }}</h3>
+              <h3>{{ strip.content | translate }}</h3>
             </div>
           </div>
         }
@@ -14,26 +14,21 @@
     </aside>
 
     <div class="about-me-container">
-      <p class="head-line">Wer ist Philipp?</p>
+      <p class="head-line">{{ 'about-me.headline' | translate }}</p>
       <div
         appImgReveal
         revealClass="reveal-right-to-left"
         overlayClass="overlay-bottom"
         trigger="interval"
       >
-        <h2>Über mich</h2>
+        <h2>{{ 'about-me.title' | translate }}</h2>
         <img #animateElementRef src="assets/img/underline_blue.png" />
       </div>
-      <p class="content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, et dicta. Et hic, fugit
-        minima necessitatibus unde placeat dignissimos aliquam recusandae laboriosam mollitia? Nemo
-        praesentium at incidunt nulla quis quisquam repudiandae necessitatibus, illum aliquam nihil
-        eum vitae placeat voluptas laboriosam reprehenderit mollitia debitis perferendis! Voluptas
-        <br /><br />
-        nobis repudiandae corporis minima. Dolores eaque accusantium vitae veniam recusandae?
-      </p>
+      <p class="content" [innerHTML]="'about-me.content' | translate"></p>
 
-      <button class="button-dark"><a href="#contact-me">Kontakt aufnehmen</a></button>
+      <button class="button-dark">
+        <a href="#contact-me">{{ 'about-me.button' | translate }}</a>
+      </button>
     </div>
   </div>
 </section>

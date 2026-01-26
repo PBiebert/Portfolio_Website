@@ -1,0 +1,189 @@
+{
+  "header": {
+    "navElements": {
+      "aboutMe": "Über mich",
+      "skills": "Fähigkeiten",
+      "projects": "Projekte",
+      "contact": "Kontakt"
+    }
+  },
+
+  "heroSection": {
+    "buttons": {
+      "sayHelloBtn": "Hello World",
+      "introduceBtn": "Mein Name ist Philipp",
+      "getInTouchBtn": "Kontakt aufnehmen"
+    },
+    "currentLangClass": "lang-de"
+  },
+  "about-me": {
+    "strips": {
+      "location": "Standort in Lübeck",
+      "relocate": "Regional mobil bis 40km",
+      "remote": "Remote möglich"
+    },
+    "headline": "Wer ist Philipp?",
+    "title": "Über mich",
+    "content": "Ich bin Philipp Biebert, Fullstack-Webentwickler mit technischem Hintergrund aus dem Bauwesen. Nach mehreren Jahren als Bauleiter habe ich meine strukturierte, lösungsorientierte Arbeitsweise in die Softwareentwicklung übertragen. Durch meinen beruflichen Hintergrund bringe ich ein hohes Maß an Organisation, Verantwortungsbewusstsein, Planungssicherheit und Projektverständnis in die Webentwicklung ein. <br /><br />Heute entwickle ich moderne Webanwendungen mit Fokus auf sauberen Code, klare Strukturen und funktionale Benutzeroberflächen. Als Fullstack-Entwickler begleite ich Projekte ganzheitlich – von der Konzeption über die Umsetzung bis zur fertigen Anwendung – und lege dabei Wert auf Wartbarkeit, Performance und nachvollziehbare Lösungen.",
+    "button": "Kontakt aufnehmen"
+  },
+  "stack": {
+    "myStack": "MEIN STACK",
+    "title": "Skill Set",
+    "peelNote": "Zum Abziehen <br> Klicken!",
+    "learningPlan": "Auf meinem Lernplan:",
+    "headlineContent": "Ich arbeite als Fullstack-Entwickler mit modernen Frontend-Technologien wie HTML, CSS, JavaScript, TypeScript und Angular sowie Backend-Lösungen mit Python, Django und REST-APIs. Neue Technologien integriere ich schnell und flexibel."
+  },
+  "projectsHome": {
+    "introLabel": "MEINE ERSTELTEN",
+    "title": "Projekte",
+    "introText": "Entdecke meine Projekte und erhalte einen Einblick in meine Arbeitsweise als Fullstack-Webentwickler. Jedes Projekt ist responsiv, benutzerfreundlich und mit Fokus auf effizientem, sauber strukturiertem Code umgesetzt. Schau dich um, teste die Anwendungen und erlebe die Lösungen in Aktion."
+  },
+  "projectsService": {
+    "items": [
+      {
+        "title": "Join",
+        "shortDescription": "Task-Manager im Kanban-Stil. Organisiere Aufgaben per Drag-and-Drop und weise Nutzern und Kategorien zu.",
+        "description": "Join ist ein Aufgabenmanagement-Tool, das an Kanban angelehnt ist. Es ermöglicht Teams, Aufgaben effizient zu planen, zu organisieren und zu verfolgen.",
+        "implementationDetails": "Das Projekt wurde mit Angular, HTML und JavaScript umgesetzt. Es beinhaltet Drag-and-Drop-Funktionalität, Responsive Design und eine intuitive Benutzeroberfläche.",
+        "duration": "5 Wochen"
+      },
+      {
+        "title": "Sharkie",
+        "shortDescription": "Jump-and-Run-Spiel im Browser. Steuere Sharkie durch ein spannendes Level, sammle Münzen und Giftflaschen und besiege den Killerwal.",
+        "description": "Sharkie ist ein browserbasiertes Jump-and-Run-Spiel, in dem du als kleiner Hai ein Level meisterst, Hindernisse überwindest, Münzen und Giftflaschen sammelst und gegen den Killerwal kämpfst.",
+        "implementationDetails": "Das Spiel wurde mit Angular entwickelt und nutzt moderne Webtechnologien für Animationen und Interaktionen.",
+        "duration": "3 Wochen"
+      },
+      {
+        "title": "DA-Bubble",
+        "shortDescription": "Diese App ist ein Slack-Klon. Sie revolutioniert Teamkommunikation und Zusammenarbeit mit intuitiver Oberfläche, Echtzeitnachrichten und starker Kanalorganisation.",
+        "description": "DA-Bubble ist eine Kommunikationsplattform für Gruppen, die den Austausch und die Zusammenarbeit erleichtert.",
+        "implementationDetails": "Die Anwendung basiert auf Angular und bietet Funktionen wie Gruppen-Chats, Benachrichtigungen und ein modernes UI.",
+        "duration": "4 Wochen"
+      }
+    ]
+  },
+  "projectsDetails": {
+    "goBack": "Zurück zur Startseite",
+    "descriptionTitle": "Beschreibung",
+    "implementationTitle": "Meine Rolle & Arbeitsweise",
+    "duration": "Dauer",
+    "nextProject": "Nächstes Projekt",
+    "github": "Github",
+    "test": "Testen"
+  },
+  "references": {
+    "inOwnWords": "In eigenen Worten",
+    "colleaguesOpinion": "Meinung der Kollegen",
+    "profile": "Profil",
+    "items": [
+      {
+        "name": "Max Mustermann",
+        "position": "Projektleiter",
+        "reference": "Philipp hat im Team immer den Überblick behalten und unsere Aufgaben effizient umgesetzt. Seine strukturierte Arbeitsweise und technische Kompetenz haben uns sehr geholfen."
+      },
+      {
+        "name": "Anna Beispiel",
+        "position": "Frontend Developer",
+        "reference": "Philipp hat das Frontend-Team durch seine klaren Lösungen und seine Unterstützung bei komplexen Aufgaben gestärkt. Mit ihm zusammenzuarbeiten war sehr angenehm."
+      },
+      {
+        "name": "Paul Muster",
+        "position": "Backend Developer",
+        "reference": "Philipp hat seine Aufgaben stets zuverlässig erledigt und immer hilfreiche Ideen eingebracht. Dank ihm konnten wir unsere Projekte effizient abschließen."
+      }
+    ]
+  },
+  "referencesInOwnWords": "In eigenen Worten",
+  "referencesColleaguesOpinion": "Meinung der Kollegen",
+  "referencesProfile": "Profil",
+  "contactMe": {
+    "contactMe": "Kontaktiere mich",
+    "ready": "Bereit zur Zusammenarbeit?",
+    "intro": "Ich freue mich darauf, von dir zu hören! Als Fullstack-Webentwickler bin ich stets auf der Suche nach neuen Projekten, bei denen ich mein Wissen in Frontend- und Backend-Technologien einbringen und gleichzeitig meine Fähigkeiten weiterentwickeln kann.",
+    "experience": "Mit meiner Erfahrung in JavaScript, TypeScript, Angular, Python, Django und REST-APIs trage ich aktiv zu effizienten, strukturierten und benutzerfreundlichen Lösungen bei. Ich arbeite gern in Teams, übernehme Verantwortung für Aufgaben und bringe kreative Ideen ein, um Projekte erfolgreich umzusetzen.",
+    "outro": "Wenn du ein neues Projekt planst oder Unterstützung in der Webentwicklung suchst, freue ich mich auf deine Nachricht und darauf, gemeinsam an spannenden Lösungen zu arbeiten.",
+    "nameLabel": "Wie ist dein Name?",
+    "nameError": "Gib bitte min. 5 Zeichen ein",
+    "namePlaceholder": "Gib bitte deinen Namen ein ",
+    "namePlaceholderError": "Hoppla! dein Name fehlt.",
+    "emailLabel": "Wie ist deine E-Mail Adresse?",
+    "emailError": "Prüfe bitte deine E-Mail Adresse",
+    "emailPlaceholder": "deine-email@adresse.de",
+    "emailPlaceholderError": "Deine E-Mail Adresse wird benötigt",
+    "messageLabel": "Wie kann ich dir helfen?",
+    "messageError": "Bitte gib min. 20 Zeichen ein.",
+    "messagePlaceholder": "Hallo Philipp, ich bin interessiert an...",
+    "messagePlaceholderError": "Bitte gib eine Nachricht ein",
+    "privacyText1": "Ich habe die ",
+    "privacyLink": "Datenschutzbestimmungen",
+    "privacyText2": " gelesen und stimme der Verarbeitung meiner Daten als externe Dienstleister zu.",
+    "send": "Senden",
+    "thankYou": "Vielen dank für Ihre E-Mail",
+    "thankYouSub": "Ich werde mich schnellstmöglich bei Ihnen melden"
+  },
+  "externLinks": {
+    "imprint": "Impressum",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "E-Mail"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "section1Title": "Angaben gemäß § 5 TMG",
+    "name": "Philipp Alexander Biebert",
+    "street": "An der Logleine 7",
+    "zipCity": "23570 Lübeck",
+    "country": "Deutschland",
+    "section2Title": "Kontakt",
+    "phone": "Telefon: 0173 / 7984214",
+    "email": "E-Mail: philipp.biebert@gmail.com",
+    "section3Title": "Website",
+    "website": "www.philipp-biebert-dev.de",
+    "section4Title": "Hinweis gemäß § 55 Abs. 2 RStV",
+    "section4Text1": "Diese Website dient ausschließlich privaten und informativen Zwecken.",
+    "section4Text2": "Es erfolgt keine journalistisch-redaktionelle Gestaltung der Inhalte.",
+    "section5Title": "Haftung für Inhalte",
+    "section5Text1": "Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.",
+    "section5Text2": "Nach §§ 8 bis 10 TMG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+    "section6Title": "Haftung für Links",
+    "section6Text1": "Diese Website enthält ggf. Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe.",
+    "section6Text2": "Für diese fremden Inhalte wird keine Gewähr übernommen."
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "responsibleTitle": "Verantwortlicher",
+    "responsibleText": "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutz-Grundverordnung (DSGVO), ist:",
+    "name": "Philipp Alexander Biebert",
+    "street": "An der Logleine 7",
+    "zipCity": "23570 Lübeck",
+    "country": "Deutschland",
+    "phone": "0173 / 7984214",
+    "email": "E-Mail: philipp.biebert@gmail.com",
+    "rightsTitle": "Ihre Betroffenenrechte",
+    "rightsText": "Unter den angegebenen Kontaktdaten können Sie gemäß DSGVO jederzeit folgende Rechte ausüben:",
+    "rightsList": [
+      "Auskunft über Ihre bei mir gespeicherten Daten (Art. 15 DSGVO)",
+      "Berichtigung unrichtiger Daten (Art. 16 DSGVO)",
+      "Löschung Ihrer Daten (Art. 17 DSGVO)",
+      "Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+      "Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)",
+      "Datenübertragbarkeit (Art. 20 DSGVO)"
+    ],
+    "revocation": "Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.",
+    "supervisoryAuthorities": "Eine Liste der zuständigen Aufsichtsbehörden finden Sie unter:",
+    "contactTitle": "Kontaktaufnahme",
+    "contactText": "Wenn Sie uns per Kontaktformular, E-Mail oder Telefon kontaktieren, werden die von Ihnen übermittelten Daten zum Zweck der Bearbeitung Ihrer Anfrage gespeichert.",
+    "legalBasisTitle": "Rechtsgrundlage",
+    "legalBasisText": "Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis eines berechtigten Interesses an einer unkomplizierten Kommunikation.",
+    "storageDurationTitle": "Speicherdauer",
+    "storageDurationText": "Personenbezogene Daten werden spätestens 90 Tage nach Abschluss der Anfrage gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.",
+    "objectionTitle": "Widerspruchsrecht",
+    "objectionText": "Sie haben das Recht, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen.",
+    "changesTitle": "Änderung der Datenschutzerklärung",
+    "changesText": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an aktuelle rechtliche Anforderungen anzupassen.",
+    "questionsTitle": "Fragen zum Datenschutz",
+    "questionsText": "Bei Fragen zum Datenschutz wenden Sie sich bitte per E-Mail an den Verantwortlichen."
+  }
+}

@@ -1,13 +1,12 @@
 <section>
   <div class="wrapper">
     <div class="content" id="contact-me">
-      <h4>Kontaktiere mich</h4>
-      <h2>Bereit zur Zusammenarbeit?</h2>
+      <h4>{{ 'contactMe.contactMe' | translate }}</h4>
+      <h2>{{ 'contactMe.ready' | translate }}</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis quasi dolore
-        odio enim temporibus nostrum placeat non perspiciatis nam autem beatae soluta debitis, nihil
-        iusto eos numquam exercitationem quam magnam cum eius earum. Sit velit omnis, suscipit et
-        impedit ab id sequi maxime animi architecto ipsam alias iusto odio?
+        {{ 'contactMe.intro' | translate }}<br /><br />
+        {{ 'contactMe.experience' | translate }}<br /><br />
+        {{ 'contactMe.outro' | translate }}
       </p>
       <div
         appImgReveal
@@ -25,8 +24,8 @@
           <label for="input-name" [class.highlight-label-If-Invalid]="name.touched && name.invalid">
             {{
               name.touched && name.invalid && name.dirty
-                ? 'Gib bitte min. 5 Zeichen ein'
-                : 'Wie ist dein Name?'
+                ? ('contactMe.nameError' | translate)
+                : ('contactMe.nameLabel' | translate)
             }}
           </label>
           <input
@@ -37,7 +36,9 @@
             type="text"
             minlength="5"
             [placeholder]="
-              !name.touched ? 'Gib bitte deinen Namen ein ' : 'Hoppla! dein Name fehlt.'
+              !name.touched
+                ? ('contactMe.namePlaceholder' | translate)
+                : ('contactMe.namePlaceholderError' | translate)
             "
             required
             #name="ngModel"
@@ -50,8 +51,8 @@
           >
             {{
               email.touched && email.invalid && email.dirty
-                ? 'Prüfe bitte deine E-Mail Adresse'
-                : 'Wie ist deine E-Mail Adresse?'
+                ? ('contactMe.emailError' | translate)
+                : ('contactMe.emailLabel' | translate)
             }}
           </label>
           <input
@@ -61,7 +62,9 @@
             id="input-email"
             type="email"
             [placeholder]="
-              !email.touched ? 'deine-email@adresse.de' : 'Deine E-Mail Adresse wird benötigt'
+              !email.touched
+                ? ('contactMe.emailPlaceholder' | translate)
+                : ('contactMe.emailPlaceholderError' | translate)
             "
             required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
@@ -74,8 +77,8 @@
             [class.highlight-label-If-Invalid]="massage.touched && massage.invalid"
             >{{
               massage.touched && massage.invalid && massage.dirty
-                ? 'Bitte gib min. 20 Zeichen ein.'
-                : 'Wie kann ich dir helfen?'
+                ? ('contactMe.messageError' | translate)
+                : ('contactMe.messageLabel' | translate)
             }}</label
           >
           <input
@@ -86,8 +89,8 @@
             type="text"
             [placeholder]="
               !massage.touched
-                ? 'Hallo Philipp, ich bin interessiert an...'
-                : 'Bitte gib eine Nachricht ein'
+                ? ('contactMe.messagePlaceholder' | translate)
+                : ('contactMe.messagePlaceholderError' | translate)
             "
             minlength="20"
             required
@@ -108,8 +111,9 @@
               <span class="checkbox-bg"></span>
             </label>
             <p class="privacy-text" style="margin-left: 8px">
-              Ich habe die <a routerLink="/privacy">Datenschutzbestimmungen</a> gelesen und stimme
-              der Verarbeitung meiner Daten als externe Dienstleister zu.
+              {{ 'contactMe.privacyText1' | translate }}
+              <a routerLink="/privacy">{{ 'contactMe.privacyLink' | translate }}</a>
+              {{ 'contactMe.privacyText2' | translate }}
             </p>
           </div>
           <div class="button-container">
@@ -126,7 +130,7 @@
               class="button-bright type-button"
               [disabled]="name.invalid || email.invalid || massage.invalid || privacyCheck.invalid"
             >
-              Senden
+              {{ 'contactMe.send' | translate }}
             </button>
           </div>
         </div>
@@ -137,8 +141,8 @@
   <dialog #thankYouDialog (click)="closeThankYouDialog()">
     <div class="dialog-wrapper" (click)="$event.stopPropagation()">
       <div class="dialog-content">
-        <p>Vielen dank für Ihre E-Mail</p>
-        <p>Ich werde mich schnellstmöglich bei Ihnen melden</p>
+        <p>{{ 'contactMe.thankYou' | translate }}</p>
+        <p>{{ 'contactMe.thankYouSub' | translate }}</p>
       </div>
       <button class="dialog-close-btn button-dark" (click)="closeThankYouDialog()">
         <p>X</p>

@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { ImgReveal } from '../../../../shared/directives/img-reveal';
 import { CommonModule, NgClass } from '@angular/common';
-import { StackItem } from '../../../../Interfaces/stack-item.interface';
 import { StackService } from '../../../../shared/services/stack-service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-stack',
-  imports: [ImgReveal, CommonModule, NgClass],
+  imports: [ImgReveal, CommonModule, NgClass, TranslatePipe],
   templateUrl: './stack.html',
   styleUrl: './stack.scss',
 })

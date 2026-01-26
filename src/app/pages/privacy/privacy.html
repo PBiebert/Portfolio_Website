@@ -1,45 +1,37 @@
 <section class="head-line">
   <app-header></app-header>
   <div class="wrapper">
-    <h2>Datenschutzerklärung</h2>
+    <h2>{{ 'privacy.title' | translate }}</h2>
   </div>
 </section>
 
 <section class="privacy">
   <div class="wrapper">
     <div>
-      <h3>Verantwortlicher</h3>
+      <h3>{{ 'privacy.responsibleTitle' | translate }}</h3>
+      <p>{{ 'privacy.responsibleText' | translate }}</p>
+      <p><br />{{ 'privacy.name' | translate }}</p>
+      <p>{{ 'privacy.street' | translate }}</p>
+      <p>{{ 'privacy.zipCity' | translate }}</p>
+      <p>{{ 'privacy.country' | translate }}</p>
+      <p><br />{{ 'privacy.phone' | translate }}</p>
       <p>
-        Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der
-        EU-Datenschutz-Grundverordnung (DSGVO), ist:
+        <a href="mailto:philipp.biebert@gmail.com">{{ 'privacy.email' | translate }}</a>
       </p>
-      <p><br />Philipp Alexander Biebert</p>
-      <p>An der Logleine 7</p>
-      <p>23570 Lübeck</p>
-      <p>Deutschland</p>
-      <p>
-        <br />
-        0173 / 7984214
-      </p>
-      <p><a href="mailto:philipp.biebert@gmail.com">E-Mail: philipp.biebert@gmail.com</a></p>
 
-      <h3>Ihre Betroffenenrechte</h3>
-      <p>
-        Unter den angegebenen Kontaktdaten können Sie gemäß DSGVO jederzeit folgende Rechte ausüben:
-      </p>
+      <h3>{{ 'privacy.rightsTitle' | translate }}</h3>
+      <p>{{ 'privacy.rightsText' | translate }}</p>
       <ul>
-        <li>Auskunft über Ihre bei mir gespeicherten Daten (Art. 15 DSGVO)</li>
-        <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
-        <li>Löschung Ihrer Daten (Art. 17 DSGVO)</li>
-        <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-        <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
-        <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+        <li>{{ 'privacy.rightsList.0' | translate }}</li>
+        <li>{{ 'privacy.rightsList.1' | translate }}</li>
+        <li>{{ 'privacy.rightsList.2' | translate }}</li>
+        <li>{{ 'privacy.rightsList.3' | translate }}</li>
+        <li>{{ 'privacy.rightsList.4' | translate }}</li>
+        <li>{{ 'privacy.rightsList.5' | translate }}</li>
       </ul>
-
-      <p>Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.</p>
-
+      <p>{{ 'privacy.revocation' | translate }}</p>
       <p>
-        Eine Liste der zuständigen Aufsichtsbehörden finden Sie unter:
+        {{ 'privacy.supervisoryAuthorities' | translate }}
         <a
           href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
         >
@@ -47,38 +39,23 @@
         </a>
       </p>
 
-      <h3>Kontaktaufnahme</h3>
-      <p>
-        Wenn Sie uns per Kontaktformular, E-Mail oder Telefon kontaktieren, werden die von Ihnen
-        übermittelten Daten zum Zweck der Bearbeitung Ihrer Anfrage gespeichert.
-      </p>
+      <h3>{{ 'privacy.contactTitle' | translate }}</h3>
+      <p>{{ 'privacy.contactText' | translate }}</p>
 
-      <h3>Rechtsgrundlage</h3>
-      <p>
-        Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis eines berechtigten
-        Interesses an einer unkomplizierten Kommunikation.
-      </p>
+      <h3>{{ 'privacy.legalBasisTitle' | translate }}</h3>
+      <p>{{ 'privacy.legalBasisText' | translate }}</p>
 
-      <h3>Speicherdauer</h3>
-      <p>
-        Personenbezogene Daten werden spätestens 90 Tage nach Abschluss der Anfrage gelöscht, sofern
-        keine gesetzlichen Aufbewahrungspflichten bestehen.
-      </p>
+      <h3>{{ 'privacy.storageDurationTitle' | translate }}</h3>
+      <p>{{ 'privacy.storageDurationText' | translate }}</p>
 
-      <h3>Widerspruchsrecht</h3>
-      <p>
-        Sie haben das Recht, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten
-        Widerspruch einzulegen.
-      </p>
+      <h3>{{ 'privacy.objectionTitle' | translate }}</h3>
+      <p>{{ 'privacy.objectionText' | translate }}</p>
 
-      <h3>Änderung der Datenschutzerklärung</h3>
-      <p>
-        Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an aktuelle rechtliche
-        Anforderungen anzupassen.
-      </p>
+      <h3>{{ 'privacy.changesTitle' | translate }}</h3>
+      <p>{{ 'privacy.changesText' | translate }}</p>
 
-      <h3>Fragen zum Datenschutz</h3>
-      <p>Bei Fragen zum Datenschutz wenden Sie sich bitte per E-Mail an den Verantwortlichen.</p>
+      <h3>{{ 'privacy.questionsTitle' | translate }}</h3>
+      <p>{{ 'privacy.questionsText' | translate }}</p>
     </div>
   </div>
 </section>

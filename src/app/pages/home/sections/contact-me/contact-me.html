@@ -1,6 +1,7 @@
 <section>
   <div class="wrapper">
     <div class="content" id="contact-me">
+      <app-sticker class="sticker-content"></app-sticker>
       <h4>{{ 'contactMe.contactMe' | translate }}</h4>
       <h2>{{ 'contactMe.ready' | translate }}</h2>
       <p>
@@ -19,6 +20,7 @@
     </div>
 
     <div class="contact-form-container">
+      <app-sticker class="sticker-form"></app-sticker>
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="input-container">
           <label for="input-name" [class.highlight-label-If-Invalid]="name.touched && name.invalid">
@@ -112,7 +114,7 @@
             </label>
             <p class="privacy-text" style="margin-left: 8px">
               {{ 'contactMe.privacyText1' | translate }}
-              <a routerLink="/privacy">{{ 'contactMe.privacyLink' | translate }}</a>
+              <a href="/privacy">{{ 'contactMe.privacyLink' | translate }}</a>
               {{ 'contactMe.privacyText2' | translate }}
             </p>
           </div>

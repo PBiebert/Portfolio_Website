@@ -48,15 +48,26 @@
             </div>
           </div>
           <div class="preview-container">
-            <div class="preview">
-              <img
-                [src]="
-                  project.title == 'projectsService.items.0.title'
-                    ? 'assets/img/prev-join_full_size.png'
-                    : project.pevImg
-                "
-                alt=""
-              />
+            <div class="preview-sticker-wrapper">
+              <div class="preview">
+                <img
+                  [src]="
+                    project.title == 'projectsService.items.0.title'
+                      ? 'assets/img/prev-join_full_size.png'
+                      : project.pevImg
+                  "
+                  alt=""
+                />
+              </div>
+              @if (project.title == 'projectsService.items.0.title') {
+                <div class="sticker-container">
+                  <img src="assets/img/sticker-blue.png" alt="" class="sticker" />
+                </div>
+              } @else {
+                <div class="sticker-container">
+                  <app-sticker [bgColor]="'yellow'"></app-sticker>
+                </div>
+              }
             </div>
             <div class="links">
               <button class="button-bright">
@@ -84,7 +95,7 @@
           </a>
         </div>
       </div>
-      <app-sticker [bgColor]="'orange'"></app-sticker>
+      <!-- <app-sticker [bgColor]="'orange'"></app-sticker> -->
     </section>
   }
 }

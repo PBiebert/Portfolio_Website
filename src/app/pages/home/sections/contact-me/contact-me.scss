@@ -17,6 +17,8 @@ section {
 }
 
 .content {
+  padding-top: 150px;
+  position: relative;
   flex-grow: 1;
   text-wrap: wrap;
   min-width: 60%;
@@ -115,6 +117,24 @@ section {
   }
 }
 
+.sticker-form,
+.sticker-content {
+  position: absolute;
+  height: 150px;
+  aspect-ratio: 1/1;
+}
+
+.sticker-form {
+  top: -125px;
+  right: 0;
+}
+
+.sticker-content {
+  top: 0;
+  right: 0;
+  display: none;
+}
+
 @media (max-width: 1150px) {
   .wrapper {
     flex-direction: column;
@@ -142,6 +162,14 @@ section {
     input {
       margin: 0.5rem 0rem;
     }
+  }
+
+  .sticker-form {
+    display: none;
+  }
+
+  .sticker-content {
+    display: block;
   }
 }
 
@@ -306,6 +334,16 @@ dialog {
   }
 }
 
+@media (max-width: 500px) {
+  .content {
+    padding-top: 125px;
+
+    //   .sticker-form {
+    //   display: none;
+    // }
+  }
+}
+
 @media (max-width: 360px) {
   dialog {
     .dialog-wrapper {
@@ -315,5 +353,9 @@ dialog {
         right: 0.8rem;
       }
     }
+  }
+
+  .sticker-content {
+    height: 125px;
   }
 }

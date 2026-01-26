@@ -58,7 +58,7 @@ h2 {
 
 .content-container {
   width: 45%;
-  @include flexbox($align-items: flex-start);
+  align-items: flex-start;
   margin-right: 2rem;
 
   .content {
@@ -81,6 +81,7 @@ h2 {
 
   .programming-languages-container {
     @include flexbox($flex-direction: row);
+    flex-wrap: wrap;
 
     .language {
       @include flexbox($flex-direction: row);
@@ -99,17 +100,43 @@ h2 {
 }
 
 .preview-container {
+  position: relative;
   width: 50%;
   @include flexbox($align-items: flex-end, $justify-content: space-between);
   gap: 5rem;
 
-  .preview {
+  .preview-sticker-wrapper {
+    position: relative;
     width: 90%;
+    aspect-ratio: 1.6/1;
+    display: flex;
+    align-items: center;
+  }
+
+  .preview {
+    width: 100%;
     aspect-ratio: 1.6/1;
     overflow: hidden;
     border-radius: 1rem;
+    position: relative;
 
     img {
+      width: 100%;
+    }
+  }
+
+  .sticker-container {
+    position: absolute;
+    top: 50%;
+    right: -25%;
+    transform: translate(-50%, -50%);
+    height: 45%;
+    aspect-ratio: 1/1;
+    z-index: 2;
+
+    img,
+    app-sticker {
+      height: 100%;
       width: 100%;
     }
   }
@@ -150,6 +177,10 @@ h2 {
 @media (max-width: 700px) {
   .preview-container {
     gap: 3rem;
+  }
+
+  .sticker-container {
+    display: none;
   }
 }
 

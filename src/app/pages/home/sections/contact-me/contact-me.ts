@@ -6,9 +6,10 @@ import { HttpClient } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
+import { Sticker } from '../../../../shared/components/sticker/sticker';
 @Component({
   selector: 'app-contact-me',
-  imports: [ImgReveal, Footer, FormsModule, RouterLink, TranslatePipe],
+  imports: [ImgReveal, Footer, FormsModule, RouterLink, TranslatePipe, Sticker],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })

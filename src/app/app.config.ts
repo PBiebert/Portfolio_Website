@@ -31,9 +31,9 @@ export const appConfig: ApplicationConfig = {
     }),
     provideRouter(
       routes,
-      withInMemoryScrolling({
-        scrollPositionRestoration: 'top',
-      }),
+      // withInMemoryScrolling({
+      //   scrollPositionRestoration: 'top',
+      // }),
     ),
     provideHttpClient(),
   ],

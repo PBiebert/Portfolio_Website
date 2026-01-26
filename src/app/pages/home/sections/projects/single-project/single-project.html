@@ -2,10 +2,10 @@
   <div class="preview-img-container">
     <img
       src="{{ project.pevImg }}"
-      [ngClass]="{ bounce: project.title === 'projects.items.0.title' }"
+      [ngClass]="{ bounce: project.title === 'projectsService.items.0.title' }"
       alt=""
     />
-    @if (project.title === 'projects.items.0.title') {
+    @if (project.title === 'projectsService.items.0.title') {
       <img src="assets/img/sticker-blue.png" class="sticker" />
     }
     <div class="overlay">

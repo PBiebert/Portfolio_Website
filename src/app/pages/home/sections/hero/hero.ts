@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ImgReveal } from '../../../../shared/directives/img-reveal';
 import { Header } from '../../../../shared/components/header/header';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-hero',
@@ -14,6 +15,8 @@ import { Header } from '../../../../shared/components/header/header';
   styleUrl: './hero.scss',
 })
 export class Hero implements OnInit {
+  constructor(private viewportScroller: ViewportScroller) {}
+
   contentFirstLine = 'Fullstack'.split('');
   contentSecondLine = 'DEVELOPER'.split('');
 
@@ -61,5 +64,9 @@ export class Hero implements OnInit {
   startFrameHoverAnimation() {
     setTimeout(() => (this.hoverAnimationRunning = false), 500);
     this.hoverAnimationRunning = true;
+  }
+
+  scrollToContactMe() {
+    this.viewportScroller.scrollToAnchor('contact-me');
   }
 }

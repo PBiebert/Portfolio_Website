@@ -1,0 +1,25 @@
+<div class="project-container">
+  <div class="preview-img-container">
+    <img
+      class="main-img"
+      src="{{ project.pevImg }}"
+      [ngClass]="{ bounce: project.title === 'projectsService.items.0.title' }"
+      alt=""
+    />
+    @if (project.title === 'projectsService.items.0.title') {
+      <img src="assets/img/sticker-blue.webp" class="sticker" />
+    }
+    <div class="overlay">
+      <button class="button-bright">
+        <a [routerLink]="['/single-project', project.id]">Projekt Details</a>
+      </button>
+    </div>
+  </div>
+  <h3>{{ project.title | translate }}</h3>
+  <p class="short-description">
+    {{ 'projectsService.items.' + projectIndex + '.shortDescription' | translate }}
+  </p>
+  <button class="button-dark">
+    <a [routerLink]="['/single-project', project.id]">Projekt Details</a>
+  </button>
+</div>

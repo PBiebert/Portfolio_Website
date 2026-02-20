@@ -1,0 +1,13 @@
+@use './../../styles/core' as *;
+
+li {
+  position: relative;
+  text-align: center;
+  @include flexbox($flex-direction: row);
+}
+
+.overlay-bottom {
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}

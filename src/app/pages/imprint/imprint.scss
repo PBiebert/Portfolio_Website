@@ -1,0 +1,67 @@
+@use './../../shared/styles/core' as *;
+
+main {
+  height: 100vh;
+  height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.imprint {
+  flex: 1 1 0;
+
+  .wrapper {
+    justify-content: flex-start;
+  }
+}
+
+a {
+  color: $color-font-dark;
+  font-weight: normal;
+}
+
+.head-line {
+  min-height: 350px;
+  width: 100%;
+  background-image: url(./../../../../public/assets/img/skills.webp);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+  justify-content: flex-start;
+
+  .wrapper {
+    h2 {
+      mix-blend-mode: difference;
+      margin: 0;
+      align-self: flex-start;
+      color: $color-font-light;
+    }
+  }
+}
+
+h3 {
+  color: $color-accent-blue;
+}
+
+a {
+  padding: 0;
+}
+
+.bg-footer {
+  min-height: 15rem;
+}
+
+@media (max-width: 1024px) {
+  .head-line {
+    height: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  .head-line {
+    height: 250px;
+  }
+}

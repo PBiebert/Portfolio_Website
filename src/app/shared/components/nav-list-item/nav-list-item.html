@@ -1,0 +1,58 @@
+@if (item.link == 'imprint') {
+  <li
+    appImgReveal
+    revealClass="reveal-right-to-left"
+    overlayClass="overlay-bottom"
+    trigger="hover"
+    (click)="onItemClicked($event)"
+  >
+    <a [routerLink]="['/imprint']">{{ item.title | translate }}</a>
+    <img #animateElementRef src="{{ item.hoverImg }}" />
+  </li>
+} @else if (item.animationType == 'topToBottom') {
+  <li
+    appImgReveal
+    revealClass="reveal-top-to-bottom"
+    overlayClass="overlay-bottom"
+    trigger="hover"
+    (click)="onItemClicked($event)"
+  >
+    <a [routerLink]="['/']" fragment="{{ item.link }}">{{ item.title | translate }}</a>
+    <img #animateElementRef src="{{ item.hoverImg }}" />
+  </li>
+} @else if (item.animationType == 'rightToLeft') {
+  <li
+    appImgReveal
+    revealClass="reveal-right-to-left"
+    overlayClass="overlay-bottom"
+    trigger="hover"
+    (click)="onItemClicked($event)"
+  >
+    <a [routerLink]="['/']" fragment="{{ item.link }}">{{ item.title | translate }}</a>
+    <img #animateElementRef src="{{ item.hoverImg }}" />
+  </li>
+} @else if (item.animationType == 'role') {
+  <li
+    appImgReveal
+    class="fill-container"
+    revealClass="role-left"
+    overlayClass="role-overlay"
+    trigger="hover"
+    (click)="onItemClicked($event)"
+  >
+    @if (
+      item.link == 'mailto:contact@philippbiebert.de' ||
+      item.link == 'https://github.com/PBiebert' ||
+      item.link == 'https://www.linkedin.com/in/philipp-alexander-biebert-55258737a'
+    ) {
+      <a href="{{ item.link }}" target="_blank">{{ item.title | translate }}</a>
+    } @else {
+      <a [routerLink]="['/']" fragment="{{ item.link }}" target="_blank">{{
+        item.title | translate
+      }}</a>
+    }
+    <div #animateElementRef>
+      <img src="{{ item.hoverImg }}" />
+    </div>
+  </li>
+}

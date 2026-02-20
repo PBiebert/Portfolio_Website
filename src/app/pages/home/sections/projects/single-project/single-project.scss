@@ -1,0 +1,117 @@
+@use './../projects.scss' as *;
+@use './../../../../../shared/styles/core' as *;
+.project-container {
+  @include flexbox($align-items: flex-start);
+
+  .preview-img-container {
+    @include flexbox();
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.6/1;
+    border-radius: 25px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      transition: $hover-transition-fast;
+      z-index: 1;
+
+      &.bounce {
+        animation: slowBounce 2s ease-in-out infinite alternate;
+      }
+    }
+
+    .sticker {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 25%;
+      aspect-ratio: 1/1;
+      z-index: 3;
+
+      &:hover {
+        animation: initial;
+      }
+
+      @media (max-width: 400px) {
+        display: none;
+      }
+    }
+
+    .overlay {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(247, 247, 247, 0) 50%);
+      opacity: 0;
+      transition: $hover-transition;
+      z-index: 2;
+
+      button {
+        pointer-events: auto;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1rem;
+        font-weight: lighter;
+        z-index: 4;
+      }
+    }
+  }
+
+  .preview-img-container:hover .overlay {
+    opacity: 1;
+  }
+
+  .preview-img-container:hover .main-img {
+    animation: slowScale 250ms ease-in-out 1 forwards;
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}
+
+.button-dark {
+  display: none;
+  margin-top: 1rem;
+  align-self: flex-end;
+  a {
+    display: flex;
+    color: $color-font-dark;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-dark {
+    display: initial;
+  }
+
+  .button-bright {
+    display: none;
+  }
+}
+
+@keyframes slowBounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10%);
+  }
+}
+
+@keyframes slowScale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}

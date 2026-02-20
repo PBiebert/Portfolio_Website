@@ -1,0 +1,55 @@
+<section id="my-stack">
+  <div class="wrapper">
+    <div class="head-line">
+      <div class="title">
+        <p>{{ 'stack.myStack' | translate }}</p>
+        <div
+          appImgReveal
+          revealClass="reval-0deg"
+          overlayClass="overlay-rotate-90deg"
+          trigger="interval"
+        >
+          <h2>{{ 'stack.title' | translate }}</h2>
+          <img #animateElementRef src="assets/img/circle_orange.png" />
+        </div>
+      </div>
+      <div class="head-line-content">
+        <p [innerHTML]="'stack.headlineContent' | translate"></p>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="stack-container">
+        @for (stackItem of stackServce.stack; track $index) {
+          <div class="stack-item">
+            <div class="img-container">
+              <img src="{{ stackItem.icon }}" />
+            </div>
+
+            <p>{{ stackItem.title }}</p>
+          </div>
+        }
+      </div>
+
+      <div class="note-container" (click)="peelTheNote()">
+        <p>{{ 'stack.learningPlan' | translate }}</p>
+        <div class="note-item-container">
+          @for (stackItem of stackServce.learningStack; track $index) {
+            <div class="note-skills-item">
+              <img src="{{ stackItem.icon }}" />
+              <p>{{ stackItem.title }}</p>
+            </div>
+          }
+        </div>
+
+        <div class="overlay-container" [ngClass]="{ 'd-none': noteIsCheckt }">
+          <img class="note-overlay" [src]="overlaySrc" />
+          <div class="overlay-text">
+            <img class="note-arrow" src="assets/img/note-arrow.png" alt="" />
+            <p [innerHTML]="'stack.peelNote' | translate"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

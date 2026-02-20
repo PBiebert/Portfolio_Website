@@ -1,0 +1,154 @@
+<section>
+  <div class="wrapper">
+    <div class="content" id="contact-me">
+      <app-sticker class="sticker-content"></app-sticker>
+      <h4>{{ 'contactMe.contactMe' | translate }}</h4>
+      <h2>{{ 'contactMe.ready' | translate }}</h2>
+      <p>
+        {{ 'contactMe.intro' | translate }}<br /><br />
+        {{ 'contactMe.experience' | translate }}<br /><br />
+        {{ 'contactMe.outro' | translate }}
+      </p>
+      <div
+        appImgReveal
+        revealClass="reveal-right-to-left"
+        overlayClass="overlay-bottom"
+        trigger="interval"
+      >
+        <img #animateElementRef src="assets/img/wave_arrow_yellow.png" />
+      </div>
+    </div>
+
+    <div class="contact-form-container">
+      <app-sticker class="sticker-form"></app-sticker>
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div class="input-container">
+          <label for="input-name" [class.highlight-label-If-Invalid]="name.touched && name.invalid">
+            {{
+              name.touched && name.invalid && name.dirty
+                ? ('contactMe.nameError' | translate)
+                : ('contactMe.nameLabel' | translate)
+            }}
+          </label>
+          <input
+            [(ngModel)]="contactData.name"
+            [class.invalid]="name.touched"
+            name="input-name"
+            id="input-name"
+            type="text"
+            minlength="5"
+            [placeholder]="
+              !name.touched
+                ? ('contactMe.namePlaceholder' | translate)
+                : ('contactMe.namePlaceholderError' | translate)
+            "
+            required
+            #name="ngModel"
+          />
+        </div>
+        <div class="input-container">
+          <label
+            for="input-email"
+            [class.highlight-label-If-Invalid]="email.touched && email.invalid"
+          >
+            {{
+              email.touched && email.invalid && email.dirty
+                ? ('contactMe.emailError' | translate)
+                : ('contactMe.emailLabel' | translate)
+            }}
+          </label>
+          <input
+            [(ngModel)]="contactData.email"
+            name="input-email"
+            [class.invalid]="email.touched"
+            id="input-email"
+            type="email"
+            [placeholder]="
+              !email.touched
+                ? ('contactMe.emailPlaceholder' | translate)
+                : ('contactMe.emailPlaceholderError' | translate)
+            "
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            #email="ngModel"
+          />
+        </div>
+        <div class="input-container">
+          <label
+            for="input-massage"
+            [class.highlight-label-If-Invalid]="massage.touched && massage.invalid"
+            >{{
+              massage.touched && massage.invalid && massage.dirty
+                ? ('contactMe.messageError' | translate)
+                : ('contactMe.messageLabel' | translate)
+            }}</label
+          >
+          <input
+            [(ngModel)]="contactData.message"
+            name="input-massage"
+            [class.invalid]="massage.touched"
+            id="input-massage"
+            type="text"
+            [placeholder]="
+              !massage.touched
+                ? ('contactMe.messagePlaceholder' | translate)
+                : ('contactMe.messagePlaceholderError' | translate)
+            "
+            minlength="20"
+            required
+            #massage="ngModel"
+          />
+        </div>
+        <div class="interactions-container">
+          <div class="privacy-check-container">
+            <label for="privacy">
+              <input
+                [(ngModel)]="contactData.privacyCheck"
+                type="checkbox"
+                id="privacy"
+                name="privacy"
+                required
+                #privacyCheck="ngModel"
+              />
+              <span class="checkbox-bg"></span>
+            </label>
+            <p class="privacy-text" style="margin-left: 8px">
+              {{ 'contactMe.privacyText1' | translate }}
+              <a routerLink="/privacy">{{ 'contactMe.privacyLink' | translate }}</a>
+              {{ 'contactMe.privacyText2' | translate }}
+            </p>
+          </div>
+          <div class="button-container">
+            <div
+              appImgReveal
+              revealClass="reveal-right-to-left"
+              overlayClass="overlay-bottom"
+              trigger="interval"
+            >
+              <img #animateElementRef src="assets/img/wave_arrow_yellow.png" />
+            </div>
+            <button
+              type="submit"
+              class="button-bright type-button"
+              [disabled]="name.invalid || email.invalid || massage.invalid || privacyCheck.invalid"
+            >
+              {{ 'contactMe.send' | translate }}
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <app-footer></app-footer>
+  <dialog #thankYouDialog (click)="closeThankYouDialog()">
+    <div class="dialog-wrapper" (click)="$event.stopPropagation()">
+      <div class="dialog-content">
+        <p>{{ 'contactMe.thankYou' | translate }}</p>
+        <p>{{ 'contactMe.thankYouSub' | translate }}</p>
+      </div>
+      <button class="dialog-close-btn button-dark" (click)="closeThankYouDialog()">
+        <p>X</p>
+      </button>
+    </div>
+  </dialog>
+</section>

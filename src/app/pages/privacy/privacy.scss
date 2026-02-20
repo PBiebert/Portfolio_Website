@@ -1,0 +1,51 @@
+@use './../../shared/styles/core' as *;
+
+a {
+  color: $color-font-dark;
+  font-weight: normal;
+}
+
+.head-line {
+  height: 350px;
+  width: 100%;
+  background-image: url(./../../../../public/assets/img/skills.webp);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+
+  .wrapper h2 {
+    align-self: flex-start;
+    color: $color-font-light;
+  }
+}
+
+h3 {
+  color: $color-accent-blue;
+}
+
+ul {
+  margin: 1rem 6px;
+  padding-left: 0;
+
+  li {
+    margin-left: 1rem;
+    margin-bottom: 6px;
+    list-style: disc;
+  }
+}
+a {
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .head-line {
+    height: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  .head-line {
+    height: 250px;
+  }
+}

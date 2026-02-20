@@ -1,0 +1,101 @@
+@for (project of projectService.projects; track $index) {
+  @if (project.id == urlID) {
+    <section>
+      <app-header></app-header>
+      <div class="wrapper">
+        <div class="arrow">
+          <a class="go-back" routerLink="">
+            <img src="assets/icons/arrow-back.png" alt="" />
+            <p>{{ 'projectsDetails.goBack' | translate }}</p>
+          </a>
+        </div>
+        <div class="project-wrapper">
+          <div class="content-container">
+            <div class="content">
+              <div
+                appImgReveal
+                revealClass="reveal-right-to-left"
+                overlayClass="overlay-bottom"
+                trigger="interval"
+              >
+                <h2>{{ project.title | translate }}</h2>
+                <img #animateElementRef src="assets/img/underline_blue.png" />
+              </div>
+              <div class="description">
+                <h3>{{ 'projectsDetails.descriptionTitle' | translate }}</h3>
+                <p>
+                  {{ project.description | translate }}
+                </p>
+              </div>
+              <div class="details">
+                <h3>{{ 'projectsDetails.implementationTitle' | translate }}</h3>
+                <p>
+                  {{ project.implementationDetails | translate }}
+                </p>
+                <p class="duration-title">
+                  <span>{{ 'projectsDetails.duration' | translate }}</span
+                  >: {{ project.duration | translate }}
+                </p>
+              </div>
+              <div class="programming-languages-container">
+                @for (language of project.programmingLanguages; track $index) {
+                  <div class="language">
+                    <img src="{{ language.icon }}" alt="" />
+                    <p>{{ language.title }}</p>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+          <div class="preview-container">
+            <div class="preview-sticker-wrapper">
+              <div class="preview">
+                <img
+                  [src]="
+                    project.title == 'projectsService.items.0.title'
+                      ? 'assets/img/prev-join_full_size.png'
+                      : project.pevImg
+                  "
+                  alt=""
+                />
+              </div>
+              @if (project.title == 'projectsService.items.0.title') {
+                <div class="sticker-container">
+                  <img src="assets/img/sticker-blue.webp" alt="" class="sticker" />
+                </div>
+              } @else {
+                <div class="sticker-container">
+                  <app-sticker [bgColor]="'yellow'"></app-sticker>
+                </div>
+              }
+            </div>
+            <div class="links">
+              <button class="button-bright">
+                <a href="{{ project.githubLink }}" target="_blank">{{
+                  'projectsDetails.github' | translate
+                }}</a>
+              </button>
+              <button class="button-bright">
+                <a
+                  [href]="
+                    project.testLink == ''
+                      ? 'https://pbiebert.github.io/In-Progress/'
+                      : project.testLink
+                  "
+                  target="_blank"
+                  >{{ 'projectsDetails.test' | translate }}</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="arrow" (click)="nextProject()">
+          <a class="next">
+            <p>{{ 'projectsDetails.nextProject' | translate }}</p>
+            <img src="assets/icons/arrow-next.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </section>
+  }
+}

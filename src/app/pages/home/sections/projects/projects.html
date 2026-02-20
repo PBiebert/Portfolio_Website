@@ -1,0 +1,23 @@
+<section id="projects">
+  <div class="wrapper">
+    <div class="project-container">
+      <div class="introduction">
+        <p>{{ 'projectsHome.introLabel' | translate }}</p>
+        <div
+          appImgReveal
+          revealClass="reveal-right-to-left"
+          overlayClass="overlay-bottom"
+          trigger="interval"
+          appAnimateImgRevealRightToLeft
+        >
+          <h2>{{ 'projectsHome.title' | translate }}</h2>
+          <img #animateElementRef src="assets/img/underlined_waved_yellow.png" />
+        </div>
+        <p>{{ 'projectsHome.introText' | translate }}</p>
+      </div>
+    </div>
+    @for (projectItem of projectServic.projects; track $index) {
+      <app-single-project [project]="projectItem" [projectIndex]="$index"></app-single-project>
+    }
+  </div>
+</section>

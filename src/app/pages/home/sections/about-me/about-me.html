@@ -1,0 +1,35 @@
+<section id="about-me">
+  <div class="wrapper">
+    <aside>
+      <div class="info-strips">
+        @for (strip of strips; track $index) {
+          <div class="stripe" [ngClass]="strip.cssClass">
+            <div class="content">
+              <img src="{{ strip.icon }}" />
+              <h3>{{ strip.content | translate }}</h3>
+            </div>
+          </div>
+        }
+      </div>
+    </aside>
+
+    <div class="about-me-container">
+      <p class="head-line">{{ 'about-me.headline' | translate }}</p>
+      <div
+        appImgReveal
+        revealClass="reveal-right-to-left"
+        overlayClass="overlay-bottom"
+        trigger="interval"
+      >
+        <h2>{{ 'about-me.title' | translate }}</h2>
+        <img #animateElementRef src="assets/img/underline_blue.png" />
+      </div>
+      <p class="content" [innerHTML]="'about-me.content' | translate"></p>
+
+      <button class="button-dark">
+        <a [routerLink]="['/']" fragment="contact-me">{{ 'about-me.button' | translate }}</a>
+      </button>
+    </div>
+  </div>
+  <!-- <app-btn-back-to-start></app-btn-back-to-start> -->
+</section>

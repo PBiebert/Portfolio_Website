@@ -1,0 +1,55 @@
+<section>
+  <app-header></app-header>
+  <div class="wrapper">
+    <div class="hero-section">
+      <div class="content">
+        <div
+          appImgReveal
+          class="fill-container say-hello"
+          revealClass="role-left"
+          overlayClass="role-overlay"
+          trigger="hover"
+          (mouseenter)="isOnHelloWorldBtn()"
+          (mouseleave)="isNotOnHelloWorldBtn()"
+        >
+          <p>{{ helloWorldBtnContent | translate }}</p>
+          <div #animateElementRef class="d-none">
+            <img src="assets/icons/waving_hand.png" />
+          </div>
+        </div>
+
+        <h1>
+          <span class="first-line">
+            @for (char of contentFirstLine; track $index) {
+              <span appInvertCase>{{ char }}</span>
+            }
+          </span>
+          <span class="second-line">
+            @for (char of contentSecondLine; track $index) {
+              <span appInvertCase>{{ char }}</span>
+            }
+          </span>
+        </h1>
+
+        <button class="button-bright">
+          <a [routerLink]="['/']" fragment="contact-me">{{
+            'heroSection.buttons.getInTouchBtn' | translate
+          }}</a>
+        </button>
+        <div class="polaroid" (mouseenter)="isOnPicture()" (mouseleave)="isNotOnPicture()">
+          <img
+            class="frame"
+            [ngClass]="{ frameEffect: hoverAnimationRunning, onPolaroid: isOnPolaroid }"
+            src="./assets/img/polaroid_frame.png"
+            alt=""
+          />
+          <img class="me" src="./assets/img/me.webp" alt="" />
+          <p [ngClass]="{ shake: hoverAnimationRunning }">
+            {{ !isOnPolaroid ? 'Philipp :&#41;' : 'Philipp :D' }}
+          </p>
+        </div>
+      </div>
+      <app-social-links></app-social-links>
+    </div>
+  </div>
+</section>

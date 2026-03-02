@@ -27,10 +27,10 @@ export class ContactMe {
     privacyCheck: false,
   };
 
-  mailTest = true;
+  mailTest = false;
 
   private post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://philippbiebert.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

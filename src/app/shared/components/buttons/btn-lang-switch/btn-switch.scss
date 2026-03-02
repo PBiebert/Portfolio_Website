@@ -47,6 +47,8 @@ span {
 .container-switch {
   @include flexbox();
   margin: 0 0.5rem;
+  pointer-events: none;
+  cursor: inherit;
 }
 
 .switch {

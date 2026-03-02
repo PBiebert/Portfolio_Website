@@ -135,6 +135,10 @@ section {
   display: none;
 }
 
+app-footer {
+  overflow: hidden;
+}
+
 @media (max-width: 1150px) {
   .wrapper {
     flex-direction: column;
@@ -173,6 +177,12 @@ section {
   }
 }
 
+@media (max-width: 700px) {
+  app-footer {
+    padding-bottom: 3rem;
+  }
+}
+
 @media (max-width: 620px) {
   dialog {
     max-width: 380px;
@@ -199,8 +209,14 @@ section {
 
 @media (max-width: 490px) {
   .sticker-content {
-    top: 70px;
+    // top: 70px;
     height: 135px;
+  }
+}
+
+@media (max-width: 375px) {
+  .sticker-content {
+    top: 70px;
   }
 }
 

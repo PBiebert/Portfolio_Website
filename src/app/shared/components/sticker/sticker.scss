@@ -36,7 +36,6 @@
 }
 
 .sticker-logo-wrapper {
-  transform: rotate(15deg);
   position: absolute;
   top: 0;
   left: 0;
@@ -50,6 +49,7 @@
 }
 
 .sticker-logo-svg {
+  transform: rotate(15deg);
   width: 35%;
   height: 35%;
   display: block;

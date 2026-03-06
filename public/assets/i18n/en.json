@@ -44,16 +44,16 @@
     "items": [
       {
         "title": "Join",
-        "shortDescription": "Kanban-style task manager. Organize tasks via drag-and-drop and assign users and categories.",
-        "description": "Join is a task management tool inspired by Kanban. It enables teams to efficiently plan, organize, and track tasks.",
-        "implementationDetails": "The project was implemented with Angular, HTML, and JavaScript. It includes drag-and-drop functionality, responsive design, and an intuitive user interface.",
+        "shortDescription": "Kanban-based task manager with drag-and-drop functionality and an integrated contact list for assigning tasks.",
+        "description": "Join is a web-based task management tool built around the Kanban principle. Tasks can be created, categorized, and moved between status columns using drag and drop. An integrated contact list allows users to assign responsibilities directly and supports structured team collaboration.",
+        "implementationDetails": "The project was developed using Angular. Firebase was set up and integrated for data structure, data storage, and user management. My responsibilities included project planning and organization, task delegation within the team, implementation of the sign-up section, development of the contact list, implementation of the add-task feature including related dialogs, as well as project-wide debugging and bug fixing.",
         "duration": "5 weeks"
       },
       {
         "title": "Sharkie",
-        "shortDescription": "Browser-based jump-and-run game. Guide Sharkie through an exciting level, collect coins and poison bottles, and defeat the killer whale.",
-        "description": "Sharkie is a browser-based jump-and-run game where you master a level as a little shark, overcome obstacles, collect coins and poison bottles, and fight the killer whale.",
-        "implementationDetails": "The game was developed with Angular and uses modern web technologies for animations and interactions.",
+        "shortDescription": "Browser-based jump-and-run game. Control Sharkie through an exciting level, collect coins and poison bottles, and defeat the killer whale.",
+        "description": "Sharkie is a browser-based jump-and-run game in which you play as a small shark, overcome obstacles, collect coins and poison bottles, and battle a killer whale.",
+        "implementationDetails": "The game was developed using HTML, CSS, and JavaScript. I was responsible for the complete implementation of the project, including the creation of the game world, the development of the main character and enemies, and the implementation of the entire game logic.",
         "duration": "3 weeks"
       },
       {
@@ -80,19 +80,19 @@
     "profile": "Profile",
     "items": [
       {
-        "name": "Max Mustermann",
-        "position": "Project Manager",
-        "reference": "Philipp always kept an overview in the team and implemented our tasks efficiently. His structured approach and technical competence helped us a lot."
+        "name": "",
+        "position": "",
+        "reference": "No reference available yet"
       },
       {
-        "name": "Anna Beispiel",
-        "position": "Frontend Developer",
-        "reference": "Philipp strengthened the frontend team with his clear solutions and support on complex tasks. Working with him was very pleasant."
+        "name": "",
+        "position": "",
+        "reference": "No reference available yet"
       },
       {
-        "name": "Paul Muster",
-        "position": "Backend Developer",
-        "reference": "Philipp always completed his tasks reliably and contributed helpful ideas. Thanks to him, we were able to complete our projects efficiently."
+        "name": "",
+        "position": "",
+        "reference": "No reference available yet"
       }
     ]
   },

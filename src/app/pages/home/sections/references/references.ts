@@ -15,22 +15,22 @@ export class References {
       name: 'references.items.0.name',
       position: 'references.items.0.position',
       reference: 'references.items.0.reference',
-      linkedIn: '#',
+      linkedIn: 'https://www.linkedin.com',
       bgClass: 'reference-bg-1',
     },
     {
       name: 'references.items.1.name',
       position: 'references.items.1.position',
       reference: 'references.items.1.reference',
-      linkedIn: '#',
+      linkedIn: 'https://www.linkedin.com',
       bgClass: 'reference-bg-2',
     },
     {
       name: 'references.items.2.name',
       position: 'references.items.2.position',
       reference: 'references.items.2.reference',
-      linkedIn: '#',
+      linkedIn: 'https://www.linkedin.com',
       bgClass: 'reference-bg-1',
-    }, 
+    },
   ];
 }

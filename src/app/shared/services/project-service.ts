@@ -15,13 +15,13 @@ export class ProjectService {
       programmingLanguages: [
         { icon: 'assets/icons/stack/HTML.png', title: 'HTML' },
         { icon: 'assets/icons/stack/CSS.png', title: 'CSS' },
-        { icon: 'assets/icons/stack/Js.png', title: 'JavaScript' },
+        { icon: 'assets/icons/stack/Ts.png', title: 'TypeScript' },
         { icon: 'assets/icons/stack/Angular.png', title: 'Angular' },
         { icon: 'assets/icons/stack/Firebase.png', title: 'Firebase' },
       ],
       duration: 'projectsService.items.0.duration',
       githubLink: 'https://github.com/PBiebert/join',
-      testLink: '',
+      testLink: 'https://join.philippbiebert.de/',
     },
     {
       id: '1',
@@ -36,7 +36,7 @@ export class ProjectService {
       ],
       duration: 'projectsService.items.1.duration',
       githubLink: 'https://github.com/PBiebert/MODUL-12_Sharkie',
-      testLink: 'https://pbiebert.github.io/Sharkie/',
+      testLink: 'https://sharkie.philippbiebert.de/',
     },
     {
       id: '2',
@@ -51,7 +51,7 @@ export class ProjectService {
       ],
       duration: 'projectsService.items.2.duration',
       githubLink: 'https://github.com/PBiebert/JS-Pokedex',
-      testLink: 'https://pbiebert.github.io/JS-Pokedex/',
+      testLink: 'https://pokedex.philippbiebert.de/',
     },
   ];
 }

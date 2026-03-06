@@ -43,16 +43,16 @@
     "items": [
       {
         "title": "Join",
-        "shortDescription": "Task-Manager im Kanban-Stil. Organisiere Aufgaben per Drag-and-Drop und weise Nutzern und Kategorien zu.",
-        "description": "Join ist ein Aufgabenmanagement-Tool, das an Kanban angelehnt ist. Es ermöglicht Teams, Aufgaben effizient zu planen, zu organisieren und zu verfolgen.",
-        "implementationDetails": "Das Projekt wurde mit Angular, HTML und JavaScript umgesetzt. Es beinhaltet Drag-and-Drop-Funktionalität, Responsive Design und eine intuitive Benutzeroberfläche.",
+        "shortDescription": "Kanban-basierter Task-Manager mit Drag-and-Drop-Funktion und integrierter Kontaktliste zur Zuweisung von Aufgaben.",
+        "description": "Join ist ein webbasiertes Aufgabenmanagement-Tool nach dem Kanban-Prinzip. Aufgaben können erstellt, kategorisiert und per Drag-and-Drop zwischen Statusbereichen verschoben werden. Eine integrierte Kontaktliste ermöglicht die direkte Zuweisung von Verantwortlichen und unterstützt eine strukturierte Teamorganisation.",
+        "implementationDetails": "Das Projekt wurde mit Angular umgesetzt. Firebase wurde für die Datenstruktur, Datenspeicherung sowie das User-Management eingerichtet und angebunden. Meine Aufgaben umfassten die Projektplanung und Organisation, die Delegation von Aufgaben im Team, die Implementierung des Sign-up-Bereichs, die Entwicklung der Kontaktliste, die Umsetzung der Add-Task-Funktion inklusive der zugehörigen Dialoge sowie das projektweite Debugging und die Fehlerbehebung.",
         "duration": "5 Wochen"
       },
       {
         "title": "Sharkie",
         "shortDescription": "Jump-and-Run-Spiel im Browser. Steuere Sharkie durch ein spannendes Level, sammle Münzen und Giftflaschen und besiege den Killerwal.",
         "description": "Sharkie ist ein browserbasiertes Jump-and-Run-Spiel, in dem du als kleiner Hai ein Level meisterst, Hindernisse überwindest, Münzen und Giftflaschen sammelst und gegen den Killerwal kämpfst.",
-        "implementationDetails": "Das Spiel wurde mit Angular entwickelt und nutzt moderne Webtechnologien für Animationen und Interaktionen.",
+        "implementationDetails": "Das Spiel wurde mit HTML, CSS und JavaScript entwickelt. Meine Aufgabe war die vollständige Umsetzung des Projekts, einschließlich der Erstellung der Spielwelt, der Entwicklung von Charakter und Gegnern sowie der Implementierung der gesamten Spiellogik.",
         "duration": "3 Wochen"
       },
       {
@@ -79,19 +79,19 @@
     "profile": "Profil",
     "items": [
       {
-        "name": "Max Mustermann",
-        "position": "Projektleiter",
-        "reference": "Philipp hat im Team immer den Überblick behalten und unsere Aufgaben effizient umgesetzt. Seine strukturierte Arbeitsweise und technische Kompetenz haben uns sehr geholfen."
+        "name": "",
+        "position": "",
+        "reference": "Noch keine Referenz vorhanden"
       },
       {
-        "name": "Anna Beispiel",
-        "position": "Frontend Developer",
-        "reference": "Philipp hat das Frontend-Team durch seine klaren Lösungen und seine Unterstützung bei komplexen Aufgaben gestärkt. Mit ihm zusammenzuarbeiten war sehr angenehm."
+        "name": "",
+        "position": "",
+        "reference": "Noch keine Referenz vorhanden"
       },
       {
-        "name": "Paul Muster",
-        "position": "Backend Developer",
-        "reference": "Philipp hat seine Aufgaben stets zuverlässig erledigt und immer hilfreiche Ideen eingebracht. Dank ihm konnten wir unsere Projekte effizient abschließen."
+        "name": "",
+        "position": "",
+        "reference": "Noch keine Referenz vorhanden"
       }
     ]
   },

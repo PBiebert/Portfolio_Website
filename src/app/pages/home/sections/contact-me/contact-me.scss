@@ -58,8 +58,9 @@ section {
 
   label,
   input {
-    margin: 0.5rem 2rem;
+    padding: 0.5rem 0.75rem;
     color: $color-font-light;
+
     &:focus {
       outline: none;
     }
@@ -161,13 +162,6 @@ app-footer {
     width: 100%;
   }
 
-  .input-container {
-    label,
-    input {
-      margin: 0.5rem 0rem;
-    }
-  }
-
   .sticker-form {
     display: none;
   }
@@ -253,7 +247,6 @@ input {
   line-height: 1.25rem;
   font-size: 1.25rem;
   border: none;
-  margin: 0.5rem 0;
   width: 100%;
 
   &::placeholder {

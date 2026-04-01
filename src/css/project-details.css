@@ -1,0 +1,202 @@
+:root {
+  --color-accent-yellow: #f7c518;
+  --color-font-light: #fff;
+}
+
+section {
+  min-height: 100vh;
+  min-height: 100svh;
+  background-image: url("./../../../../../public/assets/img/notbook_paper.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+p,
+h2 {
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.arrow a {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.arrow .go-back {
+  align-self: flex-start;
+}
+.arrow .go-back p {
+  margin-left: 0.5rem;
+}
+.arrow .next {
+  align-self: flex-end;
+  margin: 2rem 0;
+}
+.arrow .next p {
+  margin-right: 0.5rem;
+}
+
+.wrapper {
+  flex-grow: 1;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.content-container {
+  width: 45%;
+  align-items: flex-start;
+  margin-right: 2rem;
+}
+.content-container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 2rem;
+}
+.content-container .content .description h3 {
+  margin-top: 0;
+}
+.content-container .content .duration-title {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.content-container .content .duration-title span {
+  font-weight: bold;
+}
+.content-container .programming-languages-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.content-container .programming-languages-container .language {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+}
+.content-container .programming-languages-container .language img {
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+.content-container .programming-languages-container .language p {
+  font-weight: lighter;
+}
+
+.preview-container {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 5rem;
+}
+.preview-container .preview-sticker-wrapper {
+  position: relative;
+  width: 90%;
+  aspect-ratio: 1.6/1;
+  display: flex;
+  align-items: center;
+}
+.preview-container .preview {
+  width: 100%;
+  aspect-ratio: 1.6/1;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+}
+.preview-container .preview img {
+  width: 100%;
+}
+.preview-container .sticker-container {
+  position: absolute;
+  top: 50%;
+  right: -25%;
+  transform: translate(-50%, -50%);
+  height: 45%;
+  aspect-ratio: 1/1;
+  z-index: 2;
+}
+.preview-container .sticker-container img,
+.preview-container .sticker-container app-sticker {
+  height: 100%;
+  width: 100%;
+}
+.preview-container .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+@media (max-width: 820px) {
+  section {
+    background-image: url("./../../../../../public/assets/img/notbook_paper_mobile.webp");
+    background-color: #000;
+    margin-bottom: 0;
+  }
+  .project-wrapper {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .content-container,
+  .preview-container {
+    width: 100%;
+    margin: 0;
+  }
+  .preview-container {
+    align-items: center;
+  }
+  .links {
+    align-self: flex-end;
+    margin-right: 1.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .preview-container {
+    gap: 3rem;
+  }
+  .sticker-container {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .project-wrapper {
+    gap: 1.5rem;
+  }
+  .preview-container {
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .links {
+    align-self: center;
+  }
+}/*# sourceMappingURL=project-details.css.map */

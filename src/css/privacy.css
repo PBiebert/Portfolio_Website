@@ -1,0 +1,52 @@
+:root {
+  --color-accent-yellow: #f7c518;
+  --color-font-light: #fff;
+}
+
+a {
+  color: #000;
+  font-weight: normal;
+}
+
+.head-line {
+  height: 350px;
+  width: 100%;
+  background-image: url(./../../../../public/assets/img/skills.webp);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+}
+.head-line .wrapper h2 {
+  align-self: flex-start;
+  color: #fff;
+}
+
+h3 {
+  color: #3355ff;
+}
+
+ul {
+  margin: 1rem 6px;
+  padding-left: 0;
+}
+ul li {
+  margin-left: 1rem;
+  margin-bottom: 6px;
+  list-style: disc;
+}
+
+a {
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .head-line {
+    height: 300px;
+  }
+}
+@media (max-width: 700px) {
+  .head-line {
+    height: 250px;
+  }
+}/*# sourceMappingURL=privacy.css.map */

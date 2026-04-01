@@ -1,0 +1,63 @@
+:root {
+  --color-accent-yellow: #f7c518;
+  --color-font-light: #fff;
+}
+
+.sticker-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticker-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.sticker-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.sticker-svg text {
+  font-family: inherit;
+  fill: #000;
+  letter-spacing: 1px;
+  font-weight: 600;
+  dominant-baseline: middle;
+}
+
+.sticker-logo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.sticker-logo-svg {
+  transform: rotate(15deg);
+  width: 35%;
+  height: 35%;
+  display: block;
+}
+
+.sticker-logo-svg path {
+  fill: #000 !important;
+  stroke: #000 !important;
+}/*# sourceMappingURL=sticker.css.map */

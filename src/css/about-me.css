@@ -1,0 +1,189 @@
+:root {
+  --color-accent-yellow: #f7c518;
+  --color-font-light: #fff;
+}
+
+section {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.info-strips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 560px;
+  height: 500px;
+  color: #fff;
+}
+.info-strips .stripe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 33%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.info-strips .stripe .content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.info-strips .stripe .content h3 {
+  margin: 0;
+  font-weight: normal;
+}
+.info-strips .stripe .content img {
+  margin-right: 1rem;
+}
+.info-strips .yellow-strip {
+  background-image: url(./../../../../../../public/assets/img/ripped_paper_01.png);
+  transform: rotate(-5deg) translateY(70px);
+  z-index: 3;
+}
+.info-strips .yellow-strip .content {
+  padding-bottom: 1.5rem;
+}
+.info-strips .blue-strip {
+  background-image: url(./../../../../../../public/assets/img/ripped_paper_02.png);
+  z-index: 2;
+}
+.info-strips .orange-strip {
+  background-image: url(./../../../../../../public/assets/img/ripped_paper_03.png);
+  transform: rotate(5deg) translateY(-70px);
+  z-index: 1;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+.about-me-container button {
+  margin-top: 1.5rem;
+  align-self: flex-end;
+}
+.about-me-container button a {
+  color: #000;
+}
+
+@media (max-width: 1240px) {
+  .info-strips .yellow-strip {
+    transform: rotate(-5deg) translateY(85px);
+  }
+  .info-strips .orange-strip {
+    transform: rotate(5deg) translateY(-85px);
+  }
+}
+@media (max-width: 1024px) {
+  .info-strips .stripe .content h3 {
+    margin: 0;
+  }
+  .info-strips .stripe .content img {
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  .info-strips .yellow-strip {
+    transform: rotate(-5deg) translateY(100px);
+  }
+  .info-strips .yellow-strip .content {
+    padding-bottom: 1.25rem;
+  }
+  .info-strips .orange-strip {
+    transform: rotate(5deg) translateY(-100px);
+  }
+}
+@media (max-width: 920px) {
+  .info-strips .yellow-strip {
+    transform: rotate(-5deg) translateY(110px);
+  }
+  .info-strips .orange-strip {
+    transform: rotate(5deg) translateY(-110px);
+  }
+}
+@media (max-width: 820px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+  .wrapper aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .wrapper .info-strips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+  }
+  .wrapper .info-strips .stripe .content img {
+    margin-right: 1rem;
+  }
+  .wrapper .info-strips .yellow-strip {
+    transform: rotate(-5deg) translateY(40px);
+  }
+  .wrapper .info-strips .orange-strip {
+    transform: rotate(5deg) translateY(-40px);
+  }
+  .wrapper .about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media (max-width: 710px) {
+  .wrapper .info-strips {
+    height: 350px;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper .info-strips {
+    height: 300px;
+  }
+  .wrapper .info-strips .stripe .content img {
+    margin-right: 0.5rem;
+  }
+}
+@media (max-width: 360px) {
+  .wrapper .info-strips .yellow-strip {
+    transform: rotate(-5deg) translateY(45px);
+  }
+  .wrapper .info-strips .orange-strip {
+    transform: rotate(5deg) translateY(-45px);
+  }
+}/*# sourceMappingURL=about-me.css.map */

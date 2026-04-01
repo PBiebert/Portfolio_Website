@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../app/shared/styles/_core.scss","../app/pages/privacy/privacy.scss"],"names":[],"mappings":"AAUA;EACE;EACA;;;ACVF;EACE,ODFgB;ECGhB;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA,ODlBe;;;ACsBnB;EACE,ODpBkB;;;ACuBpB;EACE;EACA;;AAEA;EACE;EACA;EACA;;;AAGJ;EACE;;;AAGF;EACE;IACE;;;AAIJ;EACE;IACE","file":"privacy.css"}

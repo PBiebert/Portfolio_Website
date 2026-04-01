@@ -12,174 +12,229 @@
   }
 }
 
-.references-container {
-  @include flexbox($flex-direction: row);
+.slideshow {
   width: 100%;
-  position: relative;
-  margin-top: 5rem;
-
-  .reference {
-    position: relative;
-    max-width: 450px;
-    width: 100%;
-    aspect-ratio: 1.4/1;
-    z-index: 1;
-
-    &:hover {
-      z-index: 3;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-    &:first-child {
-      position: absolute;
-      top: -50px;
-      left: 0;
-      transform: rotate(-4deg);
-      z-index: 2;
-    }
-
-    &:last-child {
-      position: absolute;
-      top: -30px;
-      right: 0;
-      transform: rotate(4deg);
-      z-index: 0;
-    }
-
-    &:last-child:hover {
-      z-index: 3;
-    }
-  }
-
-  .reference.stack-top {
-    z-index: 3;
-  }
-
-  .reference.stack-middle {
-    z-index: 2;
-  }
-
-  .reference.stack-bottom {
-    z-index: 1;
-  }
+  margin-top: 3rem;
+  @include flexbox();
 }
 
-.reference-text-container {
+.slideshow-viewport {
+  width: 100%;
+  max-width: 720px;
+  overflow: hidden;
+}
+
+.slideshow-track {
+  display: flex;
+  transition: transform 350ms ease-in-out;
+}
+
+.slideshow-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+}
+
+.reference-card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.reference-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 2rem;
-  @include flexbox($justify-content: space-between);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reference-overlay {
+  position: relative;
+  padding: 1.5rem;
   z-index: 1;
+  @include flexbox($justify-content: space-between, $align-items: flex-start);
 
   &::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    inset: 0;
     background-image: url(../../../../../../public/assets/img/ref-bg-hover.png);
-    background-position: center;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
     opacity: 0;
+    transition: opacity 250ms ease-in-out;
     pointer-events: none;
+    z-index: -1;
   }
 
   &:hover::after {
     opacity: 0.7;
   }
 
-  &:hover .reference-footer .person-name,
-  &:hover .reference-footer .person-position {
+  &:hover .person-name,
+  &:hover .person-position {
     color: $color-font-light;
   }
+}
 
-  .reference-footer {
-    @include flexbox($flex-direction: row, $justify-content: space-between);
-    width: 100%;
+// --- Content ---
 
-    .person-name {
-      font-weight: bold;
+.reference-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-bottom: 1rem;
+}
+
+.reference-text {
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.reference-footer {
+  @include flexbox($flex-direction: row, $justify-content: space-between);
+  width: 100%;
+  flex-shrink: 0;
+
+  .person-name {
+    font-weight: bold;
+  }
+
+  .person-position {
+    font-size: 1rem;
+  }
+
+  .linkedIn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: $color-font-dark;
+    padding: 0;
+    transition: $hover-transition-fast;
+
+    &:hover {
+      color: $color-font-light;
+
+      svg path {
+        fill: $color-font-light;
+      }
     }
 
-    .person-position {
-      font-size: 1rem;
+    svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+
+      path {
+        fill: $color-font-dark;
+        transition: $hover-transition-fast;
+      }
     }
 
-    .linkedIn {
-      display: block;
-      @include flexbox($flex-direction: row);
-      color: $color-font-dark;
-
-      &:hover {
-        color: $color-font-light;
-
-        & svg path {
-          fill: $color-font-light;
-        }
-      }
-
-      svg {
-        width: 24px;
-        height: 24px;
-
-        path {
-          fill: $color-font-dark;
-        }
-      }
-
-      p {
-        font-weight: normal;
-      }
+    p {
+      font-weight: normal;
+      white-space: nowrap;
     }
   }
 }
 
-@media (max-width: 1024px) {
-  .references-container .reference {
-    max-width: 350px;
+.slideshow-controls {
+  @include flexbox($flex-direction: row);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.slideshow-arrow {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: $color-font-dark;
+  cursor: pointer;
+  @include flexbox();
+  transition: $hover-transition-fast;
+  padding: 0;
+
+  &:hover:not(:disabled) {
+    background: rgba(0, 0, 0, 0.12);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
-@media (max-width: 850px) {
-  .references-container {
-    flex-direction: column;
+.slideshow-dots {
+  @include flexbox($flex-direction: row);
+  gap: 0.5rem;
+}
+
+.slideshow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid $color-font-dark;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: $hover-transition-fast;
+
+  &.active {
+    background: $color-accent-blue;
+    border-color: $color-accent-blue;
   }
 
-  .references-container .reference {
-    max-width: 450px;
-    &:first-child {
-      position: relative;
-      z-index: 2;
-      top: auto;
-      left: auto;
-      transform: rotate(-4deg) translateY(5px);
-    }
-
-    &:last-child {
-      position: relative;
-      z-index: 0;
-      top: auto;
-      right: auto;
-      transform: rotate(4deg) translateY(-5px);
-    }
+  &:hover:not(.active) {
+    background: rgba(0, 0, 0, 0.15);
   }
 }
 
 @media (max-width: 450px) {
-  .references-container .reference {
-    aspect-ratio: 1/1;
+  .reference-overlay {
+    padding: 1rem;
   }
 
-  .reference-text-container {
-    padding: 1rem;
+  // .reference-text {
+  //   font-size: 1rem;
+  // }
+
+  .slideshow-arrow {
+    width: 36px;
+    height: 36px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .slideshow {
+    margin-top: 5rem;
+  }
+
+  .reference-overlay {
+    padding: 2rem;
+  }
+
+  .slideshow-arrow {
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

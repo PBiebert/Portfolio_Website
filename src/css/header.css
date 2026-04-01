@@ -1,0 +1,150 @@
+:root {
+  --color-accent-yellow: #f7c518;
+  --color-font-light: #fff;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  height: 10vh;
+  height: 10svh;
+  width: 100%;
+}
+
+.header-over-nav {
+  z-index: 100;
+  position: relative;
+}
+
+.logo-mobile {
+  cursor: pointer;
+  height: 2.5rem;
+  aspect-ratio: 1/1;
+  fill: #3355ff;
+  display: none;
+  stroke-width: 4px;
+  transition: all 250ms ease-in-out;
+  padding: 0;
+}
+.logo-mobile:hover {
+  fill: #f7c518;
+}
+
+nav {
+  height: 100%;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./../.././../../../public/assets/img/hero.webp);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(-100%);
+  transition: all 250ms ease-in-out;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 100px;
+  width: 100%;
+  padding: 0;
+}
+.mobile-nav app-social-links {
+  position: absolute;
+  bottom: 10%;
+}
+
+.nav_active {
+  display: flex;
+  transform: translateY(0);
+}
+
+.burger_menu {
+  display: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+.burger_menu > span {
+  display: block;
+  width: 75%;
+  height: 3px;
+  mix-blend-mode: difference;
+  background-color: #fff;
+  border-radius: 1.5px;
+  transition: transform 250ms ease-in-out;
+}
+.burger_menu img {
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+.burger_menu .clicked {
+  opacity: 1;
+}
+
+.burger_menu_active .first-line {
+  transform: translateY(9px) rotate(45deg);
+}
+.burger_menu_active .middle-line {
+  opacity: 0;
+}
+.burger_menu_active .last-line {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+  .logo-mobile,
+  .burger_menu {
+    display: flex;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 700px) and (max-width: 420px) {
+  header {
+    padding: 0 1rem;
+  }
+}/*# sourceMappingURL=header.css.map */

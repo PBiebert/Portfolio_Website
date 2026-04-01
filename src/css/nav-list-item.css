@@ -1,0 +1,19 @@
+:root {
+  --color-accent-yellow: #f7c518;
+  --color-font-light: #fff;
+}
+
+li {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-bottom {
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}/*# sourceMappingURL=nav-list-item.css.map */

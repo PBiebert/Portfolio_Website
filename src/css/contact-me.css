@@ -1,0 +1,356 @@
+:root {
+  --color-accent-yellow: #f7c518;
+  --color-font-light: #fff;
+}
+
+section {
+  position: relative;
+  min-height: 110vh;
+  background-image: url(../../../../../../public/assets/img/contact.webp);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+.wrapper {
+  flex-direction: row;
+  height: 100%;
+  color: #fff;
+}
+
+.content {
+  padding-top: 150px;
+  position: relative;
+  flex-grow: 1;
+  text-wrap: wrap;
+  min-width: 60%;
+  padding-right: 10%;
+}
+.content .overlay-bottom {
+  width: 50%;
+  left: 50%;
+  bottom: -100px;
+}
+
+.contact-form-container {
+  position: relative;
+  margin-top: 340px;
+  flex-grow: 1;
+  min-width: 40%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100px;
+  border-bottom: 1px solid #f7c518;
+}
+.input-container:hover {
+  border-top: 2px solid #3355ff;
+  border-bottom: 2px solid #3355ff;
+}
+.input-container:hover label {
+  color: #f87a55;
+}
+.input-container .highlight-label-If-Invalid {
+  color: #f87a55;
+}
+.input-container label,
+.input-container input {
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+}
+.input-container label:focus,
+.input-container input:focus {
+  outline: none;
+}
+
+.input-container:first-child:hover {
+  border-top: 2px solid #3355ff;
+}
+
+.interactions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.interactions-container .button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 120px;
+}
+.interactions-container .button-container .animate-container {
+  display: none;
+  width: 30%;
+  height: 100%;
+  margin-right: 1rem;
+}
+@media (max-width: 500px) {
+  .interactions-container .button-container .animate-container {
+    width: 50%;
+  }
+}
+.interactions-container .button-container .overlay-bottom {
+  bottom: 25%;
+}
+.interactions-container .button-container button {
+  margin-top: 2.5rem;
+}
+.interactions-container .button-container button:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 5px rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+.interactions-container .button-container button:disabled:hover {
+  box-shadow: none;
+  background-color: #ff3a00;
+  box-shadow: 2px 5px rgba(255, 255, 255, 0.5);
+  transform: translateX(0) translateY(0);
+}
+
+.sticker-form,
+.sticker-content {
+  position: absolute;
+  height: 150px;
+  aspect-ratio: 1/1;
+}
+
+.sticker-form {
+  top: -125px;
+  right: 0;
+}
+
+.sticker-content {
+  top: 35px;
+  right: 10px;
+  display: none;
+}
+
+app-footer {
+  overflow: hidden;
+}
+
+@media (max-width: 1150px) {
+  .wrapper {
+    flex-direction: column;
+    margin-top: 10rem;
+  }
+  .content {
+    padding-right: 0;
+  }
+  .content .overlay-bottom {
+    display: none;
+  }
+  .interactions-container .button-container .animate-container {
+    display: initial;
+  }
+  .contact-form-container {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  .sticker-form {
+    display: none;
+  }
+  .sticker-content {
+    display: block;
+  }
+}
+@media (max-width: 700px) {
+  app-footer {
+    padding-bottom: 3rem;
+  }
+}
+@media (max-width: 620px) {
+  dialog {
+    max-width: 380px;
+  }
+  dialog .dialog-wrapper {
+    background-image: url(../../../../../../public/assets/img/skills-description-mobile.png);
+    aspect-ratio: 1.6/1;
+  }
+  dialog .dialog-wrapper .dialog-close-btn {
+    top: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .content {
+    padding-top: 125px;
+  }
+  .sticker-content {
+    top: 20px;
+  }
+}
+@media (max-width: 490px) {
+  .sticker-content {
+    height: 135px;
+  }
+}
+@media (max-width: 375px) {
+  .sticker-content {
+    top: 70px;
+  }
+}
+@media (max-width: 360px) {
+  dialog .dialog-wrapper {
+    padding: 1rem 2rem;
+  }
+  dialog .dialog-wrapper .dialog-close-btn {
+    top: 1rem;
+    right: 0.8rem;
+  }
+  .sticker-content {
+    display: none;
+  }
+}
+.invalid::placeholder {
+  color: #ff3a00;
+}
+
+label {
+  position: relative;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  label {
+    font-size: 1.25rem;
+  }
+}
+
+input {
+  background-color: transparent;
+  line-height: 1.25rem;
+  font-size: 1.25rem;
+  border: none;
+  width: 100%;
+}
+input::placeholder {
+  font-size: 1rem;
+  color: #fff;
+}
+@media (max-width: 500px) {
+  input {
+    font-size: 1rem;
+  }
+}
+
+input[type=checkbox] {
+  position: relative;
+  appearance: none;
+  border: 2px solid #3355ff;
+  border-radius: 2px;
+  height: 1.25rem;
+  aspect-ratio: 1/1;
+  margin: 0;
+}
+input[type=checkbox]:checked::after {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  content: "";
+  height: 1.1rem;
+  aspect-ratio: 1/1;
+  background-image: url(./../../../../../../public/assets/img/Check.png);
+  background-size: contain;
+  z-index: 2;
+}
+
+.checkbox-bg {
+  position: absolute;
+  top: 0;
+  left: -2px;
+  display: block;
+  height: 1.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 2px;
+  background-color: #3355ff;
+  filter: opacity(0);
+  pointer-events: none;
+  z-index: 0;
+  transition: all 125ms ease-in-out;
+}
+
+.privacy-check-container label:hover .checkbox-bg {
+  filter: opacity(0.5);
+}
+
+.privacy-text {
+  font-size: 1rem;
+  display: block;
+}
+.privacy-text a {
+  color: #3355ff;
+  font-weight: normal;
+  padding: 0;
+}
+.privacy-text a:hover {
+  color: #f7c518;
+}
+
+.privacy-check-container {
+  display: flex;
+  flex-direction: row;
+}
+
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+  margin: auto;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 90%;
+  max-width: 560px;
+  padding: 0;
+  overflow: visible;
+}
+
+.dialog-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4.5/1;
+  background-image: url(../../../../../../public/assets/img/skills-description-web.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1rem 1.5rem;
+}
+.dialog-wrapper .dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.dialog-wrapper .dialog-content p {
+  text-align: center;
+}
+.dialog-wrapper .dialog-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+.dialog-wrapper .dialog-close-btn img {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=contact-me.css.map */
